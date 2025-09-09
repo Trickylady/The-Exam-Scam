@@ -7,7 +7,7 @@ func _ready() -> void:
 	Input.set_custom_mouse_cursor(cursor_reg)
 	$abackmenu.input_event.connect(_on_abackmenu_input)
 
-func _on_abackmenu_input(viewport, event, shape_idx):
+func _on_abackmenu_input(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		get_tree().change_scene_to_file("res://Menu.tscn")
 

@@ -5,9 +5,14 @@ var cursor_reg: Texture
 func _ready() -> void:
 	cursor_reg = load("res://images/mouse_cursor_normal.png")
 	Input.set_custom_mouse_cursor(cursor_reg)
-	$abacktomenu.input_event.connect(_on_abacktomenu_input)
+	$afamily.input_event.connect(_on_afamily_input)
+	$apg13.input_event.connect(_on_apg13_input)
 
-func _on_abacktomenu_input(_viewport, event, _shape_idx):
+func _on_afamily_input(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		get_tree().change_scene_to_file("res://")
+
+func _on_apg13_input(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		get_tree().change_scene_to_file("res://Menu.tscn")
 
