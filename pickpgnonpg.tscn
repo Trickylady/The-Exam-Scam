@@ -1,7 +1,21 @@
-[gd_scene format=3 uid="uid://drmbass7k1uo6"]
+[gd_scene load_steps=2 format=3 uid="uid://drmbass7k1uo6"]
+
+[ext_resource type="Texture2D" uid="uid://dh5t2tn14gbbo" path="res://images/pg-13WARNING.png" id="1_0gftk"]
 
 [node name="pickpgnonpg" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="pickgameplay" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("1_0gftk")
+
+[node name="afamily" type="Area2D" parent="."]
+
+[node name="cpfamily" type="CollisionPolygon2D" parent="afamily"]
+position = Vector2(-2, 0)
+polygon = PackedVector2Array(318, 426, 858, 426, 858, 756, 322, 756)
+
+[node name="apg13" type="Area2D" parent="."]
+
+[node name="cpnonpg" type="CollisionPolygon2D" parent="apg13"]
+polygon = PackedVector2Array(1075, 428, 1601, 428, 1605, 756, 1073, 760)

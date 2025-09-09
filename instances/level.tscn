@@ -56,15 +56,15 @@ unique_name_in_owner = true
 script = ExtResource("5_aicyk")
 
 [node name="pencil1" parent="pencils_mng" instance=ExtResource("6_8b0r0")]
-position = Vector2(676, 290)
+position = Vector2(1293, 79)
 speed = 199.5
 
 [node name="pencil2" parent="pencils_mng" instance=ExtResource("6_8b0r0")]
-position = Vector2(391, 428)
+position = Vector2(1719, 607)
 speed = 199.5
 
 [node name="pencil3" parent="pencils_mng" instance=ExtResource("6_8b0r0")]
-position = Vector2(757, 434)
+position = Vector2(255, 399)
 speed = 199.5
 
 [node name="scissors" parent="." instance=ExtResource("7_h6smj")]
