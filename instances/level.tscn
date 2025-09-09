@@ -1,0 +1,94 @@
+[gd_scene load_steps=14 format=3 uid="uid://b28bmchawkfsp"]
+
+[ext_resource type="Script" uid="uid://cnk87sgpisjhi" path="res://instances/level.gd" id="1_km5ld"]
+[ext_resource type="Texture2D" uid="uid://gtdrrp48pygl" path="res://images/paper_background.png" id="2_i2t4f"]
+[ext_resource type="PackedScene" uid="uid://bksovv428cjmm" path="res://instances/paper/paper.tscn" id="3_8cye3"]
+[ext_resource type="Shader" uid="uid://c3v10btwbwaao" path="res://instances/paper/paper.gdshader" id="4_2orkt"]
+[ext_resource type="Script" uid="uid://lbfuoeni3ggh" path="res://instances/pencils.gd" id="5_aicyk"]
+[ext_resource type="PackedScene" uid="uid://1fbulaq66v6h" path="res://instances/pencil/pencil.tscn" id="6_8b0r0"]
+[ext_resource type="PackedScene" uid="uid://dgnxkyyvguc5n" path="res://instances/scissors/scissors.tscn" id="7_h6smj"]
+[ext_resource type="PackedScene" uid="uid://di6fx5kumhr0b" path="res://instances/hud.tscn" id="8_v5j5c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bfqc1"]
+resource_local_to_scene = true
+shader = ExtResource("4_2orkt")
+shader_parameter/invert_mask = true
+shader_parameter/threshold = 0.5
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_11los"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rnwbf"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a2u4m"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b8mi5"]
+normal = Vector2(-1, 0)
+
+[node name="level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_km5ld")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i2t4f")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="paper" parent="." instance=ExtResource("3_8cye3")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_bfqc1")
+layout_mode = 1
+
+[node name="pencils_mng" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_aicyk")
+
+[node name="pencil1" parent="pencils_mng" instance=ExtResource("6_8b0r0")]
+position = Vector2(676, 290)
+speed = 199.5
+
+[node name="pencil2" parent="pencils_mng" instance=ExtResource("6_8b0r0")]
+position = Vector2(391, 428)
+speed = 199.5
+
+[node name="pencil3" parent="pencils_mng" instance=ExtResource("6_8b0r0")]
+position = Vector2(757, 434)
+speed = 199.5
+
+[node name="scissors" parent="." instance=ExtResource("7_h6smj")]
+unique_name_in_owner = true
+position = Vector2(323, 234)
+
+[node name="world_boundaries" type="StaticBody2D" parent="."]
+
+[node name="coll_top" type="CollisionShape2D" parent="world_boundaries"]
+unique_name_in_owner = true
+shape = SubResource("WorldBoundaryShape2D_11los")
+
+[node name="coll_left" type="CollisionShape2D" parent="world_boundaries"]
+unique_name_in_owner = true
+shape = SubResource("WorldBoundaryShape2D_rnwbf")
+
+[node name="coll_bot" type="CollisionShape2D" parent="world_boundaries"]
+unique_name_in_owner = true
+shape = SubResource("WorldBoundaryShape2D_a2u4m")
+
+[node name="coll_right" type="CollisionShape2D" parent="world_boundaries"]
+unique_name_in_owner = true
+shape = SubResource("WorldBoundaryShape2D_b8mi5")
+
+[node name="HUD" parent="." instance=ExtResource("8_v5j5c")]
+unique_name_in_owner = true
+layout_mode = 1

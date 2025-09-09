@@ -1,7 +1,7 @@
 [gd_scene load_steps=36 format=3 uid="uid://b4k1ui5uwwr7d"]
 
 [ext_resource type="Texture2D" uid="uid://djfv1qp5dywf" path="res://images/classroom.png" id="1_hmu8l"]
-[ext_resource type="Script" path="res://intro_a.gd" id="1_rpasm"]
+[ext_resource type="Script" uid="uid://dbn3yehlrcc3j" path="res://intro_a.gd" id="1_rpasm"]
 [ext_resource type="Texture2D" uid="uid://cb7u8m7ulib3q" path="res://images/skip_intro.png" id="2_av1cd"]
 [ext_resource type="Texture2D" uid="uid://fo2omj47piwx" path="res://images/timmy_body.png" id="3_l1v3n"]
 [ext_resource type="Texture2D" uid="uid://5ljyuinm74kd" path="res://images/timmy_face.png" id="4_0ip5i"]
@@ -1424,8 +1424,8 @@ tracks/56/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ojpj6"]
 _data = {
-"RESET": SubResource("Animation_emik5"),
-"timmyslide": SubResource("Animation_nhrif")
+&"RESET": SubResource("Animation_emik5"),
+&"timmyslide": SubResource("Animation_nhrif")
 }
 
 [node name="introA" type="Node2D"]
@@ -1578,7 +1578,7 @@ offset = Vector2(-197, -292)
 
 [node name="Timmyslide" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ojpj6")
+&"": SubResource("AnimationLibrary_ojpj6")
 }
 autoplay = "timmyslide"
 

@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://dgnxkyyvguc5n"]
+
+[ext_resource type="Texture2D" uid="uid://bftt8wur8evey" path="res://images/scissors_horizontal.png" id="1_keus3"]
+[ext_resource type="Script" uid="uid://bcms7unw38lsu" path="res://instances/scissors/scissors.gd" id="1_xflwj"]
+[ext_resource type="Texture2D" uid="uid://b0gq1c7osrmls" path="res://instances/scissors/white_circle.png" id="2_kdba0"]
+[ext_resource type="Gradient" uid="uid://07ksgp4q8ky5" path="res://instances/scissors/grad_shoot_normal.tres" id="3_88iph"]
+[ext_resource type="Texture2D" uid="uid://pymv2wb2ce40" path="res://images/shoot_horizontal_left.png" id="4_v30fi"]
+[ext_resource type="Texture2D" uid="uid://d2kc17q0dhd7p" path="res://images/shoot_horizontal_left_boost.png" id="5_6xgx0"]
+
+[sub_resource type="Gradient" id="Gradient_v30fi"]
+offsets = PackedFloat32Array(0, 0.273504, 0.700855, 1)
+colors = PackedColorArray(0.819608, 0, 0.180392, 1, 0.817993, 0, 0.181436, 0, 0.818097, 0, 0.181369, 0.0641026, 0.819608, 0, 0.180392, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_v30fi"]
+gradient = SubResource("Gradient_v30fi")
+
+[sub_resource type="Curve" id="Curve_jgkka"]
+_data = [Vector2(0, 0), 0.0, 17.6506, 0, 0, Vector2(0.191406, 1), -0.376264, -0.376264, 0, 0, Vector2(1, 0), -0.345343, 0.0, 0, 0]
+point_count = 3
+
+[node name="scissors" type="Node2D"]
+script = ExtResource("1_xflwj")
+n_angles = 5
+scaling = 0.8
+shoot_circles_anim_speed = 3.5
+is_boosting = false
+
+[node name="project_line" type="Line2D" parent="."]
+unique_name_in_owner = true
+width = 3.0
+texture = SubResource("GradientTexture1D_v30fi")
+texture_mode = 2
+
+[node name="part_forw" type="CPUParticles2D" parent="."]
+unique_name_in_owner = true
+amount = 12
+texture = ExtResource("2_kdba0")
+lifetime = 5.0
+preprocess = 5.0
+speed_scale = 3.5
+local_coords = true
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+scale_amount_min = 0.2
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_jgkka")
+color_ramp = ExtResource("3_88iph")
+
+[node name="part_back" type="CPUParticles2D" parent="."]
+unique_name_in_owner = true
+rotation = 3.14159
+amount = 12
+texture = ExtResource("2_kdba0")
+lifetime = 5.0
+preprocess = 5.0
+speed_scale = 3.5
+local_coords = true
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+scale_amount_min = 0.2
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_jgkka")
+color_ramp = ExtResource("3_88iph")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(-3, 1)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_keus3")
+flip_h = true
+
+[node name="ray_forw" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+visible = false
+target_position = Vector2(2000, 0)
+
+[node name="ray_back" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+visible = false
+target_position = Vector2(-2000, 0)
+
+[node name="references" type="Node2D" parent="."]
+visible = false
+
+[node name="ShootHorizontalLeft" type="Sprite2D" parent="references"]
+position = Vector2(119, -127)
+texture = ExtResource("4_v30fi")
+
+[node name="ShootHorizontalLeftBoost" type="Sprite2D" parent="references"]
+position = Vector2(125, -91)
+texture = ExtResource("5_6xgx0")

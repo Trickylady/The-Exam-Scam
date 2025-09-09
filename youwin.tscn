@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bb0gxea2auhqn"]
 
-[ext_resource type="Script" path="res://youwin.gd" id="1_tmdmd"]
+[ext_resource type="Script" uid="uid://li3cwlh0dajl" path="res://youwin.gd" id="1_tmdmd"]
 [ext_resource type="Texture2D" uid="uid://bl0l03g7y7bdq" path="res://images/end.png" id="2_k6oso"]
 [ext_resource type="AudioStream" uid="uid://cko7x38iucbmt" path="res://sounds/win.mp3" id="3_bk4by"]
 

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyo027m1b6j81"]
+
+[ext_resource type="Script" uid="uid://b3qx8nvephqy2" path="res://instances/cutting_line/cutting_line.gd" id="1_75mc3"]
+
+[node name="cutting_line" type="Area2D"]
+script = ExtResource("1_75mc3")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://coqv8b3qoc7s3"]
 
 [ext_resource type="Texture2D" uid="uid://gtdrrp48pygl" path="res://images/paper_background.png" id="1_b7ue0"]
-[ext_resource type="Script" path="res://level_1.gd" id="1_wjbx3"]
+[ext_resource type="Script" uid="uid://e0q01cvmobmb" path="res://level_1.gd" id="1_wjbx3"]
 [ext_resource type="Texture2D" uid="uid://bo156ciddtd2j" path="res://images/paper.png" id="2_1y8o1"]
 [ext_resource type="Texture2D" uid="uid://dpbukxlonryia" path="res://images/overlay_game.png" id="3_81grs"]
 [ext_resource type="Texture2D" uid="uid://beusq0j4xbp6l" path="res://images/menu button.png" id="4_yisrd"]
@@ -44,8 +44,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8a8mg"]
 _data = {
-"RESET": SubResource("Animation_y7jw8"),
-"startlevel1sound": SubResource("Animation_urgdn")
+&"RESET": SubResource("Animation_y7jw8"),
+&"startlevel1sound": SubResource("Animation_urgdn")
 }
 
 [node name="Level1" type="Node2D"]

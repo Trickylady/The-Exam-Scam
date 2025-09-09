@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dhm7nmp8gh02u"]
 
-[ext_resource type="Script" path="res://youlose.gd" id="1_4r7sw"]
+[ext_resource type="Script" uid="uid://rf1m6ow3nir7" path="res://youlose.gd" id="1_4r7sw"]
 [ext_resource type="Texture2D" uid="uid://v3yxb4fbxorq" path="res://images/loser.png" id="2_41qbh"]
 [ext_resource type="AudioStream" uid="uid://d10mkhtem355q" path="res://sounds/lose.mp3" id="3_tfa17"]
 
