@@ -70,6 +70,8 @@ speed = 199.5
 [node name="scissors" parent="." instance=ExtResource("7_h6smj")]
 unique_name_in_owner = true
 position = Vector2(323, 234)
+cutting_line_thickness = 0.6
+boost_mult = 2.5
 
 [node name="world_boundaries" type="StaticBody2D" parent="."]
 

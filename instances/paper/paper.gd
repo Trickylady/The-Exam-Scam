@@ -69,6 +69,8 @@ func cut_out_ui_polygon_from_field(_poly: PackedVector2Array) -> void:
 
 func cut_along_segment(seg: PackedVector2Array, at_point: Vector2) -> void:
 	assert(seg.size() == 2)
+	if not is_point_in_paper(at_point):
+		return
 	# 1) Find the target region under the point
 	var target_idx := _paper_region_index_at(at_point)
 	if target_idx == -1:

@@ -11,6 +11,16 @@ class_name Scissors
 		scaling = val
 		if is_node_ready(): $sprite.scale = Vector2.ONE * scaling
 
+@export_range(0.25, 2.0, 0.05) var cutting_line_thickness: float = 0.6
+
+@export_subgroup("Boost")
+@export_range(1.0, 5.0) var boost_mult: float = 2.5
+@export var is_boosting: bool = true:
+	set(val):
+		if is_boosting == val: return
+		is_boosting = val
+		_update_shoot()
+
 @export_subgroup("Shoot circles", "shoot_")
 @export_range(0.25, 10.0, 0.25) var shoot_circles_anim_speed: float = 3.0:
 	set(val):
@@ -32,11 +42,6 @@ class_name Scissors
 	set(val):
 		shoot_col_boost = val
 		_update_shoot()
-@export var is_boosting: bool = true:
-	set(val):
-		if is_boosting == val: return
-		is_boosting = val
-		_update_shoot()
 
 var level: Level
 func _set_level(l: Level) -> void:
@@ -53,6 +58,8 @@ var is_cutting: bool = false
 var _tw_rot: Tween
 var _hit_point_forw: Vector2
 var _hit_point_back: Vector2
+
+signal cut_line_hit(pencil: Pencil)
 
 
 func _ready() -> void:
@@ -94,17 +101,6 @@ func _physics_process(delta: float) -> void:
 		loc_hit_back = (_hit_point_back - global_position).rotated(-rotation)
 	else:
 		_hit_point_back = Vector2(-1,-1)
-	
-	
-	#update preview for the cut line
-	if %ray_forw.is_colliding() and %ray_back.is_colliding():
-		%project_line.points = [loc_hit_back, loc_hit_forw]
-	elif %ray_forw.is_colliding():
-		%project_line.points = [Vector2.ZERO, loc_hit_forw]
-	elif %ray_back.is_colliding():
-		%project_line.points = [loc_hit_back, Vector2.ZERO]
-	else:
-		%project_line.points = []
 
 
 func cycle_angle(is_clockwise: bool) -> void:
@@ -118,16 +114,26 @@ func cut() -> void:
 	if _tw_rot:
 		if _tw_rot.is_running():
 			await _tw_rot.finished
-	# TODO: temporary replace with cutting line
-	#var cutting_line: CuttingLine = preload(
-	#cutting_line.cutting_done.connect(
 	
-	var seg: PackedVector2Array = PackedVector2Array([_hit_point_back, _hit_point_forw])
-	level.paper.cut_along_segment(seg, global_position) # TODO: Remove direct call
+	is_cutting = true
+	var cutting_line: CuttingLine = preload("res://instances/cutting_line/cutting_line.tscn").instantiate()
+	cutting_line.level = level
+	cutting_line.position = position
+	cutting_line.rotation = rotation
+	cutting_line.boost_mult = 1.0 if not is_boosting else boost_mult
+	cutting_line.target_segment = PackedVector2Array([_hit_point_back, _hit_point_forw])
+	cutting_line.finished.connect(_on_cutting_line_finished)
+	cutting_line.pencil_touched.connect(_on_cutting_line_pencil_touched)
+	level.add_child(cutting_line)
 
 
 func _on_cutting_line_finished() -> void:
 	is_cutting = false
+
+
+func _on_cutting_line_pencil_touched(pencil: Pencil) -> void:
+	is_cutting = false
+	cut_line_hit.emit(pencil)
 
 
 func _update_scissors_rotation() -> void:
@@ -146,8 +152,11 @@ func _update_scissors_rotation() -> void:
 
 func _update_shoot() -> void:
 	if not is_node_ready(): return
-	var grad: Gradient = shoot_col_boost if is_boosting else shoot_col_normal
-	var shoot_speed: float = shoot_circles_boost_speed if is_boosting else shoot_circles_normal_speed
+	var _boosting: bool = is_boosting
+	if not Engine.is_editor_hint():
+		_boosting = _boosting # TODO: check for boost in inventory
+	var grad: Gradient = shoot_col_boost if _boosting else shoot_col_normal
+	var shoot_speed: float = shoot_circles_boost_speed if _boosting else shoot_circles_normal_speed
 	%part_forw.color_ramp = grad
 	%part_back.color_ramp = grad
 	%part_forw.initial_velocity_max= shoot_speed
