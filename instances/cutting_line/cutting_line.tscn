@@ -1,19 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://cyo027m1b6j81"]
 
 [ext_resource type="Script" uid="uid://b3qx8nvephqy2" path="res://instances/cutting_line/cutting_line.gd" id="1_75mc3"]
+[ext_resource type="Gradient" uid="uid://cjmb6lmvver0n" path="res://instances/scissors/grad_cut_normal.tres" id="2_00jih"]
+[ext_resource type="Texture2D" uid="uid://c84603ba81cwn" path="res://instances/scissors/white_circle_with_space.png" id="3_3aopv"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_75mc3"]
 b = Vector2(0, 0)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lhfp8"]
 b = Vector2(0, 0)
-
-[sub_resource type="Gradient" id="Gradient_v30fi"]
-offsets = PackedFloat32Array(0, 0.273504, 0.700855, 1)
-colors = PackedColorArray(0.819608, 0, 0.180392, 1, 0.817993, 0, 0.181436, 0, 0.818097, 0, 0.181369, 0.0641026, 0.819608, 0, 0.180392, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_75mc3"]
-gradient = SubResource("Gradient_v30fi")
 
 [node name="cutting_line" type="Area2D"]
 collision_layer = 4
@@ -28,11 +23,22 @@ shape = SubResource("SegmentShape2D_75mc3")
 unique_name_in_owner = true
 shape = SubResource("SegmentShape2D_lhfp8")
 
-[node name="line" type="Line2D" parent="."]
+[node name="line_forw" type="Line2D" parent="."]
 unique_name_in_owner = true
-points = PackedVector2Array(299, 26, -99, 53)
-width = 3.0
-texture = SubResource("GradientTexture1D_75mc3")
-texture_mode = 2
+texture_repeat = 2
+points = PackedVector2Array(77, 14, -99, 53)
+width = 8.0
+gradient = ExtResource("2_00jih")
+texture = ExtResource("3_3aopv")
+texture_mode = 1
+
+[node name="line_back" type="Line2D" parent="."]
+unique_name_in_owner = true
+texture_repeat = 2
+points = PackedVector2Array(77, 14, -99, 53)
+width = 8.0
+gradient = ExtResource("2_00jih")
+texture = ExtResource("3_3aopv")
+texture_mode = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

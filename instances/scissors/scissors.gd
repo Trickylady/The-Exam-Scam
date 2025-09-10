@@ -12,11 +12,6 @@ class_name Scissors
 		scaling = val
 		if is_node_ready(): $sprite.scale = Vector2.ONE * scaling
 
-@export_range(0.25, 2.0, 0.05) var cutting_line_thickness: float = 0.6
-
-@export_subgroup("Boost")
-@export_range(300.0, 2000.0, 5.0) var cutting_base_speed: float = 800 #px/s
-@export_range(1.0, 5.0) var boost_mult: float = 2.5
 @export var is_boosting: bool = false:
 	set(val):
 		if is_boosting == val: return
@@ -55,7 +50,12 @@ var _angle_idx: int = 0:
 		_angle_idx = val
 		_update_scissors_rotation()
 
-var is_cutting: bool = false
+var is_cutting: bool = false:
+	set(val):
+		is_cutting = val
+		if not is_node_ready(): return
+		%part_forw.visible = not is_cutting
+		%part_back.visible = not is_cutting
 
 var _tw_rot: Tween
 var _hit_point_forw: Vector2
@@ -110,10 +110,9 @@ func cut() -> void:
 	is_cutting = true
 	var cutting_line: CuttingLine = preload("res://instances/cutting_line/cutting_line.tscn").instantiate()
 	cutting_line.level = level
-	cutting_line.grow_speed = cutting_base_speed
 	cutting_line.position = position
 	cutting_line.rotation = rotation
-	cutting_line.boost_mult = 1.0 if not is_boosting else boost_mult
+	cutting_line.is_boosting = is_boosting
 	cutting_line.target_segment = PackedVector2Array([_hit_point_back, _hit_point_forw])
 	cutting_line.finished.connect(_on_cutting_line_finished)
 	cutting_line.pencil_touched.connect(_on_cutting_line_pencil_touched)
@@ -132,8 +131,6 @@ func _on_cutting_line_finished() -> void:
 func _on_cutting_line_pencil_touched(pencil: Pencil) -> void:
 	is_cutting = false
 	cut_line_hit.emit(pencil)
-	if is_rotation_sequential:
-		cycle_angle(true)
 
 
 func _update_scissors_rotation() -> void:

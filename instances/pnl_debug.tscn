@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://drp0xdm87jr2j"]
+
+[ext_resource type="Script" uid="uid://twpcm4446256" path="res://instances/pnl_debug.gd" id="1_qk85j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fdae"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+bg_color = Color(0.162401, 0.417587, 0.311389, 0.490196)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qk85j"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="pnl_debug" type="PanelContainer"]
+custom_minimum_size = Vector2(360, 0)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6fdae")
+script = ExtResource("1_qk85j")
+
+[node name="vb" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="pnl_scissors" type="PanelContainer" parent="vb"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qk85j")
+
+[node name="vb" type="VBoxContainer" parent="vb/pnl_scissors"]
+layout_mode = 2
+
+[node name="lb2" type="Label" parent="vb/pnl_scissors/vb"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Scissors"
+
+[node name="sep" type="HSeparator" parent="vb/pnl_scissors/vb"]
+layout_mode = 2
+
+[node name="hb_angles" type="HBoxContainer" parent="vb/pnl_scissors/vb"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="lb" type="Label" parent="vb/pnl_scissors/vb/hb_angles"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Angles"
+
+[node name="sp_angles" type="SpinBox" parent="vb/pnl_scissors/vb/hb_angles"]
+layout_mode = 2
+min_value = 3.0
+max_value = 20.0
+value = 3.0
+
+[node name="hb_level" type="HBoxContainer" parent="vb"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="btn_go_to_level" type="Button" parent="vb/hb_level"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Go To Level"
+
+[node name="sp_level_select" type="SpinBox" parent="vb/hb_level"]
+layout_mode = 2
+min_value = 1.0
+max_value = 20.0
+value = 1.0

@@ -2,8 +2,6 @@ extends Node2D
 class_name PencilsMng
 
 
-const SLOW_MULT: float = 0.4
-
 var level: Level
 func _set_level(l: Level) -> void:
 	level = l
@@ -25,8 +23,8 @@ func setup() -> void:
 		#if node is Pencil:
 			#pencils.append(node)
 	await get_tree().process_frame
-	n_pencils = level.n * 2 + 3
-	pencils_radius = 120.0 / n_pencils
+	n_pencils = level.n + 3
+	pencils_radius = 160.0 / n_pencils
 	pencils_speed = 300.0 + 100 * level.n
 	for i in n_pencils:
 		spawn_pencil(pencils_radius, pencils_speed)
@@ -51,7 +49,7 @@ func spawn_pencil(radius: float, speed: float) -> void:
 func start_slow() -> void:
 	is_slow_active = true
 	_tmr_slow.start()
-	var slow_speed: float = pencils_speed * SLOW_MULT
+	var slow_speed: float = pencils_speed * Mng.slow_pencils_mult
 	if _tw_slow:
 		_tw_slow.kill()
 	_tw_slow = create_tween()

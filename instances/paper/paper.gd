@@ -2,8 +2,6 @@ extends TextureRect
 class_name Paper
 
 
-@export_range(1.0, 16.0, 0.5) var slit_thickness = 10.0 #px
-
 @onready var cut_polygons: Node2D = %cut_polygons
 @onready var mask_polys: Node2D = %mask_polys
 
@@ -106,7 +104,7 @@ func cut_along_segment(seg: PackedVector2Array, at_point: Vector2) -> void:
 	var target := paper_regions[target_idx]
 
 	# 2) Build a finite slit along the actual cut segment and apply it only to the target
-	var slit := segment_to_strip(seg, slit_thickness, slit_thickness * 0.5)
+	var slit := segment_to_strip(seg, Mng.cut_thickness, Mng.cut_thickness * 0.5)
 
 	# Pieces actually removed by the slit (for area/signal/visuals)
 	var slit_removed_now: Array[PackedVector2Array] = Geometry2D.intersect_polygons(target, slit)

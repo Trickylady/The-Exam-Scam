@@ -7,20 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://duhskn1vf50m" path="res://images/adderall.png" id="4_34k8l"]
 [ext_resource type="Texture2D" uid="uid://lpikyaamp1c0" path="res://images/xanax.png" id="5_ingsw"]
 [ext_resource type="Texture2D" uid="uid://beusq0j4xbp6l" path="res://images/menu button.png" id="6_7kkmc"]
+[ext_resource type="PackedScene" uid="uid://drp0xdm87jr2j" path="res://instances/pnl_debug.tscn" id="8_34k8l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_34k8l"]
 font_size = 28
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fdae"]
-content_margin_left = 24.0
-content_margin_top = 24.0
-content_margin_right = 24.0
-content_margin_bottom = 24.0
-bg_color = Color(0.162401, 0.417587, 0.311389, 0.490196)
-corner_radius_top_left = 24
-corner_radius_top_right = 24
-corner_radius_bottom_right = 24
-corner_radius_bottom_left = 24
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -190,32 +180,13 @@ offset_right = 140.0
 offset_bottom = 540.0
 texture_normal = ExtResource("6_7kkmc")
 
-[node name="pnl_debug" type="PanelContainer" parent="."]
+[node name="pnl_debug" parent="." instance=ExtResource("8_34k8l")]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(360, 0)
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_6fdae")
-
-[node name="vb" type="VBoxContainer" parent="pnl_debug"]
-layout_mode = 2
-
-[node name="hb_level" type="HBoxContainer" parent="pnl_debug/vb"]
-layout_mode = 2
-size_flags_vertical = 10
-
-[node name="btn_go_to_level" type="Button" parent="pnl_debug/vb/hb_level"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Go To Level"
-
-[node name="sp_level_select" type="SpinBox" parent="pnl_debug/vb/hb_level"]
-layout_mode = 2
-min_value = 1.0
-max_value = 20.0
-value = 1.0
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 360.0
+grow_horizontal = 1
+grow_vertical = 1

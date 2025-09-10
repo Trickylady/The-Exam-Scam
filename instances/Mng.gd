@@ -1,27 +1,36 @@
 #Singleton Mng.gd
 extends Node
 
-
 var is_debug_build: bool = true
+
+# Game modifiers
 var is_family_friendly: bool = true
+var max_levels: int = 10 # when the game ends
+var max_lives: int = 5 # can't collect more than this
+var max_boosts: int = 5
+var max_slows: int = 5
+var init_boosts: int = 1 # the game starts with
+var init_slows: int = 1
 
+# Scissors
+var cutting_grow_speed_base = 800 # px/s
+var cutting_grow_speed_mult = 2.5 # multiplier
+var cut_thickness: float = 10.0
 
-const MAX_LEVELS = 10
-const MAX_LIVES = 5
-const MAX_BOOSTS = 5
-const MAX_SLOWS = 5
-const INIT_BOOSTS = 1
-const INIT_SLOWS = 1
+# Power-ups
+var slow_pencils_mult: float = 0.25
+
 
 var current_level_n: int
+var scores: Dictionary = {}
 var score: int:
 	set(val): score = val; score_updated.emit()
 var lives: int:
-	set(val): lives = clamp(val, 0, MAX_LIVES); lives_updated.emit()
+	set(val): lives = clamp(val, 0, max_lives); lives_updated.emit()
 var boost_n: int:
-	set(val): boost_n = clamp(val, 0, MAX_BOOSTS); boost_n_updated.emit()
+	set(val): boost_n = clamp(val, 0, max_boosts); boost_n_updated.emit()
 var slow_n: int:
-	set(val): slow_n = clamp(val, 0, MAX_SLOWS); slow_n_updated.emit()
+	set(val): slow_n = clamp(val, 0, max_slows); slow_n_updated.emit()
 signal score_updated
 signal lives_updated
 signal boost_n_updated
@@ -30,11 +39,10 @@ signal slow_n_updated
 const LEVEL_PCK = preload("res://instances/level.tscn")
 var level: Level
 
-var start_from_level = 0
+
+
 func _ready() -> void:
 	reset_stats()
-	if start_from_level:
-		go_to_level(start_from_level)
 
 
 func start_game() -> void:
@@ -43,11 +51,12 @@ func start_game() -> void:
 
 
 func reset_stats() -> void:
+	scores = {}
 	score = 0
 	lives = 4
 	current_level_n = 1
-	boost_n = INIT_BOOSTS
-	slow_n = INIT_SLOWS
+	boost_n = init_boosts
+	slow_n = init_slows
 
 
 func go_to_main_menu() -> void:
@@ -69,7 +78,7 @@ func go_to_level(level_n: int) -> void:
 
 
 func _on_level_won() -> void:
-	if current_level_n == MAX_LEVELS:
+	if current_level_n == max_levels:
 		go_to_main_menu()
 		#TODO: go to win page
 	go_to_level(current_level_n + 1)
