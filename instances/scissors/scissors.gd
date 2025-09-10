@@ -6,6 +6,7 @@ class_name Scissors
 @export var debug: bool = false
 
 @export_range(3, 10) var n_angles: int = 4
+@export var is_rotation_sequential: bool = true
 @export_range(0.25, 2.0, 0.05) var scaling: float = 0.6:
 	set(val):
 		scaling = val
@@ -127,11 +128,15 @@ func cut() -> void:
 
 func _on_cutting_line_finished() -> void:
 	is_cutting = false
+	if is_rotation_sequential:
+		cycle_angle(false)
 
 
 func _on_cutting_line_pencil_touched(pencil: Pencil) -> void:
 	is_cutting = false
 	cut_line_hit.emit(pencil)
+	if is_rotation_sequential:
+		cycle_angle(true)
 
 
 func _update_scissors_rotation() -> void:
@@ -171,8 +176,9 @@ func _update_capture_mouse() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed(&"rotate_c"): cycle_angle(true)
-	elif event.is_action_pressed(&"rotate_cc"): cycle_angle(false)
+	if not is_rotation_sequential:
+		if event.is_action_pressed(&"rotate_c"): cycle_angle(true)
+		elif event.is_action_pressed(&"rotate_cc"): cycle_angle(false)
 	if event is InputEventMouseButton:
 		if not level.paper.is_point_in_paper(event.position): return
 		if event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
