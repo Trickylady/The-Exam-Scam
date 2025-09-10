@@ -22,7 +22,7 @@ signal collected(powerup: Powerup)
 
 
 func _ready() -> void:
-	$tmr_despawn.wait_time = 5 #seconds
+	$tmr_despawn.wait_time = Mng.powerup_despawn_time
 	$tmr_despawn.timeout.connect(_on_tmr_despawn_timeout)
 	assign_image()
 	if not level: return
@@ -38,8 +38,6 @@ func _on_paper_removed(polygon: PackedVector2Array) -> void:
 
 
 func assign_image() -> void:
-	if not type:
-		return
 	match type:
 		Type.LIFE: $sprite.texture = IMGS.Lives
 		Type.BOOST: $sprite.texture = IMGS.Boosts

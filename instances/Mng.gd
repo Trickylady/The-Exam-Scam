@@ -11,13 +11,28 @@ var max_boosts: int = 5
 var max_slows: int = 5
 var init_boosts: int = 1 # the game starts with
 var init_slows: int = 1
+var goal_completion: float = 0.75 # 0 to 1 (percentage to win the level)
 
 # Scissors
+var scissors_angles_num: int = 5
+var scissors_rotation_sequential: bool = true
+var scissors_scaling: float = 0.6:
+	set(val): scissors_scaling = val; if level: level.scissors.update_scale()
 var cutting_grow_speed_base = 800 # px/s
 var cutting_grow_speed_mult = 2.5 # multiplier
 var cut_thickness: float = 10.0
 
+# Pencils
+
 # Power-ups
+var powerup_spaw_probabilities = {
+	Powerup.Type.LIFE: 0.0,
+	Powerup.Type.BOOST: 0.0,
+	Powerup.Type.SLOW: 0.0,
+}
+var powerup_spawn_new_time: float = 5.0 # sec
+var powerup_despawn_time: float = 5.0 # sec
+var pencils_slow_duration: float = 10.0 # sec
 var slow_pencils_mult: float = 0.25
 
 

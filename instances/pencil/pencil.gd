@@ -18,6 +18,7 @@ const SAFE_MARGIN := 0.001
 const MAX_BOUNCES_PER_FRAME := 8
 const EPS := 1e-6
 
+
 func _ready() -> void:
 	if Engine.is_editor_hint(): return
 	# Random initial direction and velocity

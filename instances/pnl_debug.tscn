@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://drp0xdm87jr2j"]
+[gd_scene load_steps=9 format=3 uid="uid://drp0xdm87jr2j"]
 
+[ext_resource type="Theme" uid="uid://bdlo068qgnv34" path="res://hud.theme" id="1_4c6qb"]
 [ext_resource type="Script" uid="uid://twpcm4446256" path="res://instances/pnl_debug.gd" id="1_qk85j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fdae"]
@@ -7,26 +8,45 @@ content_margin_left = 24.0
 content_margin_top = 24.0
 content_margin_right = 24.0
 content_margin_bottom = 24.0
-bg_color = Color(0.162401, 0.417587, 0.311389, 0.490196)
+bg_color = Color(0.0941176, 0.411765, 0.419608, 0.486275)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 corner_radius_top_left = 24
 corner_radius_top_right = 24
 corner_radius_bottom_right = 24
 corner_radius_bottom_left = 24
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_4c6qb"]
+color = Color(0.0942836, 0.412665, 0.420865, 1)
+
+[sub_resource type="Theme" id="Theme_b041p"]
+default_font_size = 14
+HSeparator/styles/separator = SubResource("StyleBoxLine_4c6qb")
+
+[sub_resource type="LabelSettings" id="LabelSettings_nltuj"]
+outline_size = 7
+outline_color = Color(0.152941, 0.2, 0.180392, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qk85j"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
 draw_center = false
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_ff5oh"]
+outline_size = 5
+outline_color = Color(0.152941, 0.2, 0.180392, 1)
 
 [node name="pnl_debug" type="PanelContainer"]
 custom_minimum_size = Vector2(360, 0)
@@ -36,11 +56,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
+theme = ExtResource("1_4c6qb")
 theme_override_styles/panel = SubResource("StyleBoxFlat_6fdae")
 script = ExtResource("1_qk85j")
 
 [node name="vb" type="VBoxContainer" parent="."]
 layout_mode = 2
+theme = SubResource("Theme_b041p")
+
+[node name="lb3" type="Label" parent="vb"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Debug"
+label_settings = SubResource("LabelSettings_nltuj")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="pnl_scissors" type="PanelContainer" parent="vb"]
 layout_mode = 2
@@ -53,6 +83,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Scissors"
+label_settings = SubResource("LabelSettings_ff5oh")
 
 [node name="sep" type="HSeparator" parent="vb/pnl_scissors/vb"]
 layout_mode = 2
@@ -82,7 +113,10 @@ size_flags_horizontal = 3
 text = "Go To Level"
 
 [node name="sp_level_select" type="SpinBox" parent="vb/hb_level"]
+unique_name_in_owner = true
 layout_mode = 2
 min_value = 1.0
 max_value = 20.0
 value = 1.0
+
+[connection signal="pressed" from="vb/hb_level/btn_go_to_level" to="." method="_on_btn_go_to_level_pressed"]

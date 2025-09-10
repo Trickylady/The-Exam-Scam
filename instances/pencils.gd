@@ -23,7 +23,7 @@ func setup() -> void:
 		#if node is Pencil:
 			#pencils.append(node)
 	await get_tree().process_frame
-	n_pencils = level.n + 3
+	n_pencils = level.n + 3 # TODO: Balance pencils formula
 	pencils_radius = 160.0 / n_pencils
 	pencils_speed = 300.0 + 100 * level.n
 	for i in n_pencils:
@@ -31,7 +31,7 @@ func setup() -> void:
 	
 	if not level.is_node_ready(): await level.ready
 	_tmr_slow = Timer.new()
-	_tmr_slow.wait_time = 5 #seconds
+	_tmr_slow.wait_time = Mng.pencils_slow_duration
 	_tmr_slow.one_shot = true
 	_tmr_slow.timeout.connect(_on_tmr_slow_timeout)
 	add_child(_tmr_slow)
@@ -44,6 +44,11 @@ func spawn_pencil(radius: float, speed: float) -> void:
 	new_pencil.position = level.paper.get_random_point_in_paper()
 	pencils.append(new_pencil)
 	add_child(new_pencil)
+
+
+func resize_pencils(radius: float) -> void:
+	for pencil: Pencil in pencils:
+		pencil.radius = radius
 
 
 func start_slow() -> void:

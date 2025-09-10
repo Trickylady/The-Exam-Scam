@@ -8,8 +8,6 @@ class_name Level
 
 @export var n: int = 1
 
-var goal_completion: float = 0.75 # 0 to 1
-
 signal level_won
 signal level_lost
 
@@ -58,5 +56,5 @@ func _on_scissors_line_hit(_pencil: Pencil) -> void:
 
 
 func _on_paper_area_updated() -> void:
-	if paper.completed_ratio > goal_completion:
+	if paper.completed_ratio > Mng.goal_completion:
 		level_won.emit()

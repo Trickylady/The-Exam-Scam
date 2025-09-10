@@ -5,13 +5,6 @@ class_name Scissors
 
 @export var debug: bool = false
 
-@export_range(3, 10) var n_angles: int = 4
-@export var is_rotation_sequential: bool = true
-@export_range(0.25, 2.0, 0.05) var scaling: float = 0.6:
-	set(val):
-		scaling = val
-		if is_node_ready(): $sprite.scale = Vector2.ONE * scaling
-
 @export var is_boosting: bool = false:
 	set(val):
 		if is_boosting == val: return
@@ -67,10 +60,15 @@ signal cut_line_hit(pencil: Pencil)
 func setup() -> void:
 	_update_capture_mouse()
 	visibility_changed.connect(_update_capture_mouse)
-	var increment: float = TAU / n_angles
-	for i in n_angles:
+	var increment: float = TAU / Mng.scissors_angles_num
+	for i in Mng.scissors_angles_num:
 		var angle: float = increment * i
 		angles.append(angle)
+	update_scale()
+
+
+func update_scale() -> void:
+	$sprite.scale = Vector2.ONE * Mng.scissors_scaling
 
 
 func _process(_delta: float) -> void:
@@ -124,7 +122,7 @@ func cut() -> void:
 
 func _on_cutting_line_finished() -> void:
 	is_cutting = false
-	if is_rotation_sequential:
+	if Mng.scissors_rotation_sequential:
 		cycle_angle(false)
 
 
@@ -170,7 +168,7 @@ func _update_capture_mouse() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if not is_rotation_sequential:
+	if not Mng.scissors_rotation_sequential:
 		if event.is_action_pressed(&"rotate_c"): cycle_angle(true)
 		elif event.is_action_pressed(&"rotate_cc"): cycle_angle(false)
 	if event.is_action_pressed(&"boost_speed"):

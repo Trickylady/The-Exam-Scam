@@ -8,4 +8,8 @@ func _set_level(l: Level) -> void:
 
 
 func setup() -> void:
-	pass
+	Mng
+
+
+func _on_btn_go_to_level_pressed() -> void:
+	Mng.go_to_level(int(%sp_level_select.value))
