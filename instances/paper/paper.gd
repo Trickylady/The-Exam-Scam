@@ -38,6 +38,7 @@ signal available_area_updated
 
 func setup() -> void:
 	available_area_updated.connect(_on_available_area_updated)
+	paper_removed.connect(_on_paper_removed)
 	
 	# mask
 	clear_cut_visuals()
@@ -72,6 +73,14 @@ func setup() -> void:
 
 func _on_available_area_updated() -> void:
 	pass
+
+
+func _on_paper_removed(poly_removed: PackedVector2Array) -> void:
+	@warning_ignore("integer_division")
+	var removed_area: float = polygon_area_shoelace(poly_removed)
+	var removed_area_ratio: float = removed_area/initial_available_area
+	var delta_score: int = int(floor(1000 * removed_area_ratio))
+	Mng.score += delta_score
 
 
 func cut_out_ui_polygon_from_field(_poly: PackedVector2Array) -> void:

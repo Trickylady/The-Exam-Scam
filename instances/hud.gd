@@ -1,11 +1,6 @@
 extends Control
 class_name HUD
 
-const IMGS = {
-	"Lives": preload("res://images/1up.png"),
-	"Boosts": preload("res://images/adderall.png"),
-	"Slows": preload("res://images/xanax.png"),
-}
 
 @onready var coll_poly: PackedVector2Array = %coll.polygon
 
@@ -57,15 +52,15 @@ func update_scores() -> void:
 func update_lives() -> void:
 	_clear_container(%hb_lives)
 	for i in Mng.lives:
-		_add_icon_to_container(IMGS.Lives, %hb_lives)
+		_add_icon_to_container(Powerup.IMGS.Lives, %hb_lives)
 func update_boosts() -> void:
 	_clear_container(%hb_boosts)
 	for i in Mng.boost_n:
-		_add_icon_to_container(IMGS.Boosts, %hb_boosts)
+		_add_icon_to_container(Powerup.IMGS.Boosts, %hb_boosts)
 func update_slows() -> void:
 	_clear_container(%hb_slows)
 	for i in Mng.slow_n:
-		_add_icon_to_container(IMGS.Slows, %hb_slows)
+		_add_icon_to_container(Powerup.IMGS.Slows, %hb_slows)
 
 
 func _on_paper_available_area_updated() -> void:

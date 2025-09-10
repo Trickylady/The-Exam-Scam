@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://b28bmchawkfsp"]
+[gd_scene load_steps=15 format=3 uid="uid://b28bmchawkfsp"]
 
 [ext_resource type="Script" uid="uid://cnk87sgpisjhi" path="res://instances/level.gd" id="1_km5ld"]
 [ext_resource type="Texture2D" uid="uid://gtdrrp48pygl" path="res://images/paper_background.png" id="2_i2t4f"]
 [ext_resource type="PackedScene" uid="uid://bksovv428cjmm" path="res://instances/paper/paper.tscn" id="3_8cye3"]
 [ext_resource type="Shader" uid="uid://c3v10btwbwaao" path="res://instances/paper/paper.gdshader" id="4_2orkt"]
+[ext_resource type="Script" uid="uid://2sqtxwso132e" path="res://instances/powerups_mng.gd" id="5_8omac"]
 [ext_resource type="Script" uid="uid://lbfuoeni3ggh" path="res://instances/pencils.gd" id="5_aicyk"]
 [ext_resource type="PackedScene" uid="uid://1fbulaq66v6h" path="res://instances/pencil/pencil.tscn" id="6_8b0r0"]
 [ext_resource type="PackedScene" uid="uid://dgnxkyyvguc5n" path="res://instances/scissors/scissors.tscn" id="7_h6smj"]
 [ext_resource type="PackedScene" uid="uid://di6fx5kumhr0b" path="res://instances/hud.tscn" id="8_v5j5c"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bfqc1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8omac"]
 resource_local_to_scene = true
 shader = ExtResource("4_2orkt")
 shader_parameter/invert_mask = true
@@ -37,6 +38,7 @@ script = ExtResource("1_km5ld")
 n = 10
 
 [node name="bg" type="TextureRect" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,8 +51,11 @@ stretch_mode = 6
 
 [node name="paper" parent="." instance=ExtResource("3_8cye3")]
 unique_name_in_owner = true
-material = SubResource("ShaderMaterial_bfqc1")
+material = SubResource("ShaderMaterial_8omac")
 layout_mode = 1
+
+[node name="powerups" type="Node2D" parent="."]
+script = ExtResource("5_8omac")
 
 [node name="pencils_mng" type="Node2D" parent="."]
 unique_name_in_owner = true

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bftt8wur8evey" path="res://images/scissors_horizontal.png" id="1_keus3"]
 [ext_resource type="Script" uid="uid://bcms7unw38lsu" path="res://instances/scissors/scissors.gd" id="1_xflwj"]
 [ext_resource type="Texture2D" uid="uid://b0gq1c7osrmls" path="res://instances/scissors/white_circle.png" id="2_kdba0"]
-[ext_resource type="Gradient" uid="uid://dkpt1t6ueaq7r" path="res://instances/scissors/grad_shoot_boost.tres" id="3_88iph"]
+[ext_resource type="Gradient" uid="uid://07ksgp4q8ky5" path="res://instances/scissors/grad_shoot_normal.tres" id="3_2hy5a"]
 
 [sub_resource type="Curve" id="Curve_jgkka"]
 _data = [Vector2(0, 0), 0.0, 17.6506, 0, 0, Vector2(0.191406, 1), -0.376264, -0.376264, 0, 0, Vector2(1, 0), -0.345343, 0.0, 0, 0]
@@ -12,7 +12,6 @@ point_count = 3
 [node name="scissors" type="Node2D"]
 script = ExtResource("1_xflwj")
 n_angles = 5
-is_boosting = true
 
 [node name="part_forw" type="CPUParticles2D" parent="."]
 unique_name_in_owner = true
@@ -24,12 +23,12 @@ speed_scale = 3.0
 local_coords = true
 spread = 0.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 90.0
-initial_velocity_max = 90.0
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
 scale_amount_min = 0.2
 scale_amount_max = 0.2
 scale_amount_curve = SubResource("Curve_jgkka")
-color_ramp = ExtResource("3_88iph")
+color_ramp = ExtResource("3_2hy5a")
 
 [node name="part_back" type="CPUParticles2D" parent="."]
 unique_name_in_owner = true
@@ -42,12 +41,12 @@ speed_scale = 3.0
 local_coords = true
 spread = 0.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 90.0
-initial_velocity_max = 90.0
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
 scale_amount_min = 0.2
 scale_amount_max = 0.2
 scale_amount_curve = SubResource("Curve_jgkka")
-color_ramp = ExtResource("3_88iph")
+color_ramp = ExtResource("3_2hy5a")
 
 [node name="sprite" type="Sprite2D" parent="."]
 position = Vector2(-3, 1)

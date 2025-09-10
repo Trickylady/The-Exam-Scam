@@ -27,6 +27,11 @@ func setup() -> void:
 	_assign_references()
 	_connect_signals()
 	_update_world_boundaries()
+	var bg_idx: int = (n-1) % 3
+	match bg_idx:
+		0: %bg.texture = preload("res://images/paper_background.png")
+		1: %bg.texture = preload("res://images/paper_background_2.png")
+		2: %bg.texture = preload("res://images/paper_background_3.png")
 
 
 func _assign_references() -> void:

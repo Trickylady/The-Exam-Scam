@@ -77,7 +77,6 @@ func _process(_delta: float) -> void:
 	if Engine.is_editor_hint(): return
 	if is_cutting: return
 	position = get_global_mouse_position()
-	is_boosting = Input.is_action_pressed(&"boost_speed")
 	if debug:
 		queue_redraw()
 
@@ -119,6 +118,9 @@ func cut() -> void:
 	cutting_line.finished.connect(_on_cutting_line_finished)
 	cutting_line.pencil_touched.connect(_on_cutting_line_pencil_touched)
 	level.add_child(cutting_line)
+	if is_boosting:
+		is_boosting = false
+		Mng.boost_n -= 1
 
 
 func _on_cutting_line_finished() -> void:
@@ -174,6 +176,12 @@ func _input(event: InputEvent) -> void:
 	if not is_rotation_sequential:
 		if event.is_action_pressed(&"rotate_c"): cycle_angle(true)
 		elif event.is_action_pressed(&"rotate_cc"): cycle_angle(false)
+	if event.is_action_pressed(&"boost_speed"):
+		var can_boost: bool = Mng.boost_n > 0
+		if can_boost and not is_boosting:
+			is_boosting = true
+		elif is_boosting:
+			is_boosting = false
 	if event is InputEventMouseButton:
 		if not level.paper.is_point_in_paper(event.position): return
 		if event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
