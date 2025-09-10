@@ -1,11 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://di6fx5kumhr0b"]
+[gd_scene load_steps=10 format=3 uid="uid://di6fx5kumhr0b"]
 
 [ext_resource type="Script" uid="uid://bseg1kq1i6e2j" path="res://instances/hud.gd" id="1_hvx1s"]
+[ext_resource type="Theme" uid="uid://bdlo068qgnv34" path="res://hud.theme" id="1_sjqol"]
 [ext_resource type="Texture2D" uid="uid://dpbukxlonryia" path="res://images/overlay_game.png" id="2_6fdae"]
 [ext_resource type="Texture2D" uid="uid://wsvetbndxt2e" path="res://images/1up.png" id="3_sjqol"]
 [ext_resource type="Texture2D" uid="uid://duhskn1vf50m" path="res://images/adderall.png" id="4_34k8l"]
 [ext_resource type="Texture2D" uid="uid://lpikyaamp1c0" path="res://images/xanax.png" id="5_ingsw"]
 [ext_resource type="Texture2D" uid="uid://beusq0j4xbp6l" path="res://images/menu button.png" id="6_7kkmc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_34k8l"]
+font_size = 28
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fdae"]
 content_margin_left = 24.0
@@ -25,6 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_sjqol")
 script = ExtResource("1_hvx1s")
 
 [node name="coll" type="CollisionPolygon2D" parent="."]
@@ -46,23 +51,135 @@ offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 0
 max_value = 1.0
+show_percentage = false
 
 [node name="overlay" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_6fdae")
 
-[node name="1Up" type="Sprite2D" parent="overlay"]
-position = Vector2(155, 153)
+[node name="lb_level_n" type="Label" parent="overlay"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 178.0
+offset_top = 26.0
+offset_right = 233.0
+offset_bottom = 66.0
+text = "3"
+label_settings = SubResource("LabelSettings_34k8l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hb_scores" type="HBoxContainer" parent="overlay"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 182.0
+offset_top = 83.0
+offset_right = 310.0
+offset_bottom = 123.0
+theme_override_constants/separation = 1
+
+[node name="lb_score_1" type="Label" parent="overlay/hb_scores"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "1"
+label_settings = SubResource("LabelSettings_34k8l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lb_score_2" type="Label" parent="overlay/hb_scores"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "1"
+label_settings = SubResource("LabelSettings_34k8l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lb_score_3" type="Label" parent="overlay/hb_scores"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "1"
+label_settings = SubResource("LabelSettings_34k8l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lb_score_4" type="Label" parent="overlay/hb_scores"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "1"
+label_settings = SubResource("LabelSettings_34k8l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hb_lives" type="HBoxContainer" parent="overlay"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 126.0
+offset_top = 132.0
+offset_right = 176.0
+offset_bottom = 181.0
+theme_override_constants/separation = 8
+
+[node name="1Up" type="TextureRect" parent="overlay/hb_lives"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
 texture = ExtResource("3_sjqol")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="Adderall" type="Sprite2D" parent="overlay"]
-position = Vector2(63, 302)
+[node name="1Up2" type="TextureRect" parent="overlay/hb_lives"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+texture = ExtResource("3_sjqol")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="1Up3" type="TextureRect" parent="overlay/hb_lives"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+texture = ExtResource("3_sjqol")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="1Up4" type="TextureRect" parent="overlay/hb_lives"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+texture = ExtResource("3_sjqol")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="hb_boosts" type="HBoxContainer" parent="overlay"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 38.0
+offset_top = 271.0
+offset_right = 206.0
+offset_bottom = 320.0
+theme_override_constants/separation = 8
+
+[node name="ico1" type="TextureRect" parent="overlay/hb_boosts"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
 texture = ExtResource("4_34k8l")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="Xanax" type="Sprite2D" parent="overlay"]
-position = Vector2(63, 427)
+[node name="hb_slows" type="HBoxContainer" parent="overlay"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 37.0
+offset_top = 400.0
+offset_right = 205.0
+offset_bottom = 449.0
+theme_override_constants/separation = 8
+
+[node name="ico1" type="TextureRect" parent="overlay/hb_slows"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
 texture = ExtResource("5_ingsw")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="gomenubutton" type="TextureButton" parent="overlay"]
 unique_name_in_owner = true
@@ -85,9 +202,20 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6fdae")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="pnl_debug"]
+[node name="vb" type="VBoxContainer" parent="pnl_debug"]
 layout_mode = 2
 
-[node name="btn_go_to_level" type="Button" parent="pnl_debug/VBoxContainer"]
+[node name="hb_level" type="HBoxContainer" parent="pnl_debug/vb"]
 layout_mode = 2
+size_flags_vertical = 10
+
+[node name="btn_go_to_level" type="Button" parent="pnl_debug/vb/hb_level"]
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Go To Level"
+
+[node name="sp_level_select" type="SpinBox" parent="pnl_debug/vb/hb_level"]
+layout_mode = 2
+min_value = 1.0
+max_value = 20.0
+value = 1.0

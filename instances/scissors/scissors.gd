@@ -64,11 +64,6 @@ var _hit_point_back: Vector2
 signal cut_line_hit(pencil: Pencil)
 
 
-func _ready() -> void:
-	# only game logic here
-	if Engine.is_editor_hint(): return
-
-
 func setup() -> void:
 	_update_capture_mouse()
 	visibility_changed.connect(_update_capture_mouse)

@@ -49,3 +49,5 @@ text = "The
 Exam 
 Scam"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="playbutton" to="." method="_on_playbutton_pressed"]

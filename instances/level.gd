@@ -8,6 +8,11 @@ class_name Level
 
 @export var n: int = 1
 
+var goal_completion: float = 0.75 # 0 to 1
+
+signal level_won
+signal level_lost
+
 
 var pencils: Array[Pencil]:
 	get: return pencils_mng.pencils
@@ -26,13 +31,12 @@ func setup() -> void:
 
 func _assign_references() -> void:
 	propagate_call("_set_level", [self], true)
-	#paper.level = self
-	#scissors.level = self
-	#hud.level = self
 
 
 func _connect_signals() -> void:
 	item_rect_changed.connect(_update_world_boundaries)
+	scissors.cut_line_hit.connect(_on_scissors_line_hit)
+	paper.available_area_updated.connect(_on_paper_area_updated)
 
 
 func _update_world_boundaries() -> void:
@@ -40,3 +44,14 @@ func _update_world_boundaries() -> void:
 	%coll_bot.position.y = size.y
 	%coll_right.position.x = size.x
 #endregion
+
+
+func _on_scissors_line_hit(_pencil: Pencil) -> void:
+	Mng.lives -= 1
+	if Mng.lives <= 0:
+		level_lost.emit()
+
+
+func _on_paper_area_updated() -> void:
+	if paper.completed_ratio > goal_completion:
+		level_won.emit()

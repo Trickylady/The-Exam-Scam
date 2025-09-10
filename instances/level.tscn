@@ -71,7 +71,6 @@ speed = 199.5
 [node name="scissors" parent="." instance=ExtResource("7_h6smj")]
 unique_name_in_owner = true
 position = Vector2(323, 234)
-is_rotation_sequential = true
 
 [node name="world_boundaries" type="StaticBody2D" parent="."]
 

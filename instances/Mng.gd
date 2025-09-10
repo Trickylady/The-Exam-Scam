@@ -10,11 +10,19 @@ const MAX_LIVES = 4
 const INIT_BOOSTS = 4
 const INIT_SLOWS = 4
 
-var score: int
-var lives: int
 var current_level_n: int
-var boost_n: int
-var slow_n: int
+var score: int:
+	set(val): score = val; score_updated.emit()
+var lives: int:
+	set(val): lives = val; lives_updated.emit()
+var boost_n: int:
+	set(val): boost_n = val; boost_n_updated.emit()
+var slow_n: int:
+	set(val): slow_n = val; slow_n_updated.emit()
+signal score_updated
+signal lives_updated
+signal boost_n_updated
+signal slow_n_updated
 
 const LEVEL_PCK = preload("res://instances/level.tscn")
 var level: Level
@@ -26,9 +34,14 @@ func _ready() -> void:
 		go_to_level(start_from_level)
 
 
+func start_game() -> void:
+	reset_stats()
+	Mng.go_to_level(1)
+
+
 func reset_stats() -> void:
 	score = 0
-	lives = MAX_LIVES
+	lives = 4
 	current_level_n = 1
 	boost_n = INIT_BOOSTS
 	slow_n = INIT_SLOWS
