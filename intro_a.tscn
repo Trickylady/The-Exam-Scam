@@ -1323,7 +1323,7 @@ tracks/49/path = NodePath("TextBox1:position")
 tracks/49/interp = 1
 tracks/49/loop_wrap = true
 tracks/49/keys = {
-"times": PackedFloat32Array(0, 7, 7.5, 9.99074, 10.5, 13.5, 14.0022, 14.5, 19, 19.5, 20.0038),
+"times": PackedFloat32Array(0, 7, 7.5, 10.9415, 11.4508, 15.2841, 15.7863, 16.2841, 22.6333, 23.1333, 23.6371),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1539, 250), Vector2(1539, 250), Vector2(314, 831), Vector2(314, 831), Vector2(956, 116), Vector2(956, 116), Vector2(1000, 983), Vector2(1000, 983), Vector2(1000, 983), Vector2(1684, 160), Vector2(1684, 160)]
@@ -1335,7 +1335,7 @@ tracks/50/path = NodePath("TextBox1:rotation")
 tracks/50/interp = 1
 tracks/50/loop_wrap = true
 tracks/50/keys = {
-"times": PackedFloat32Array(0, 7, 7.5, 9.99074, 10.5, 19, 19.5, 20.0038),
+"times": PackedFloat32Array(0, 7, 7.5, 10.9415, 11.4508, 22.6333, 23.1333, 23.6371),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.316787, 0.316787, -0.402805, -0.402805, 0.0, 0.0, 0.326766, 0.326766]
@@ -1347,7 +1347,7 @@ tracks/51/path = NodePath("TextBox1:modulate")
 tracks/51/interp = 1
 tracks/51/loop_wrap = true
 tracks/51/keys = {
-"times": PackedFloat32Array(0, 1, 1.5, 7, 7.5, 8.01, 10, 10.5, 11, 13.5, 14, 14.4967, 19, 19.5, 20.0038),
+"times": PackedFloat32Array(0, 1, 1.5, 7, 7.5, 8.01, 10.9508, 11.4508, 11.9508, 15.2841, 15.7841, 16.2808, 22.6333, 23.1333, 23.6371),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -1359,7 +1359,7 @@ tracks/52/path = NodePath("TextBox1:scale")
 tracks/52/interp = 1
 tracks/52/loop_wrap = true
 tracks/52/keys = {
-"times": PackedFloat32Array(0, 1, 1.5, 7, 7.5, 8, 9.99074, 10.5, 10.9946, 13.5, 14.0011, 14.5, 19, 19.5, 20.0038),
+"times": PackedFloat32Array(0, 1, 1.5, 7, 7.5, 8, 10.9415, 11.4508, 11.9454, 15.2841, 15.7852, 16.2841, 22.6333, 23.1333, 23.6371),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1.00136e-05, 1.00136e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1)]
@@ -1371,7 +1371,7 @@ tracks/53/path = NodePath("TextBox1:visible")
 tracks/53/interp = 1
 tracks/53/loop_wrap = true
 tracks/53/keys = {
-"times": PackedFloat32Array(0, 7, 7.5, 10, 10.5052, 13.5, 14.0011, 19, 19.5),
+"times": PackedFloat32Array(0, 7, 7.5, 10.9508, 11.456, 15.2841, 15.7852, 22.6333, 23.1333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [true, false, true, false, true, false, true, false, true]
@@ -1383,8 +1383,8 @@ tracks/54/path = NodePath("TextBox1/subtitles:text")
 tracks/54/interp = 1
 tracks/54/loop_wrap = true
 tracks/54/keys = {
-"times": PackedFloat32Array(0, 7.5, 8, 10.5, 13.5109, 14, 15, 15.5, 16, 17, 17.0056, 19, 19.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 7.5, 8, 11.4508, 15.295, 15.7841, 16.7841, 17.2841, 17.7841, 19.2841, 19.2897, 22.6333, 23.1333, 25.2667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": ["
 
@@ -1399,7 +1399,7 @@ paper.", "[center]
 
 Now all he's gotta do is
 write down the answers
-to the [shake]fucking[/shake] questions
+to the [shake]f*cking[/shake] questions
 on the blackboard, yeah.", "[center]
 
 Now all he's gotta do is
@@ -1432,7 +1432,11 @@ on, you [shake]f*cking b*ll*nd?![/shake]", "[center]
 
 
 Maybe your mate Paul
-has some extra papers?"]
+has some extra papers?", "[center] 
+
+
+Not your mate and he doesn't have them
+either?"]
 }
 tracks/55/type = "value"
 tracks/55/imported = false
@@ -1441,10 +1445,10 @@ tracks/55/path = NodePath("TextBox1/subtitles:visible")
 tracks/55/interp = 1
 tracks/55/loop_wrap = true
 tracks/55/keys = {
-"times": PackedFloat32Array(0, 2, 7, 8, 10.5095, 11.5, 13.494, 14.9987, 15.5, 16, 17.0056, 17.5, 19, 20),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2, 7, 8, 11.4603, 12.4508, 15.2781, 16.2879, 17.2841, 17.7841, 19.2897, 19.7841, 22.6333, 23.6333, 25.0102, 25.4996),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true]
 }
 tracks/56/type = "value"
 tracks/56/imported = false
@@ -1453,10 +1457,10 @@ tracks/56/path = NodePath("TextBox1/subtitles:visible_characters")
 tracks/56/interp = 1
 tracks/56/loop_wrap = true
 tracks/56/keys = {
-"times": PackedFloat32Array(0, 2, 3.5, 4.5, 5.5, 6.5, 7, 7.5, 8, 8.5, 9, 9.49508, 9.99859, 11.5, 11.9965, 12.5047, 13.0054, 14, 14.4979, 14.9987, 16, 16.5099, 17.0056, 17.5, 18, 18.5, 19.5, 20, 20.5121),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2, 3.5, 4.5, 5.5, 6.5, 7, 7.5, 8, 8.5, 9, 10.4458, 10.9494, 12.2333, 13.2, 13.9, 14.6333, 15.7841, 16.282, 16.7828, 17.7841, 18.3879, 19.4879, 20.1546, 20.8546, 21.5546, 23.1333, 23.6333, 24.1454, 25.4055, 26.2399, 26.9301),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [-1, 28, 50, 78, 100, 100, 100, -1, 25, 50, 56, 56, 0, 26, 49, 78, 102, 0, 102, 102, 26, -1, 0, 26, 52, 100, 0, 23, 46]
+"values": [-1, 28, 50, 78, 100, 100, 100, -1, 25, 50, 56, 56, 0, 26, 49, 75, 102, 0, 102, 102, 26, -1, 0, 26, 52, 100, 0, 23, 46, 25, 43, 50]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ojpj6"]
