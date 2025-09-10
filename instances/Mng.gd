@@ -52,7 +52,7 @@ func reset_stats() -> void:
 
 func go_to_main_menu() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	get_tree().change_scene_to_file("res://Menu.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://Menu.tscn")
 
 
 func go_to_level(level_n: int) -> void:
