@@ -6,6 +6,8 @@ class_name Level
 @onready var pencils_mng: PencilsMng = %pencils_mng
 @onready var scissors: Scissors = %scissors
 
+@export var n: int = 1
+
 
 var pencils: Array[Pencil]:
 	get: return pencils_mng.pencils

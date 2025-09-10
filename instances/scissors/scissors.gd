@@ -14,8 +14,9 @@ class_name Scissors
 @export_range(0.25, 2.0, 0.05) var cutting_line_thickness: float = 0.6
 
 @export_subgroup("Boost")
+@export_range(300.0, 2000.0, 5.0) var cutting_base_speed: float = 800 #px/s
 @export_range(1.0, 5.0) var boost_mult: float = 2.5
-@export var is_boosting: bool = true:
+@export var is_boosting: bool = false:
 	set(val):
 		if is_boosting == val: return
 		is_boosting = val
@@ -118,6 +119,7 @@ func cut() -> void:
 	is_cutting = true
 	var cutting_line: CuttingLine = preload("res://instances/cutting_line/cutting_line.tscn").instantiate()
 	cutting_line.level = level
+	cutting_line.grow_speed = cutting_base_speed
 	cutting_line.position = position
 	cutting_line.rotation = rotation
 	cutting_line.boost_mult = 1.0 if not is_boosting else boost_mult

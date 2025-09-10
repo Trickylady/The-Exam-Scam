@@ -2,7 +2,7 @@ extends Area2D
 class_name CuttingLine
 
 
-@export_range(100.0, 1000.0, 5.0) var grow_speed: float = 300 #px/s
+var grow_speed: float = 800 #px/s
 
 
 @onready var coll_forw: CollisionShape2D = %coll_forw

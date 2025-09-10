@@ -4,6 +4,7 @@ class_name HUD
 var level: Level
 func _set_level(l: Level) -> void:
 	level = l
+@onready var coll_poly: PackedVector2Array = %coll.polygon
 
 
 func setup() -> void:
