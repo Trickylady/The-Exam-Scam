@@ -77,7 +77,7 @@ func setup() -> void:
 		angles.append(angle)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Engine.is_editor_hint(): return
 	if is_cutting: return
 	position = get_global_mouse_position()
@@ -86,20 +86,16 @@ func _process(delta: float) -> void:
 		queue_redraw()
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if is_cutting: return
 	if Engine.is_editor_hint(): return
-	#calculate hit points for the cut line
-	var loc_hit_forw: Vector2 = Vector2(-1,-1)
-	var loc_hit_back: Vector2 = Vector2(-1,-1)
+	
 	if %ray_forw.is_colliding():
 		_hit_point_forw = %ray_forw.get_collision_point()
-		loc_hit_forw = (_hit_point_forw - global_position).rotated(-rotation)
 	else:
 		_hit_point_forw = Vector2(-1,-1)
 	if %ray_back.is_colliding():
 		_hit_point_back = %ray_back.get_collision_point()
-		loc_hit_back = (_hit_point_back - global_position).rotated(-rotation)
 	else:
 		_hit_point_back = Vector2(-1,-1)
 

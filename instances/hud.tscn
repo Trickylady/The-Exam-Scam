@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://di6fx5kumhr0b"]
+[gd_scene load_steps=8 format=3 uid="uid://di6fx5kumhr0b"]
 
 [ext_resource type="Script" uid="uid://bseg1kq1i6e2j" path="res://instances/hud.gd" id="1_hvx1s"]
 [ext_resource type="Texture2D" uid="uid://dpbukxlonryia" path="res://images/overlay_game.png" id="2_6fdae"]
@@ -6,6 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://duhskn1vf50m" path="res://images/adderall.png" id="4_34k8l"]
 [ext_resource type="Texture2D" uid="uid://lpikyaamp1c0" path="res://images/xanax.png" id="5_ingsw"]
 [ext_resource type="Texture2D" uid="uid://beusq0j4xbp6l" path="res://images/menu button.png" id="6_7kkmc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fdae"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+bg_color = Color(0.162401, 0.417587, 0.311389, 0.490196)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -61,3 +72,22 @@ offset_top = 478.0
 offset_right = 140.0
 offset_bottom = 540.0
 texture_normal = ExtResource("6_7kkmc")
+
+[node name="pnl_debug" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6fdae")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pnl_debug"]
+layout_mode = 2
+
+[node name="btn_go_to_level" type="Button" parent="pnl_debug/VBoxContainer"]
+layout_mode = 2
+text = "Go To Level"

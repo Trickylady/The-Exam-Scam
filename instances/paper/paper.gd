@@ -251,7 +251,6 @@ func _any_piece_have_pencils(pieces: Array, _local_pencils: Array[Pencil]) -> bo
 
 
 func is_point_in_paper(point: Vector2) -> bool:
-	var inside_any := false
 	for poly: PackedVector2Array in paper_regions:
 		if Geometry2D.is_point_in_polygon(point, poly):
 			return true
@@ -319,25 +318,25 @@ func _filter_nontrivial(pieces: Array[PackedVector2Array], area_eps := 1e-3) -> 
 
 
 func get_random_point_in_paper() -> Vector2:
-	# No paper left?
+	@warning_ignore_start("confusable_local_declaration")
 	if paper_regions.is_empty():
 		return Vector2.ZERO
-
+	
 	# --- 1) Pick a region weighted by area ---
 	var eps := 1e-6
 	var areas := PackedFloat32Array()
 	areas.resize(paper_regions.size())
 	var total_area := 0.0
-
+	
 	for i in range(paper_regions.size()):
 		var poly := paper_regions[i]
 		var a: float = abs(polygon_area_shoelace(poly, true))
 		areas[i] = a
 		total_area += a
-
+	
 	if total_area <= eps:
 		return Vector2.ZERO
-
+	
 	var r := randf() * total_area
 	var acc := 0.0
 	var region_idx := 0
@@ -355,6 +354,7 @@ func get_random_point_in_paper() -> Vector2:
 		return _random_point_in_polygon_rejection(poly)  # fallback
 
 	var tri_areas := PackedFloat32Array()
+	@warning_ignore("integer_division")
 	tri_areas.resize(idx.size() / 3)
 	var tri_total := 0.0
 	var t := 0
@@ -390,6 +390,7 @@ func get_random_point_in_paper() -> Vector2:
 	if u + v > 1.0:
 		u = 1.0 - u
 		v = 1.0 - v
+	@warning_ignore_restore("confusable_local_declaration")
 	return A + (B - A) * u + (C - A) * v
 
 

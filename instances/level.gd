@@ -14,7 +14,7 @@ var pencils: Array[Pencil]:
 
 
 #region Init
-func _ready() -> void:
+func start() -> void:
 	propagate_call("setup", [], true)
 
 

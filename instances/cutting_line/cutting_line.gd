@@ -22,7 +22,6 @@ var _length_back: float
 var has_reached_forw: bool = false
 var has_reached_back: bool = false
 
-var _tw_grow: Tween
 
 signal finished
 signal pencil_touched(pencil: Pencil)
