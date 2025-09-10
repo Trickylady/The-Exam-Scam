@@ -19,7 +19,7 @@ var slow_n: int
 const LEVEL_PCK = preload("res://instances/level.tscn")
 var level: Level
 
-var start_from_level = 1
+var start_from_level = 0
 func _ready() -> void:
 	reset_stats()
 	if start_from_level:

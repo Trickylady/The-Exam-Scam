@@ -1,12 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpin57jxud8tn"]
+[gd_scene load_steps=5 format=3 uid="uid://bpin57jxud8tn"]
 
 [ext_resource type="Texture2D" uid="uid://bobinbbsbqfoa" path="res://images/teacher_body.png" id="2_ovpi1"]
-
-[sub_resource type="Resource" id="Resource_s2ta7"]
-metadata/__load_path__ = "res://images/background_class.png"
-
-[sub_resource type="Resource" id="Resource_ayt76"]
-metadata/__load_path__ = "res://images/teacher_head.png"
 
 [sub_resource type="Animation" id="Animation_f1way"]
 length = 0.001
@@ -75,7 +69,6 @@ _data = {
 offset_right = 3789.0
 offset_bottom = 2131.0
 scale = Vector2(0.306134, 0.306134)
-texture = SubResource("Resource_s2ta7")
 
 [node name="teacher" type="Node2D" parent="."]
 position = Vector2(-43, -27)
@@ -89,12 +82,11 @@ texture = ExtResource("2_ovpi1")
 [node name="TeacherHead" type="Sprite2D" parent="teacher"]
 texture_filter = 2
 position = Vector2(1063, 708)
-texture = SubResource("Resource_ayt76")
 
 [node name="teacher" type="AnimationPlayer" parent="teacher"]
 root_node = NodePath("../../scene")
 
 [node name="scene" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_j487n")
+&"": SubResource("AnimationLibrary_j487n")
 }
