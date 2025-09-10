@@ -727,6 +727,7 @@ tracks/56/keys = {
 [sub_resource type="Animation" id="Animation_nhrif"]
 resource_name = "timmyslide"
 length = 60.0
+step = 0.0333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -746,10 +747,10 @@ tracks/1/path = NodePath("1-Soundintro:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.997586, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, true, true]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1322,10 +1323,10 @@ tracks/49/path = NodePath("TextBox1:position")
 tracks/49/interp = 1
 tracks/49/loop_wrap = true
 tracks/49/keys = {
-"times": PackedFloat32Array(0, 7, 7.5),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 7, 7.5, 9.99074, 10.5, 13.5, 14.0022, 14.5, 19, 19.5, 20.0038),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1539, 250), Vector2(1539, 250), Vector2(314, 831)]
+"values": [Vector2(1539, 250), Vector2(1539, 250), Vector2(314, 831), Vector2(314, 831), Vector2(956, 116), Vector2(956, 116), Vector2(1000, 983), Vector2(1000, 983), Vector2(1000, 983), Vector2(1684, 160), Vector2(1684, 160)]
 }
 tracks/50/type = "value"
 tracks/50/imported = false
@@ -1334,10 +1335,10 @@ tracks/50/path = NodePath("TextBox1:rotation")
 tracks/50/interp = 1
 tracks/50/loop_wrap = true
 tracks/50/keys = {
-"times": PackedFloat32Array(0, 7, 7.5),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 7, 7.5, 9.99074, 10.5, 19, 19.5, 20.0038),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.316787, 0.316787, -0.402805]
+"values": [0.316787, 0.316787, -0.402805, -0.402805, 0.0, 0.0, 0.326766, 0.326766]
 }
 tracks/51/type = "value"
 tracks/51/imported = false
@@ -1346,10 +1347,10 @@ tracks/51/path = NodePath("TextBox1:modulate")
 tracks/51/interp = 1
 tracks/51/loop_wrap = true
 tracks/51/keys = {
-"times": PackedFloat32Array(0, 1, 1.5, 7, 7.5, 8.01, 9.5, 10, 10.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 1.5, 7, 7.5, 8.01, 10, 10.5, 11, 13.5, 14, 14.4967, 19, 19.5, 20.0038),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/52/type = "value"
 tracks/52/imported = false
@@ -1358,10 +1359,10 @@ tracks/52/path = NodePath("TextBox1:scale")
 tracks/52/interp = 1
 tracks/52/loop_wrap = true
 tracks/52/keys = {
-"times": PackedFloat32Array(0, 1, 1.5, 7, 7.5, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 1.5, 7, 7.5, 8, 9.99074, 10.5, 10.9946, 13.5, 14.0011, 14.5, 19, 19.5, 20.0038),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1.00136e-05, 1.00136e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1)]
+"values": [Vector2(1e-05, 1e-05), Vector2(1.00136e-05, 1.00136e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1)]
 }
 tracks/53/type = "value"
 tracks/53/imported = false
@@ -1370,10 +1371,10 @@ tracks/53/path = NodePath("TextBox1:visible")
 tracks/53/interp = 1
 tracks/53/loop_wrap = true
 tracks/53/keys = {
-"times": PackedFloat32Array(0, 7, 7.5, 9.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 7, 7.5, 10, 10.5052, 13.5, 14.0011, 19, 19.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [true, false, true, false]
+"values": [true, false, true, false, true, false, true, false, true]
 }
 tracks/54/type = "value"
 tracks/54/imported = false
@@ -1382,20 +1383,56 @@ tracks/54/path = NodePath("TextBox1/subtitles:text")
 tracks/54/interp = 1
 tracks/54/loop_wrap = true
 tracks/54/keys = {
-"times": PackedFloat32Array(0, 7.5, 8, 10.5, 15),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 7.5, 8, 10.5, 13.5109, 14, 15, 15.5, 16, 17, 17.0056, 19, 19.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": ["
-[center] Alright, so this is Timmy. 
-Timmy be all prepared and [shake] sh*t [/shake] for 
-his chemistry exam, 
-innit bruv?!", "", "[center]
+
+[center]Alright, so this is Timmy.
+Timmy be all prepared
+and  [shake]sh*t[/shake] for his chemistry
+exam, innit bruv?!", "", "[center]
 
 He got his calculator,
 scissors, tape, pen, and
 paper.", "[center]
-Now all he's gotta do is write down the answers to the fucking questions on the blackboard, yeah.", "[center]
-Now all he's gotta do is write down the answers to the fucking questions on the blackboard, yeah."]
+
+Now all he's gotta do is
+write down the answers
+to the [shake]fucking[/shake] questions
+on the blackboard, yeah.", "[center]
+
+Now all he's gotta do is
+write down the answers
+to the [shake]fucking[/shake] questions
+on the blackboard, yeah.", "[center]
+[font_size=50]
+Wait... [/font_size]", "[center]
+[font_size=50]
+Wait... [/font_size]", "[center]", "[center]
+
+
+Where the [shake]f*ck[/shake] are your
+empty pages Timmy?", "[center]
+
+
+What the fuck were you
+planning to fucking write
+on, you fucking bellend?!", "[center]
+
+
+What the [shake]f*ck[/shake] were you
+planning to [shake]f*cking[/shake] write
+on, you [shake]f*cking b*ll*nd?![/shake]", "[center]
+
+
+What the [shake]f*ck[/shake] were you
+planning to [shake]f*cking[/shake] write
+on, you [shake]f*cking b*ll*nd?![/shake]", "[center]
+
+
+Maybe your mate Paul
+has some extra papers?"]
 }
 tracks/55/type = "value"
 tracks/55/imported = false
@@ -1404,10 +1441,10 @@ tracks/55/path = NodePath("TextBox1/subtitles:visible")
 tracks/55/interp = 1
 tracks/55/loop_wrap = true
 tracks/55/keys = {
-"times": PackedFloat32Array(0, 2, 7, 8, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2, 7, 8, 10.5095, 11.5, 13.494, 14.9987, 15.5, 16, 17.0056, 17.5, 19, 20),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [false, true, false, true, true]
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true]
 }
 tracks/56/type = "value"
 tracks/56/imported = false
@@ -1416,10 +1453,10 @@ tracks/56/path = NodePath("TextBox1/subtitles:visible_characters")
 tracks/56/interp = 1
 tracks/56/loop_wrap = true
 tracks/56/keys = {
-"times": PackedFloat32Array(0, 2, 3.5, 4.5, 5.5, 6.5, 7, 7.5, 8, 8.5, 9, 9.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2, 3.5, 4.5, 5.5, 6.5, 7, 7.5, 8, 8.5, 9, 9.49508, 9.99859, 11.5, 11.9965, 12.5047, 13.0054, 14, 14.4979, 14.9987, 16, 16.5099, 17.0056, 17.5, 18, 18.5, 19.5, 20, 20.5121),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [-1, 28, 51, 68, 89, 100, 100, -1, 25, 50, 56, 0]
+"values": [-1, 28, 50, 78, 100, 100, 100, -1, 25, 50, 56, 56, 0, 26, 49, 78, 102, 0, 102, 102, 26, -1, 0, 26, 52, 100, 0, 23, 46]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ojpj6"]
@@ -1597,10 +1634,10 @@ texture = ExtResource("30_p7pld")
 
 [node name="subtitles" type="RichTextLabel" parent="TextBox1"]
 visible = false
-offset_left = -220.0
-offset_top = -95.0
-offset_right = 218.0
-offset_bottom = 77.0
+offset_left = -220.169
+offset_top = -113.039
+offset_right = 217.831
+offset_bottom = 58.9612
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("30_4bb6v")
 theme_override_font_sizes/normal_font_size = 23
