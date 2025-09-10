@@ -702,7 +702,7 @@ tracks/54/keys = {
 
 [sub_resource type="Animation" id="Animation_nhrif"]
 resource_name = "timmyslide"
-length = 62.0
+length = 63.0
 step = 0.0333
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1014,7 +1014,7 @@ tracks/25/keys = {
 "times": PackedFloat32Array(0, 23.5333, 27.5, 28.5, 30, 50.5, 51, 53, 58.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(279, 8), Vector2(279, 8), Vector2(-988, 8), Vector2(-988, 8), Vector2(-988, 969), Vector2(-988, 969), Vector2(887, 1493), Vector2(887, 1493), Vector2(887, 3338)]
+"values": [Vector2(279, 8), Vector2(279, 8), Vector2(-988, 8), Vector2(-988, 8), Vector2(-988, 969), Vector2(-988, 969), Vector2(848, 1578), Vector2(848, 1578), Vector2(848, 3339)]
 }
 tracks/26/type = "value"
 tracks/26/imported = false
@@ -1287,7 +1287,7 @@ tracks/48/path = NodePath("Level1Start:position")
 tracks/48/interp = 1
 tracks/48/loop_wrap = true
 tracks/48/keys = {
-"times": PackedFloat32Array(0, 62),
+"times": PackedFloat32Array(0, 63),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(960, 540), Vector2(960, 540)]
@@ -1324,7 +1324,7 @@ nicely and I'm sure
 she'll...", "[center][font_size=50]Hold on![/font_size]", "[center]What's that
 crumpled-up paper
 on the floor
-doing there?", "[center]Grab it, Timmy,
+doing there?", "[center][font_size=30]Grab it, Timmy,[/font_size]
 [shake]f*cking[/shake] grab it, yeah!", "[center]Brilliant, Timmy, you
 [shake]f*cking[/shake] snail! Your mate
 Paul spotted it as well
@@ -1352,10 +1352,10 @@ tracks/51/path = NodePath("TextBox1:position")
 tracks/51/interp = 1
 tracks/51/loop_wrap = true
 tracks/51/keys = {
-"times": PackedFloat32Array(0, 1.5, 6, 6.5, 14, 14.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.5, 7.5, 8, 15.5, 16, 32, 32.5, 41.5, 42),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1032, 200), Vector2(1032, 335), Vector2(1032, 335), Vector2(237, 194), Vector2(237, 194), Vector2(1680, 164)]
+"values": [Vector2(1032, 200), Vector2(1032, 335), Vector2(1032, 335), Vector2(237, 194), Vector2(237, 194), Vector2(969, 971), Vector2(969, 971), Vector2(1668, 170), Vector2(1668, 170), Vector2(261, 195)]
 }
 tracks/52/type = "value"
 tracks/52/imported = false
@@ -1364,10 +1364,10 @@ tracks/52/path = NodePath("TextBox1:rotation")
 tracks/52/interp = 1
 tracks/52/loop_wrap = true
 tracks/52/keys = {
-"times": PackedFloat32Array(0, 1.5, 6, 6.5, 14, 14.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.5, 7.5, 8, 15.5, 16, 32, 32.5, 41.5, 42),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0, 0.0, -0.50785, -0.50785, 0.30814]
+"values": [0.0, 0.0, 0.0, -0.50785, -0.50785, -0.249582, -0.249582, 0.150874, 0.150874, -0.394315]
 }
 tracks/53/type = "value"
 tracks/53/imported = false
@@ -1376,7 +1376,7 @@ tracks/53/path = NodePath("TextBox1:scale")
 tracks/53/interp = 1
 tracks/53/loop_wrap = true
 tracks/53/keys = {
-"times": PackedFloat32Array(1, 1.5, 6, 6.5),
+"times": PackedFloat32Array(1, 1.5, 6, 7.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
@@ -1521,8 +1521,7 @@ position = Vector2(-3072.94, -197.654)
 texture = ExtResource("23_wo0ad")
 offset = Vector2(19.4385, -208.846)
 
-[node name="1-Soundintro" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-779, 505)
+[node name="1-Soundintro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("24_shl8j")
 
 [node name="FloorScene" type="Sprite2D" parent="."]
