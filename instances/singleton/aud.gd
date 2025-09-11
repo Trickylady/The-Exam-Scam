@@ -5,9 +5,12 @@ extends Node
 
 func play_menu_music() -> void:
 	$mus.stop()
+	$mus.stream = load("res://sounds/menumusic.mp3")
+	$mus.play()
 func play_game_music() -> void:
 	$mus.stop()
-	if not $mus.playing: $mus.play()
+	$mus.stream = load("res://sounds/soundtrack.mp3")
+	$mus.play()
 func stop_music() -> void:
 	$mus.stop()
 

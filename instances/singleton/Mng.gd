@@ -77,9 +77,9 @@ func reset_stats() -> void:
 
 func go_to_intro() -> void:
 	if is_family_friendly:
-		get_tree().change_scene_to_file("res://scenes/intro_family.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/intro_family.tscn")
 	else:
-		get_tree().change_scene_to_file("res://scenes/intro_pg.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/intro_pg.tscn")
 
 
 func go_to_main_menu() -> void:
@@ -106,7 +106,7 @@ func go_to_level(level_n: int) -> void:
 
 
 func go_to_level_score() -> void:
-	get_tree().change_scene_to_file("res://scenes/level_score.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/level_score.tscn")
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
@@ -115,10 +115,10 @@ func next_level() -> void:
 
 
 func go_to_youlose() -> void:
-	get_tree().change_scene_to_file("res://scenes/youlose.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/youlose.tscn")
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 func go_to_youwin() -> void:
-	get_tree().change_scene_to_file("res://scenes/youwin.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/youwin.tscn")
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 

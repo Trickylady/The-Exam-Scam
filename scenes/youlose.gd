@@ -2,6 +2,7 @@ extends Control
 
 
 func _ready() -> void:
+	Aud.play_menu_music()
 	Aud.play_lose()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 

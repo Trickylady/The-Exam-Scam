@@ -66,6 +66,7 @@ visible = false
 layout_mode = 1
 
 [node name="score_recap" parent="." instance=ExtResource("4_wovw3")]
+layout_mode = 0
 offset_left = 429.0
 offset_top = 711.0
 offset_right = 1047.0
