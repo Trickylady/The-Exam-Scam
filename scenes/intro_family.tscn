@@ -1,37 +1,37 @@
-[gd_scene load_steps=36 format=3 uid="uid://x1evj6pgycq2"]
+[gd_scene load_steps=36 format=3 uid="uid://cicj8wt4l0brl"]
 
-[ext_resource type="Script" uid="uid://dbn3yehlrcc3j" path="res://scenes/intro_a.gd" id="1_qgavk"]
-[ext_resource type="Texture2D" uid="uid://djfv1qp5dywf" path="res://images/intro/classroom.png" id="2_4svnu"]
-[ext_resource type="Texture2D" uid="uid://fo2omj47piwx" path="res://images/intro/timmy_body.png" id="3_xu8sd"]
-[ext_resource type="Texture2D" uid="uid://5ljyuinm74kd" path="res://images/intro/timmy_face.png" id="4_btacc"]
-[ext_resource type="Texture2D" uid="uid://bs7bcbn108mmu" path="res://images/intro/timmy_eyesocket_left.png" id="5_gixri"]
-[ext_resource type="Texture2D" uid="uid://5quwg4oyjjf6" path="res://images/intro/timmy_eyesocket_right.png" id="6_m3b8t"]
-[ext_resource type="Texture2D" uid="uid://hle8dpvun82l" path="res://images/intro/timmy_eyebrow_left.png" id="7_uj1cv"]
-[ext_resource type="Texture2D" uid="uid://x5gcxdhkso4g" path="res://images/intro/timmy_eyebrow_right.png" id="8_m0uhk"]
-[ext_resource type="Texture2D" uid="uid://dnyiph6adiwf3" path="res://images/intro/timmy_iris_left.png" id="9_nnx4q"]
-[ext_resource type="Texture2D" uid="uid://c01bgaacv7dyd" path="res://images/intro/timmy_iris_right.png" id="10_3wwe2"]
-[ext_resource type="Texture2D" uid="uid://b2vyxfw1ooa45" path="res://images/intro/timmy_mouth_a.png" id="11_noc3i"]
-[ext_resource type="Texture2D" uid="uid://dadnsne3hagna" path="res://images/intro/timmy_mouth_ab.png" id="12_o7wuf"]
-[ext_resource type="Texture2D" uid="uid://v1t5f3j1e2la" path="res://images/intro/timmy_mouth_b.png" id="13_5i1tl"]
-[ext_resource type="Texture2D" uid="uid://byptewf2spwkk" path="res://images/intro/timmy_mouth_c.png" id="14_246xl"]
-[ext_resource type="Texture2D" uid="uid://yiw2ato5nkwp" path="res://images/intro/timmy_mouth_d.png" id="15_5uxga"]
-[ext_resource type="Texture2D" uid="uid://bry7i6qr7kvcj" path="res://images/intro/timmy_sweat.png" id="16_3f4pg"]
-[ext_resource type="Texture2D" uid="uid://cxnj20o0mwwsw" path="res://images/intro/paul_body.png" id="17_fwaey"]
-[ext_resource type="Texture2D" uid="uid://bx54cbmqlg47u" path="res://images/intro/paul_face.png" id="18_7k40h"]
-[ext_resource type="Texture2D" uid="uid://2rp44b3dyph2" path="res://images/intro/timmy_hand_wave.png" id="19_d5376"]
-[ext_resource type="Texture2D" uid="uid://dhqccgnpydk4h" path="res://images/intro/desk.png" id="20_121u4"]
-[ext_resource type="Texture2D" uid="uid://m0hcxl6ogepx" path="res://images/intro/classroomteacher.png" id="21_yalt3"]
-[ext_resource type="Texture2D" uid="uid://bobinbbsbqfoa" path="res://images/intro/teacher_body.png" id="22_tl7dc"]
-[ext_resource type="Texture2D" uid="uid://r4p6s7y2bjig" path="res://images/intro/teacher_face.png" id="23_wo0ad"]
-[ext_resource type="AudioStream" uid="uid://brn2ycl8k5om7" path="res://sounds/a.mp3" id="24_shl8j"]
-[ext_resource type="Texture2D" uid="uid://dgu0glx02wp3j" path="res://images/intro/floor_scene.png" id="25_jp2v3"]
-[ext_resource type="Texture2D" uid="uid://dx72tvl2mp6e4" path="res://images/intro/floor_scene_b.png" id="26_gpcfe"]
-[ext_resource type="Texture2D" uid="uid://jn238raymxij" path="res://images/intro/floor_scene_paper.png" id="27_3bgem"]
-[ext_resource type="Texture2D" uid="uid://bjmercw3u2pgm" path="res://images/intro/timmy_hand_back.png" id="28_1k7yw"]
-[ext_resource type="Texture2D" uid="uid://cb7u8m7ulib3q" path="res://images/ui/skip_intro.png" id="29_n6mkm"]
-[ext_resource type="Texture2D" uid="uid://bg1di6k8sorcu" path="res://images/intro/text_box.png" id="30_t5sit"]
-[ext_resource type="FontFile" uid="uid://qguv6il4xhsx" path="res://theme/BD_Cartoon_Shout.ttf" id="31_6odtw"]
-[ext_resource type="Texture2D" uid="uid://dqa5texp70qvi" path="res://images/bg/Level_1_start.png" id="32_6xloh"]
+[ext_resource type="Script" uid="uid://dbn3yehlrcc3j" path="res://scenes/intro_a.gd" id="1_jbt0w"]
+[ext_resource type="Texture2D" uid="uid://djfv1qp5dywf" path="res://images/intro/classroom.png" id="2_6081f"]
+[ext_resource type="Texture2D" uid="uid://f80p5s7ryf16" path="res://images/intro/pg_timmy_body.png" id="3_jbt0w"]
+[ext_resource type="Texture2D" uid="uid://5ljyuinm74kd" path="res://images/intro/timmy_face.png" id="4_r4l7w"]
+[ext_resource type="Texture2D" uid="uid://bs7bcbn108mmu" path="res://images/intro/timmy_eyesocket_left.png" id="5_a7boc"]
+[ext_resource type="Texture2D" uid="uid://5quwg4oyjjf6" path="res://images/intro/timmy_eyesocket_right.png" id="6_0myb2"]
+[ext_resource type="Texture2D" uid="uid://hle8dpvun82l" path="res://images/intro/timmy_eyebrow_left.png" id="7_rukwi"]
+[ext_resource type="Texture2D" uid="uid://x5gcxdhkso4g" path="res://images/intro/timmy_eyebrow_right.png" id="8_14xl3"]
+[ext_resource type="Texture2D" uid="uid://dnyiph6adiwf3" path="res://images/intro/timmy_iris_left.png" id="9_g03uf"]
+[ext_resource type="Texture2D" uid="uid://c01bgaacv7dyd" path="res://images/intro/timmy_iris_right.png" id="10_nv2ap"]
+[ext_resource type="Texture2D" uid="uid://b2vyxfw1ooa45" path="res://images/intro/timmy_mouth_a.png" id="11_qaqc2"]
+[ext_resource type="Texture2D" uid="uid://dadnsne3hagna" path="res://images/intro/timmy_mouth_ab.png" id="12_24o21"]
+[ext_resource type="Texture2D" uid="uid://v1t5f3j1e2la" path="res://images/intro/timmy_mouth_b.png" id="13_q02bm"]
+[ext_resource type="Texture2D" uid="uid://byptewf2spwkk" path="res://images/intro/timmy_mouth_c.png" id="14_w75tc"]
+[ext_resource type="Texture2D" uid="uid://yiw2ato5nkwp" path="res://images/intro/timmy_mouth_d.png" id="15_18wao"]
+[ext_resource type="Texture2D" uid="uid://bry7i6qr7kvcj" path="res://images/intro/timmy_sweat.png" id="16_y4fjg"]
+[ext_resource type="Texture2D" uid="uid://bppvgld0bvkx3" path="res://images/intro/pg_paul_body.png" id="17_6081f"]
+[ext_resource type="Texture2D" uid="uid://bx54cbmqlg47u" path="res://images/intro/paul_face.png" id="18_cwy4h"]
+[ext_resource type="Texture2D" uid="uid://2rp44b3dyph2" path="res://images/intro/timmy_hand_wave.png" id="19_ojokw"]
+[ext_resource type="Texture2D" uid="uid://dhqccgnpydk4h" path="res://images/intro/desk.png" id="20_y4hss"]
+[ext_resource type="Texture2D" uid="uid://m0hcxl6ogepx" path="res://images/intro/classroomteacher.png" id="21_7cyd0"]
+[ext_resource type="Texture2D" uid="uid://cmxafa8p8db3r" path="res://images/intro/pg_teacher_body.png" id="22_ecw2x"]
+[ext_resource type="Texture2D" uid="uid://r4p6s7y2bjig" path="res://images/intro/teacher_face.png" id="23_wisb0"]
+[ext_resource type="AudioStream" uid="uid://cloft1ko1kgg" path="res://sounds/aclean.mp3" id="24_jbt0w"]
+[ext_resource type="Texture2D" uid="uid://dgu0glx02wp3j" path="res://images/intro/floor_scene.png" id="25_igs5g"]
+[ext_resource type="Texture2D" uid="uid://dx72tvl2mp6e4" path="res://images/intro/floor_scene_b.png" id="26_j5rnp"]
+[ext_resource type="Texture2D" uid="uid://jn238raymxij" path="res://images/intro/floor_scene_paper.png" id="27_ardwf"]
+[ext_resource type="Texture2D" uid="uid://bjmercw3u2pgm" path="res://images/intro/timmy_hand_back.png" id="28_r1ygy"]
+[ext_resource type="Texture2D" uid="uid://cb7u8m7ulib3q" path="res://images/ui/skip_intro.png" id="29_4x38x"]
+[ext_resource type="Texture2D" uid="uid://bg1di6k8sorcu" path="res://images/intro/text_box.png" id="30_616g2"]
+[ext_resource type="FontFile" uid="uid://qguv6il4xhsx" path="res://theme/BD_Cartoon_Shout.ttf" id="31_kgyhy"]
+[ext_resource type="Texture2D" uid="uid://dqa5texp70qvi" path="res://images/bg/Level_1_start.png" id="32_0na2v"]
 
 [sub_resource type="Animation" id="Animation_emik5"]
 length = 0.001
@@ -1304,16 +1304,17 @@ tracks/49/keys = {
 "update": 1,
 "values": ["", "[center]Alright, so this is Timmy.
 Timmy be all prepared
-and  [shake]sh*t[/shake] for his chemistry
-exam, innit bruv?!", "[center]He got his calculator,
+and  [shake]pickles[/shake]
+for his chemistry exam,
+innit bruv?!", "[center]He got his calculator,
 scissors, tape, pen, and
 papers.", "[center]Now all he's gotta do is
 write down the answers
-to the [shake]f*cking[/shake] questions
-on the blackboard, yeah.", "[center][font_size=50]Wait... [/font_size]", "[center]Where the [shake]f*ck[/shake] are your
-empty pages Timmy?", "[center]What the [shake]f*ck[/shake] were you
+to the [shake]airfryer[/shake] questions
+on the blackboard, yeah.", "[center][font_size=50]Wait... [/font_size]", "[center]Where the [shake]shoelaces[/shake] are your
+empty pages Timmy?", "[center]What the [shake]snowglobe[/shake] were you
 planning to write on,
-you [shake]f*cking b*ll*nd[/shake]?!", "[center]Maybe your mate Paul
+you [shake]adorable kidney stone[/shake]?!", "[center]Maybe your mate Paul
 has some extra papers,
 yeah?", "[center]Not your mate and he
 didn't bring them papers
@@ -1325,13 +1326,13 @@ she'll...", "[center][font_size=50]Hold on![/font_size]", "[center]What's that
 crumpled-up paper
 on the floor
 doing there?", "[center][font_size=30]Grab it, Timmy,[/font_size]
-[shake]f*cking[/shake] grab it, yeah!", "[center]Brilliant, Timmy, you
-[shake]f*cking[/shake] snail! Your mate
+Grab it, yeah!", "[center]Brilliant, Timmy, you
+[shake]cheeky teacup[/shake]! Your mate
 Paul spotted it as well
 and it don't look like
 he's planning on playing
 nice, that chubby little
-[shake]ginger c*nt[/shake]."]
+[shake]majestic lawn chair[/shake]."]
 }
 tracks/50/type = "value"
 tracks/50/imported = false
@@ -1400,97 +1401,97 @@ _data = {
 &"timmyslide": SubResource("Animation_nhrif")
 }
 
-[node name="introA" type="Node2D"]
-script = ExtResource("1_qgavk")
+[node name="introfamily" type="Node2D"]
+script = ExtResource("1_jbt0w")
 
 [node name="classbg" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_4svnu")
+texture = ExtResource("2_6081f")
 
 [node name="Timmy" type="Node2D" parent="."]
 
 [node name="TimmyBody" type="Sprite2D" parent="Timmy"]
 position = Vector2(-216, 931)
-texture = ExtResource("3_xu8sd")
+texture = ExtResource("3_jbt0w")
 
 [node name="Timmyhead" type="Node2D" parent="Timmy"]
 position = Vector2(-230, 717)
 
 [node name="TimmyFace" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(-1.5, -196)
-texture = ExtResource("4_btacc")
+texture = ExtResource("4_r4l7w")
 
 [node name="TimmyEyesocketLeft" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(-77.5, -238)
-texture = ExtResource("5_gixri")
+texture = ExtResource("5_a7boc")
 
 [node name="TimmyEyesocketRight" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(62.5, -232)
-texture = ExtResource("6_m3b8t")
+texture = ExtResource("6_0myb2")
 
 [node name="TimmyEyebrowLeft" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(-69.5, -314)
-texture = ExtResource("7_uj1cv")
+texture = ExtResource("7_rukwi")
 
 [node name="TimmyEyebrowRight" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(59.5, -314)
-texture = ExtResource("8_m0uhk")
+texture = ExtResource("8_14xl3")
 
 [node name="TimmyIrisLeft" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(-75.5, -232)
-texture = ExtResource("9_nnx4q")
+texture = ExtResource("9_g03uf")
 
 [node name="TimmyIrisRight" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(59.5, -227)
-texture = ExtResource("10_3wwe2")
+texture = ExtResource("10_nv2ap")
 
 [node name="TimmyMouthA" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(-36.5, -31)
-texture = ExtResource("11_noc3i")
+texture = ExtResource("11_qaqc2")
 
 [node name="TimmyMouthAB" type="Sprite2D" parent="Timmy/Timmyhead"]
 visible = false
 position = Vector2(-26.5719, -20.5896)
-texture = ExtResource("12_o7wuf")
+texture = ExtResource("12_24o21")
 
 [node name="TimmyMouthB" type="Sprite2D" parent="Timmy/Timmyhead"]
 visible = false
 position = Vector2(-29.1761, -17.4572)
-texture = ExtResource("13_5i1tl")
+texture = ExtResource("13_q02bm")
 
 [node name="TimmyMouthC" type="Sprite2D" parent="Timmy/Timmyhead"]
 visible = false
 position = Vector2(-66.4732, -18.9554)
-texture = ExtResource("14_246xl")
+texture = ExtResource("14_w75tc")
 
 [node name="TimmyMouthD" type="Sprite2D" parent="Timmy/Timmyhead"]
 visible = false
 position = Vector2(-72.8284, -18.6821)
-texture = ExtResource("15_5uxga")
+texture = ExtResource("15_18wao")
 
 [node name="TimmySweat" type="Sprite2D" parent="Timmy/Timmyhead"]
 visible = false
 modulate = Color(1, 1, 1, 0)
 position = Vector2(126.805, -319.2)
-texture = ExtResource("16_3f4pg")
+texture = ExtResource("16_y4fjg")
 
 [node name="Paul" type="Node2D" parent="."]
 position = Vector2(279, 8)
 
 [node name="PaulBody" type="Sprite2D" parent="Paul"]
 position = Vector2(1968, 906)
-texture = ExtResource("17_fwaey")
+texture = ExtResource("17_6081f")
 
 [node name="PaulFace" type="Sprite2D" parent="Paul"]
 position = Vector2(1979, 732)
-texture = ExtResource("18_7k40h")
+texture = ExtResource("18_cwy4h")
 offset = Vector2(-49, -280)
 
 [node name="TimmyHandWave" type="Sprite2D" parent="."]
 position = Vector2(326, 1146)
 rotation = -1.3189
-texture = ExtResource("19_d5376")
+texture = ExtResource("19_ojokw")
 offset = Vector2(-109.908, -181.871)
 
 [node name="Desk" type="Sprite2D" parent="."]
@@ -1499,7 +1500,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(961, 540)
 rotation = -6.28319
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("20_121u4")
+texture = ExtResource("20_y4hss")
 
 [node name="teacherclassroom" type="Node2D" parent="."]
 visible = false
@@ -1507,22 +1508,22 @@ position = Vector2(928, 534)
 scale = Vector2(0.380827, 0.380827)
 
 [node name="Classroomteacher" type="Sprite2D" parent="teacherclassroom"]
-texture = ExtResource("21_yalt3")
+texture = ExtResource("21_7cyd0")
 
 [node name="Teacher" type="Node2D" parent="teacherclassroom"]
 position = Vector2(1932, 111)
 
 [node name="TeacherBody" type="Sprite2D" parent="teacherclassroom/Teacher"]
 position = Vector2(-3058.5, 294.5)
-texture = ExtResource("22_tl7dc")
+texture = ExtResource("22_ecw2x")
 
 [node name="TeacherFace" type="Sprite2D" parent="teacherclassroom/Teacher"]
 position = Vector2(-3072.94, -197.654)
-texture = ExtResource("23_wo0ad")
+texture = ExtResource("23_wisb0")
 offset = Vector2(19.4385, -208.846)
 
 [node name="1-Soundintro" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("24_shl8j")
+stream = ExtResource("24_jbt0w")
 
 [node name="FloorScene" type="Sprite2D" parent="."]
 visible = false
@@ -1530,21 +1531,21 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(-964, 1637)
 rotation = 12.5664
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("25_jp2v3")
+texture = ExtResource("25_igs5g")
 
 [node name="FloorSceneB" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 540)
-texture = ExtResource("26_gpcfe")
+texture = ExtResource("26_j5rnp")
 
 [node name="FloorScenePaper" type="Sprite2D" parent="."]
 position = Vector2(809, 778)
-texture = ExtResource("27_3bgem")
+texture = ExtResource("27_ardwf")
 
 [node name="TimmyHandBack" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1382, 1719)
-texture = ExtResource("28_1k7yw")
+texture = ExtResource("28_r1ygy")
 offset = Vector2(-197, -292)
 
 [node name="Timmyslide" type="AnimationPlayer" parent="."]
@@ -1558,11 +1559,11 @@ offset_left = 1538.0
 offset_top = 712.0
 offset_right = 1828.0
 offset_bottom = 1020.0
-texture_normal = ExtResource("29_n6mkm")
+texture_normal = ExtResource("29_4x38x")
 
 [node name="TextBox1" type="Sprite2D" parent="."]
 position = Vector2(1032, 200)
-texture = ExtResource("30_t5sit")
+texture = ExtResource("30_616g2")
 
 [node name="subtitles" type="RichTextLabel" parent="TextBox1"]
 offset_left = -223.132
@@ -1570,7 +1571,7 @@ offset_top = -100.707
 offset_right = 214.868
 offset_bottom = 81.2925
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("31_6odtw")
+theme_override_fonts/normal_font = ExtResource("31_kgyhy")
 theme_override_font_sizes/normal_font_size = 23
 bbcode_enabled = true
 text = "
@@ -1585,6 +1586,6 @@ vertical_alignment = 1
 [node name="Level1Start" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 540)
-texture = ExtResource("32_6xloh")
+texture = ExtResource("32_0na2v")
 
 [connection signal="animation_finished" from="Timmyslide" to="." method="_on_timmy_slide_animation_finished"]
