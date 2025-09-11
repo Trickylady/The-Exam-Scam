@@ -59,7 +59,7 @@ var level: Level
 
 
 func _ready() -> void:
-	Input.set_custom_mouse_cursor(preload("res://images/mouse_cursor_normal.png"))
+	Input.set_custom_mouse_cursor(preload("res://images/ui/mouse_cursor_normal.png"))
 	reset_stats()
 
 
@@ -86,7 +86,7 @@ func go_to_intro() -> void:
 
 func go_to_main_menu() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	get_tree().call_deferred("change_scene_to_file", "res://Menu.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/menu_title.tscn")
 
 
 func go_to_level(level_n: int) -> void:
@@ -118,3 +118,7 @@ func _on_game_won() -> void:
 func _on_level_lost() -> void:
 	Aud.play_lose()
 	go_to_main_menu() # TODO
+
+
+func quit() -> void:
+	get_tree().quit()

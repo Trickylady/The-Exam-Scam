@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn1ofk32ps65o"]
+
+[ext_resource type="Texture2D" uid="uid://ccrssls77cvpg" path="res://images/ui/volume_5.png" id="1_747be"]
+[ext_resource type="Script" uid="uid://buyg670meyhbk" path="res://instances/volume_slider.gd" id="2_0erfl"]
+[ext_resource type="Texture2D" uid="uid://pfghrd2ub01g" path="res://images/ui/Volume_0.png" id="2_bukm3"]
+
+[node name="volume_slider" type="TextureRect"]
+offset_right = 461.0
+offset_bottom = 117.0
+texture = ExtResource("1_747be")
+stretch_mode = 2
+script = ExtResource("2_0erfl")
+
+[node name="bar" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 460.0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_bukm3")
+expand_mode = 1
+stretch_mode = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

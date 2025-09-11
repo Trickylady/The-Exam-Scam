@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=3 uid="uid://b28bmchawkfsp"]
 
 [ext_resource type="Script" uid="uid://cnk87sgpisjhi" path="res://instances/level.gd" id="1_km5ld"]
-[ext_resource type="Texture2D" uid="uid://gtdrrp48pygl" path="res://images/paper_background.png" id="2_i2t4f"]
+[ext_resource type="Texture2D" uid="uid://gtdrrp48pygl" path="res://images/game/paper_background.png" id="2_i2t4f"]
 [ext_resource type="PackedScene" uid="uid://bksovv428cjmm" path="res://instances/paper/paper.tscn" id="3_8cye3"]
 [ext_resource type="Shader" uid="uid://c3v10btwbwaao" path="res://instances/paper/paper.gdshader" id="4_2orkt"]
-[ext_resource type="Script" uid="uid://2sqtxwso132e" path="res://instances/powerups_mng.gd" id="5_8omac"]
-[ext_resource type="Script" uid="uid://lbfuoeni3ggh" path="res://instances/pencils.gd" id="5_aicyk"]
-[ext_resource type="PackedScene" uid="uid://1fbulaq66v6h" path="res://instances/pencil/pencil.tscn" id="6_8b0r0"]
+[ext_resource type="Script" uid="uid://2sqtxwso132e" path="res://instances/powerups/powerups_mng.gd" id="5_8omac"]
+[ext_resource type="Script" uid="uid://lbfuoeni3ggh" path="res://instances/pencils/pencils.gd" id="5_aicyk"]
+[ext_resource type="PackedScene" uid="uid://1fbulaq66v6h" path="res://instances/pencils/pencil.tscn" id="6_8b0r0"]
 [ext_resource type="PackedScene" uid="uid://dgnxkyyvguc5n" path="res://instances/scissors/scissors.tscn" id="7_h6smj"]
 [ext_resource type="PackedScene" uid="uid://di6fx5kumhr0b" path="res://instances/hud.tscn" id="8_v5j5c"]
 

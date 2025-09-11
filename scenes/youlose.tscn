@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhm7nmp8gh02u"]
+
+[ext_resource type="Script" uid="uid://rf1m6ow3nir7" path="res://scenes/youlose.gd" id="1_4r7sw"]
+[ext_resource type="Texture2D" uid="uid://v3yxb4fbxorq" path="res://images/bg/loser.png" id="2_41qbh"]
+[ext_resource type="AudioStream" uid="uid://d10mkhtem355q" path="res://sounds/lose.mp3" id="3_tfa17"]
+
+[node name="youlose" type="Node2D"]
+script = ExtResource("1_4r7sw")
+
+[node name="youlosebg" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_41qbh")
+
+[node name="abackmenu" type="Area2D" parent="."]
+
+[node name="cpbackmenu" type="CollisionPolygon2D" parent="abackmenu"]
+polygon = PackedVector2Array(42, 341, 330, 335, 414, 605, 183, 791, -9, 629)
+
+[node name="ASPLose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tfa17")
+autoplay = true

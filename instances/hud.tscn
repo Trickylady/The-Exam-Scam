@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://di6fx5kumhr0b"]
 
 [ext_resource type="Script" uid="uid://bseg1kq1i6e2j" path="res://instances/hud.gd" id="1_hvx1s"]
-[ext_resource type="Theme" uid="uid://bdlo068qgnv34" path="res://hud.theme" id="1_sjqol"]
-[ext_resource type="Texture2D" uid="uid://dpbukxlonryia" path="res://images/overlay_game.png" id="2_6fdae"]
-[ext_resource type="Texture2D" uid="uid://wsvetbndxt2e" path="res://images/1up.png" id="3_sjqol"]
-[ext_resource type="Texture2D" uid="uid://duhskn1vf50m" path="res://images/adderall.png" id="4_34k8l"]
-[ext_resource type="Texture2D" uid="uid://lpikyaamp1c0" path="res://images/xanax.png" id="5_ingsw"]
-[ext_resource type="Texture2D" uid="uid://beusq0j4xbp6l" path="res://images/menu button.png" id="6_7kkmc"]
-[ext_resource type="PackedScene" uid="uid://drp0xdm87jr2j" path="res://instances/pnl_debug.tscn" id="8_34k8l"]
+[ext_resource type="Theme" uid="uid://bdlo068qgnv34" path="res://theme/hud.theme" id="1_sjqol"]
+[ext_resource type="Texture2D" uid="uid://dpbukxlonryia" path="res://images/ui/overlay_game.png" id="2_6fdae"]
+[ext_resource type="Texture2D" uid="uid://wsvetbndxt2e" path="res://images/game/1up.png" id="3_sjqol"]
+[ext_resource type="Texture2D" uid="uid://duhskn1vf50m" path="res://images/game/adderall.png" id="4_34k8l"]
+[ext_resource type="Texture2D" uid="uid://lpikyaamp1c0" path="res://images/game/xanax.png" id="5_ingsw"]
+[ext_resource type="Texture2D" uid="uid://beusq0j4xbp6l" path="res://images/ui/menu button.png" id="6_7kkmc"]
+[ext_resource type="PackedScene" uid="uid://drp0xdm87jr2j" path="res://instances/debug/pnl_debug.tscn" id="8_34k8l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_34k8l"]
 font_size = 28

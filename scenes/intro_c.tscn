@@ -1,0 +1,239 @@
+[gd_scene load_steps=24 format=3 uid="uid://cfebpheplodl4"]
+
+[ext_resource type="Texture2D" uid="uid://djfv1qp5dywf" path="res://images/intro/classroom.png" id="1_kl5bk"]
+[ext_resource type="Texture2D" uid="uid://cb7u8m7ulib3q" path="res://images/ui/skip_intro.png" id="2_teejj"]
+[ext_resource type="Texture2D" uid="uid://fo2omj47piwx" path="res://images/intro/timmy_body.png" id="3_wxpyi"]
+[ext_resource type="Texture2D" uid="uid://5ljyuinm74kd" path="res://images/intro/timmy_face.png" id="4_4bc3t"]
+[ext_resource type="Texture2D" uid="uid://bs7bcbn108mmu" path="res://images/intro/timmy_eyesocket_left.png" id="5_8e1q8"]
+[ext_resource type="Texture2D" uid="uid://5quwg4oyjjf6" path="res://images/intro/timmy_eyesocket_right.png" id="6_xpmvs"]
+[ext_resource type="Texture2D" uid="uid://hle8dpvun82l" path="res://images/intro/timmy_eyebrow_left.png" id="7_3rnff"]
+[ext_resource type="Texture2D" uid="uid://x5gcxdhkso4g" path="res://images/intro/timmy_eyebrow_right.png" id="8_mm7vv"]
+[ext_resource type="Texture2D" uid="uid://dnyiph6adiwf3" path="res://images/intro/timmy_iris_left.png" id="9_8rhdl"]
+[ext_resource type="Texture2D" uid="uid://c01bgaacv7dyd" path="res://images/intro/timmy_iris_right.png" id="10_lf5y0"]
+[ext_resource type="Texture2D" uid="uid://b2vyxfw1ooa45" path="res://images/intro/timmy_mouth_a.png" id="11_diytl"]
+[ext_resource type="Texture2D" uid="uid://dadnsne3hagna" path="res://images/intro/timmy_mouth_ab.png" id="12_j14t7"]
+[ext_resource type="Texture2D" uid="uid://v1t5f3j1e2la" path="res://images/intro/timmy_mouth_b.png" id="13_ci4m2"]
+[ext_resource type="Texture2D" uid="uid://byptewf2spwkk" path="res://images/intro/timmy_mouth_c.png" id="14_ipq6a"]
+[ext_resource type="Texture2D" uid="uid://yiw2ato5nkwp" path="res://images/intro/timmy_mouth_d.png" id="15_0by84"]
+[ext_resource type="Texture2D" uid="uid://bry7i6qr7kvcj" path="res://images/intro/timmy_sweat.png" id="16_xp2u0"]
+[ext_resource type="Texture2D" uid="uid://cxnj20o0mwwsw" path="res://images/intro/paul_body.png" id="17_ei6a7"]
+[ext_resource type="Texture2D" uid="uid://bx54cbmqlg47u" path="res://images/intro/paul_face.png" id="18_tle5k"]
+[ext_resource type="Texture2D" uid="uid://2rp44b3dyph2" path="res://images/intro/timmy_hand_wave.png" id="19_lj437"]
+[ext_resource type="AudioStream" uid="uid://brn2ycl8k5om7" path="res://sounds/a.mp3" id="20_xu61e"]
+
+[sub_resource type="Animation" id="Animation_emik5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Timmy:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hello:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TimmyHandWave:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(167, 1244)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TimmyHandWave:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.57603]
+}
+
+[sub_resource type="Animation" id="Animation_nhrif"]
+resource_name = "timmyslide"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Timmy:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.433333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(680, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hello:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TimmyHandWave:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.51526, 3, 3.5, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(167, 1244), Vector2(201, 934), Vector2(186, 983), Vector2(239, 885), Vector2(183, 1258)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TimmyHandWave:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.51526, 3, 3.5, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.57603, -0.192092, -0.447808, 0.258608, -0.9116]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojpj6"]
+_data = {
+&"RESET": SubResource("Animation_emik5"),
+&"timmyslide": SubResource("Animation_nhrif")
+}
+
+[node name="introA" type="Node2D"]
+
+[node name="classbg" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_kl5bk")
+
+[node name="skipintro" type="TextureButton" parent="."]
+offset_left = 1538.0
+offset_top = 712.0
+offset_right = 1828.0
+offset_bottom = 1020.0
+texture_normal = ExtResource("2_teejj")
+
+[node name="Timmy" type="Node2D" parent="."]
+
+[node name="TimmyBody" type="Sprite2D" parent="Timmy"]
+position = Vector2(-216, 931)
+texture = ExtResource("3_wxpyi")
+
+[node name="Timmyhead" type="Node2D" parent="Timmy"]
+position = Vector2(-193, 552)
+rotation = -0.0275939
+
+[node name="TimmyFace" type="Sprite2D" parent="Timmy/Timmyhead"]
+position = Vector2(-20.4749, -25.1588)
+texture = ExtResource("4_4bc3t")
+
+[node name="TimmyEyesocketLeft" type="Sprite2D" parent="Timmy/Timmyhead"]
+position = Vector2(-96.4749, -67.1588)
+texture = ExtResource("5_8e1q8")
+
+[node name="TimmyEyesocketRight" type="Sprite2D" parent="Timmy/Timmyhead"]
+position = Vector2(43.5251, -61.1588)
+texture = ExtResource("6_xpmvs")
+
+[node name="TimmyEyebrowLeft" type="Sprite2D" parent="Timmy/Timmyhead"]
+position = Vector2(-88.4749, -143.159)
+texture = ExtResource("7_3rnff")
+
+[node name="TimmyEyebrowRight" type="Sprite2D" parent="Timmy/Timmyhead"]
+position = Vector2(40.5251, -143.159)
+texture = ExtResource("8_mm7vv")
+
+[node name="TimmyIrisLeft" type="Sprite2D" parent="Timmy/Timmyhead"]
+position = Vector2(-94.4749, -61.1588)
+texture = ExtResource("9_8rhdl")
+
+[node name="TimmyIrisRight" type="Sprite2D" parent="Timmy/Timmyhead"]
+position = Vector2(40.5251, -56.1588)
+texture = ExtResource("10_lf5y0")
+
+[node name="TimmyMouthA" type="Sprite2D" parent="Timmy/Timmyhead"]
+position = Vector2(-55.4749, 139.841)
+texture = ExtResource("11_diytl")
+
+[node name="TimmyMouthAB" type="Sprite2D" parent="Timmy/Timmyhead"]
+visible = false
+position = Vector2(-253, 708)
+texture = ExtResource("12_j14t7")
+
+[node name="TimmyMouthB" type="Sprite2D" parent="Timmy/Timmyhead"]
+visible = false
+position = Vector2(-246, 710)
+texture = ExtResource("13_ci4m2")
+
+[node name="TimmyMouthC" type="Sprite2D" parent="Timmy/Timmyhead"]
+visible = false
+position = Vector2(-268, 721)
+texture = ExtResource("14_ipq6a")
+
+[node name="TimmyMouthD" type="Sprite2D" parent="Timmy/Timmyhead"]
+visible = false
+position = Vector2(-270, 723)
+texture = ExtResource("15_0by84")
+
+[node name="TimmySweat" type="Sprite2D" parent="Timmy/Timmyhead"]
+visible = false
+position = Vector2(-104, 416)
+texture = ExtResource("16_xp2u0")
+
+[node name="Paul" type="Node2D" parent="."]
+position = Vector2(337, 0)
+
+[node name="PaulBody" type="Sprite2D" parent="Paul"]
+position = Vector2(1968, 906)
+texture = ExtResource("17_ei6a7")
+
+[node name="PaulFace" type="Sprite2D" parent="Paul"]
+position = Vector2(1930, 452)
+texture = ExtResource("18_tle5k")
+
+[node name="TimmyHandWave" type="Sprite2D" parent="."]
+position = Vector2(167, 1244)
+rotation = -1.57603
+texture = ExtResource("19_lj437")
+
+[node name="Timmy slide" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ojpj6")
+}
+autoplay = "timmyslide"
+
+[node name="Hello" type="AudioStreamPlayer2D" parent="."]
+visible = false
+position = Vector2(-779, 505)
+stream = ExtResource("20_xu61e")

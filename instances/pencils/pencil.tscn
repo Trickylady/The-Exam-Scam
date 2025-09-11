@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://1fbulaq66v6h"]
+
+[ext_resource type="Script" uid="uid://onktag6l5osh" path="res://instances/pencils/pencil.gd" id="1_ad3jj"]
+[ext_resource type="Texture2D" uid="uid://b4twiri5rkh8q" path="res://images/game/ball.png" id="2_k0bj3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_04o1w"]
+
+[node name="pencil" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_ad3jj")
+
+[node name="sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.425532, 0.425532)
+texture = ExtResource("2_k0bj3")
+
+[node name="coll" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_04o1w")
+
+[node name="ray" type="RayCast2D" parent="."]
+visible = false
+
+[node name="cast" type="ShapeCast2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_04o1w")

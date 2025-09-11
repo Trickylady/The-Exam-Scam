@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dvlv5eahbvwrh"]
+
+[ext_resource type="FontFile" uid="uid://qguv6il4xhsx" path="res://theme/BD_Cartoon_Shout.ttf" id="1_uivuy"]
+
+[resource]
+default_font_size = 65
+Label/colors/font_color = Color(0.1634, 0.48848, 0.86, 1)
+Label/fonts/font = ExtResource("1_uivuy")
