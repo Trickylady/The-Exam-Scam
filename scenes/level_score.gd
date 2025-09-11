@@ -2,7 +2,8 @@ extends Control
 
 
 func _ready() -> void:
-	Aud.play_lose()
+	Aud.play_win_level()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	_populate()
 
 

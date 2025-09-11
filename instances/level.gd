@@ -3,10 +3,13 @@ class_name Level
 
 @onready var hud: HUD = %HUD
 @onready var paper: Paper = %paper
+@onready var powerups: PowerupsMng = %powerups
 @onready var pencils_mng: PencilsMng = %pencils_mng
 @onready var scissors: Scissors = %scissors
 
 @export var n: int = 1
+
+var t_start: int
 
 signal level_won
 signal level_lost
@@ -19,6 +22,7 @@ var pencils: Array[Pencil]:
 #region Init
 func start() -> void:
 	propagate_call("setup", [], true)
+	t_start = Time.get_ticks_msec()
 
 
 func setup() -> void:

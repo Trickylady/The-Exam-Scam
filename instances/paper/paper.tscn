@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bgrirf27g4n3s" path="res://instances/paper/paper.gd" id="2_2jdmg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jh5fo"]
+resource_local_to_scene = true
 shader = ExtResource("1_hv2f1")
 shader_parameter/invert_mask = true
 shader_parameter/threshold = 0.5
@@ -18,7 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_p66p3")
 expand_mode = 1
-stretch_mode = 6
+stretch_mode = 1
 script = ExtResource("2_2jdmg")
 
 [node name="sub" type="SubViewport" parent="."]

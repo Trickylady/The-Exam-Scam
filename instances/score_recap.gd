@@ -6,4 +6,4 @@ func _ready() -> void:
 
 
 func _populate() -> void:
-	$lb_score.text = "[wave]%s[/wave]" % Mng.score
+	$lb_score.text = "[wave]%s[/wave]" % Mng.stats.get_global_scores()

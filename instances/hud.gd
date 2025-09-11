@@ -23,7 +23,7 @@ func setup() -> void:
 
 
 func _connect_signals() -> void:
-	Mng.score_updated.connect(update_scores)
+	Mng.stats.score_updated.connect(update_scores)
 	Mng.lives_updated.connect(update_lives)
 	Mng.boost_n_updated.connect(update_boosts)
 	Mng.slow_n_updated.connect(update_slows)
@@ -39,7 +39,7 @@ func update_gui() -> void:
 
 func update_scores() -> void:
 	var zero_pad := true
-	var v: int = clamp(Mng.score, 0, 9999)
+	var v: int = clamp(Mng.stats.get_global_scores(), 0, 9999)
 	@warning_ignore("integer_division")
 	var digits := [ (v / 1000) % 10, (v / 100) % 10, (v / 10) % 10, v % 10 ]
 

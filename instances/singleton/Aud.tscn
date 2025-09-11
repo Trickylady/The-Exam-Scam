@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbtiqih3ycb26"]
+[gd_scene load_steps=3 format=3 uid="uid://bbtiqih3ycb26"]
 
 [ext_resource type="Script" uid="uid://ccitvwsr7376d" path="res://instances/singleton/aud.gd" id="1_qegt6"]
-[ext_resource type="AudioStream" uid="uid://pquq25jexc3r" path="res://sounds/mus_soundtrack.ogg" id="2_artq0"]
-[ext_resource type="AudioStream" uid="uid://dtq1cad0mqfca" path="res://sounds/mus_static_noise.ogg" id="3_vtybb"]
+[ext_resource type="AudioStream" uid="uid://dq3s38u0mxol6" path="res://sounds/soundtrack.mp3" id="2_d65k4"]
 
 [node name="Aud" type="Node"]
 script = ExtResource("1_qegt6")
@@ -18,11 +17,6 @@ volume_db = -9.797
 bus = &"sfx"
 
 [node name="mus" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_artq0")
-volume_db = -12.0
-bus = &"music"
-
-[node name="mus_noise" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_vtybb")
+stream = ExtResource("2_d65k4")
 volume_db = -12.0
 bus = &"music"
