@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://5h3ennugpanl"]
+[gd_scene load_steps=6 format=3 uid="uid://5h3ennugpanl"]
 
 [ext_resource type="Script" uid="uid://6voauss1t5dj" path="res://scenes/sound_settings.gd" id="1_6uf41"]
 [ext_resource type="Theme" uid="uid://benif35do1jnk" path="res://theme/main.theme" id="1_lt7em"]
 [ext_resource type="PackedScene" uid="uid://dn1ofk32ps65o" path="res://instances/volume_slider.tscn" id="3_b4h2r"]
 [ext_resource type="Texture2D" uid="uid://2i8ledfyd7uc" path="res://images/bg/background_menutabs.png" id="3_lt7em"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tg8u4"]
+font_size = 50
+font_color = Color(0.807843, 0.909804, 0.984314, 1)
 
 [node name="sound_settings" type="Control"]
 layout_mode = 3
@@ -31,25 +35,85 @@ grow_vertical = 2
 theme_override_constants/separation = 44
 alignment = 1
 
-[node name="volume_master" parent="vb" instance=ExtResource("3_b4h2r")]
+[node name="hb1" type="HBoxContainer" parent="vb"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="lb_master" type="RichTextLabel" parent="vb/hb1"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0.54902, 0.752941, 0.992157, 1)
+bbcode_enabled = true
+text = "[s]Master"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="volume_master" parent="vb/hb1" instance=ExtResource("3_b4h2r")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="volume_sfx" parent="vb" instance=ExtResource("3_b4h2r")]
+[node name="hb2" type="HBoxContainer" parent="vb"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="lb_sfx" type="RichTextLabel" parent="vb/hb2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0.54902, 0.752941, 0.992157, 1)
+bbcode_enabled = true
+text = "sfx"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="volume_sfx" parent="vb/hb2" instance=ExtResource("3_b4h2r")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="volume_mus" parent="vb" instance=ExtResource("3_b4h2r")]
+[node name="hb3" type="HBoxContainer" parent="vb"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="lb_music" type="RichTextLabel" parent="vb/hb3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0.54902, 0.752941, 0.992157, 1)
+bbcode_enabled = true
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="volume_mus" parent="vb/hb3" instance=ExtResource("3_b4h2r")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="volume_voice" parent="vb" instance=ExtResource("3_b4h2r")]
+[node name="hb4" type="HBoxContainer" parent="vb"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="lb_voice" type="RichTextLabel" parent="vb/hb4"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0.54902, 0.752941, 0.992157, 1)
+bbcode_enabled = true
+text = "Voice"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="volume_voice" parent="vb/hb4" instance=ExtResource("3_b4h2r")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -63,8 +127,22 @@ offset_right = 384.0
 offset_bottom = 767.0
 flat = true
 
-[connection signal="value_changed" from="vb/volume_master" to="." method="_on_volume_master_value_changed"]
-[connection signal="value_changed" from="vb/volume_sfx" to="." method="_on_volume_sfx_value_changed"]
-[connection signal="value_changed" from="vb/volume_mus" to="." method="_on_volume_mus_value_changed"]
-[connection signal="value_changed" from="vb/volume_voice" to="." method="_on_volume_voice_value_changed"]
+[node name="lb_sound" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1821.0
+offset_top = 913.0
+offset_right = 2027.0
+offset_bottom = 969.5
+rotation = -1.57079
+text = "sound"
+label_settings = SubResource("LabelSettings_tg8u4")
+
+[connection signal="gui_input" from="vb/hb1/lb_master" to="." method="_on_lb_master_gui_input"]
+[connection signal="value_changed" from="vb/hb1/volume_master" to="." method="_on_volume_master_value_changed"]
+[connection signal="gui_input" from="vb/hb2/lb_sfx" to="." method="_on_lb_sfx_gui_input"]
+[connection signal="value_changed" from="vb/hb2/volume_sfx" to="." method="_on_volume_sfx_value_changed"]
+[connection signal="gui_input" from="vb/hb3/lb_music" to="." method="_on_lb_music_gui_input"]
+[connection signal="value_changed" from="vb/hb3/volume_mus" to="." method="_on_volume_mus_value_changed"]
+[connection signal="gui_input" from="vb/hb4/lb_voice" to="." method="_on_lb_voice_gui_input"]
+[connection signal="value_changed" from="vb/hb4/volume_voice" to="." method="_on_volume_voice_value_changed"]
 [connection signal="pressed" from="btn_back" to="." method="_on_btn_back_pressed"]

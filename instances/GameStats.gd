@@ -15,7 +15,8 @@ class LevelStats extends RefCounted:
 var _all: Dictionary[int, LevelStats] = {}
 var level_t_start: int
 var level_n: int
-
+var level_stats: LevelStats:
+	get: return _all[level_n]
 
 signal score_updated
 
@@ -32,26 +33,21 @@ func new_level(_level: Level) -> void:
 
 
 func increase_score(partial_scores: int) -> void:
-	var level_stat: LevelStats = _all[level_n]
-	level_stat.scores += partial_scores
+	level_stats.scores += partial_scores
 	score_updated.emit()
 
 
 func _increase_hits(_pencil: Pencil) -> void:
-	var level_stat: LevelStats = _all[level_n]
-	level_stat.hits += 1
+	level_stats.hits += 1
 func _increase_cuts() -> void:
-	var level_stat: LevelStats = _all[level_n]
-	level_stat.cuts += 1
+	level_stats.cuts += 1
 func _on_powerup_collected(powerup: Powerup) -> void:
-	var level_stat: LevelStats = _all[level_n]
 	match powerup.type:
-		Powerup.Type.LIFE: level_stat.lives_collected += 1
-		Powerup.Type.BOOST: level_stat.boosts_collected += 1
-		Powerup.Type.SLOW: level_stat.slows_collected += 1
+		Powerup.Type.LIFE: level_stats.lives_collected += 1
+		Powerup.Type.BOOST: level_stats.boosts_collected += 1
+		Powerup.Type.SLOW: level_stats.slows_collected += 1
 func _on_level_end() -> void:
-	var level_stat: LevelStats = _all[level_n]
-	level_stat.time_elapsed = Time.get_ticks_msec() - level_t_start
+	level_stats.time_elapsed = Time.get_ticks_msec() - level_t_start
 
 
 func get_global_scores() -> int:
@@ -92,4 +88,4 @@ static func t_msec_to_string(msecs: int) -> String:
 	if t_dict["hour"] > 0:
 		return "%d:%02d%02d" % [t_dict["hour"], t_dict["minute"], t_dict["second"]]
 	
-	return "%02d%02d.%03d" % [t_dict["minute"], t_dict["second"], fract]
+	return "%02d:%02d.%03d" % [t_dict["minute"], t_dict["second"], fract]

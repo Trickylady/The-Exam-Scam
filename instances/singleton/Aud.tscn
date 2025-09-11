@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbtiqih3ycb26"]
 
 [ext_resource type="Script" uid="uid://ccitvwsr7376d" path="res://instances/singleton/aud.gd" id="1_qegt6"]
-[ext_resource type="AudioStream" uid="uid://dq3s38u0mxol6" path="res://sounds/soundtrack.mp3" id="2_d65k4"]
+[ext_resource type="AudioStream" uid="uid://10unyigx0jpn" path="res://sounds/soundtrack.mp3" id="2_d65k4"]
 
 [node name="Aud" type="Node"]
 script = ExtResource("1_qegt6")
