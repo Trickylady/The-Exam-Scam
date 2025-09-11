@@ -34,9 +34,9 @@ flat = true
 
 [node name="score_recap" parent="." instance=ExtResource("4_udcgi")]
 layout_mode = 0
-offset_left = 429.0
-offset_top = 711.0
+offset_left = 605.0
+offset_top = 703.0
 offset_right = 1047.0
-offset_bottom = 981.0
+offset_bottom = 878.0
 
 [connection signal="pressed" from="btn_go_to_menu" to="." method="_on_btn_go_to_menu_pressed"]
