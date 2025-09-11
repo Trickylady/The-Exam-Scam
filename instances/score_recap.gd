@@ -15,6 +15,6 @@ func _populate() -> void:
 	$lb_score.text = text
 
 
-func stat_value(value: Variant, col: Color = Color.GOLD, text_size: int = 50) -> String:
+func stat_value(value: Variant, col: Color = Color.GOLD, text_size: int = 30) -> String:
 	var col_hex: String = col.to_html(false)
 	return "[color=%s][font_size=%s][wave]%s[/wave][/font_size][/color]" % [col_hex, text_size, value]

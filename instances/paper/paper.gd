@@ -125,60 +125,79 @@ func cut_along_segment(seg: PackedVector2Array, at_point: Vector2) -> void:
 		if debug: %debug_renderer.queue_redraw()
 		return
 
-	# 3) Decide which components to keep/remove
-	#    - prefer the component containing the at_point
-	#    - consider pencils only inside the original target
+		# 3) Decide which components to keep/remove (pencil-driven, then fallback)
 	var pens_here := _pencils_in_region(target)
 
-	var chosen_idx := _index_of_component_with_point(kept_components, at_point)
-	var comps_with_pencils := _flags_components_have_pencils(kept_components, pens_here)
+	# Filter out degenerate crumbs first
+	kept_components = _filter_nontrivial(kept_components)
+	slit_removed_now = _filter_nontrivial(slit_removed_now)
 
-	# Both sides active? (any component other than chosen has a pencil)
-	var both_sides := false
-	if chosen_idx != -1:
-		for i in range(kept_components.size()):
-			if i != chosen_idx and comps_with_pencils[i]:
-				both_sides = true
-				break
-	else:
-		# If the cut went exactly through a vertex/edge and at_point sits on the slit,
-		# fall back: if multiple comps have pencils, treat as both_sides
-		var pencil_count := 0
-		for f in comps_with_pencils:
-			if f: pencil_count += 1
-		both_sides = pencil_count >= 2
+	# If slit erased nothing and produced no components, keep target and bail (already handled above if both were empty)
+	if kept_components.is_empty() and not slit_removed_now.is_empty():
+		# Entire target stayed as-is but we did carve a slit inside it; keep target
+		new_regions.append(target)
+		# Count slit as removed (visuals + area)
+		var just_removed: Array[PackedVector2Array] = slit_removed_now
+		paper_regions = new_regions
+		if just_removed.size() > 0:
+			add_collision_polygons(just_removed)
+			removed_regions.append_array(just_removed)
+		available_area = calculate_polygons_area(paper_regions)
+		if debug: %debug_renderer.queue_redraw()
+		return
+
+	var comps_with_pencils := _flags_components_have_pencils(kept_components, pens_here)
+	var k := 0
+	for f in comps_with_pencils:
+		if f != 0:
+			k += 1
 
 	var just_removed: Array[PackedVector2Array] = []
 
-	if both_sides:
-		# Keep all components; only the slit is removed
-		new_regions.append_array(_filter_nontrivial(kept_components))
-		just_removed.append_array(_filter_nontrivial(slit_removed_now))
-		# Optional: solid collider for the slit so pencils bounce on it
+	if k >= 2:
+		# Both sides active: keep all components; slit only is removed
+		new_regions.append_array(kept_components)
+		just_removed.append_array(slit_removed_now)
 		add_solid_collision_polygon_to_segments(slit)
-		# Emit per slit piece (not the whole rectangle)
 		for poly in slit_removed_now:
 			paper_removed.emit(poly)
-	else:
-		# Keep one side, remove the other components (+ the slit)
-		if chosen_idx == -1:
-			# If at_point is ambiguous, pick the component with pencils; else the largest
-			chosen_idx = _first_component_with_pencils(comps_with_pencils)
-			if chosen_idx == -1:
-				chosen_idx = _index_of_largest_component(kept_components)
-		# Keep chosen
+
+	elif k == 1:
+		# Keep the component that actually has pencils
+		var chosen_idx := -1
+		for i in range(comps_with_pencils.size()):
+			if comps_with_pencils[i] != 0:
+				chosen_idx = i
+				break
+
 		if chosen_idx != -1:
 			new_regions.append(kept_components[chosen_idx])
-		# Remove others
 		for i in range(kept_components.size()):
 			if i == chosen_idx: continue
 			just_removed.append(kept_components[i])
 			paper_removed.emit(kept_components[i])
-		# Slit pieces are also removed (count area + visuals/colliders)
+
 		for poly in slit_removed_now:
 			just_removed.append(poly)
 			paper_removed.emit(poly)
 
+	else:
+		# No pencils in any component → choose by locality, then size
+		var chosen_idx := _index_of_component_with_point(kept_components, at_point)
+		if chosen_idx == -1:
+			chosen_idx = _index_of_largest_component(kept_components)
+
+		if chosen_idx != -1:
+			new_regions.append(kept_components[chosen_idx])
+		for i in range(kept_components.size()):
+			if i == chosen_idx: continue
+			just_removed.append(kept_components[i])
+			paper_removed.emit(kept_components[i])
+
+		for poly in slit_removed_now:
+			just_removed.append(poly)
+			paper_removed.emit(poly)
+	
 	# 4) Commit and spawn visuals/colliders for removed bits
 	paper_regions = new_regions
 
@@ -518,6 +537,14 @@ static func half_plane_for_segment(p0: Vector2, p1: Vector2, take_left_side: boo
 		b + n * W,
 		a + n * W,
 	])
+
+
+static func _count_true(flags: PackedByteArray) -> int:
+	var c := 0
+	for f in flags:
+		if f != 0:
+			c += 1
+	return c
 
 
 static func diff_many(subjects: Array[PackedVector2Array], cutters: Array[PackedVector2Array]) -> Array[PackedVector2Array]:
