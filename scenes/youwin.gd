@@ -3,6 +3,7 @@ extends Control
 
 func _ready() -> void:
 	Aud.play_win_game()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	$credits.hide()
 
 

@@ -63,6 +63,7 @@ func _ready() -> void:
 func start_game() -> void:
 	reset_stats()
 	Aud.play_game_music()
+	Aud.start_random_lines()
 	Mng.go_to_level(1)
 
 

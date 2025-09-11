@@ -25,3 +25,8 @@ bus = &"sfx"
 stream = ExtResource("2_d65k4")
 volume_db = -12.0
 bus = &"music"
+
+[node name="tmr_random_line" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="tmr_random_line" to="." method="_on_tmr_random_line_timeout"]
