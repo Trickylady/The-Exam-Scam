@@ -59,6 +59,7 @@ var level: Level
 
 
 func _ready() -> void:
+	Input.set_custom_mouse_cursor(preload("res://images/mouse_cursor_normal.png"))
 	reset_stats()
 
 
@@ -74,6 +75,13 @@ func reset_stats() -> void:
 	current_level_n = 1
 	boost_n = init_boosts
 	slow_n = init_slows
+
+
+func go_to_intro() -> void:
+	if is_family_friendly:
+		get_tree().change_scene_to_file("res://introaredo.tscn")
+	else:
+		get_tree().change_scene_to_file("res://introaredo.tscn")
 
 
 func go_to_main_menu() -> void:

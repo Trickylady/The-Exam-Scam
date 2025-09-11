@@ -192,3 +192,5 @@ texture_normal = ExtResource("6_7kkmc")
 unique_name_in_owner = true
 layout_mode = 1
 offset_left = -375.0
+
+[connection signal="pressed" from="overlay/gomenubutton" to="." method="_on_gomenubutton_pressed"]

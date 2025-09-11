@@ -86,3 +86,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.keycode == KEY_Q and event.is_pressed() and not event.is_echo():
 			%pnl_debug.visible = !%pnl_debug.visible
+
+
+func _on_gomenubutton_pressed() -> void:
+	Mng.go_to_main_menu()
