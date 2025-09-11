@@ -48,7 +48,7 @@ func play_hit() -> void:
 
 
 func play_line_complete() -> void:
-	pass # TODO: not implemented
+	$sfx_snip.play()
 
 
 func play_nice() -> void:
