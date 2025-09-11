@@ -5,13 +5,14 @@ var is_debug_build: bool = true
 
 # Game modifiers
 var is_family_friendly: bool = true
-var max_levels: int = 10 # when the game ends
+var max_levels: int = 3 # when the game ends
 var max_lives: int = 5 # can't collect more than this
 var max_boosts: int = 5
 var max_slows: int = 5
 var init_boosts: int = 1 # the game starts with
 var init_slows: int = 1
 var goal_completion: float = 0.75 # 0 to 1 (percentage to win the level)
+var compliment_ratio: float = 0.18 # 0 to 1 (percentage to get a "blimey" compliment from Fin)
 
 # Scissors
 var scissors_angles_num: int = 5
@@ -107,4 +108,5 @@ func _on_game_won() -> void:
 	Aud.play_win_game()
 	go_to_main_menu()
 func _on_level_lost() -> void:
+	Aud.play_lose()
 	go_to_main_menu() # TODO

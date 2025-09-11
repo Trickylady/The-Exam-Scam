@@ -43,6 +43,10 @@ func play_hit() -> void:
 	_play_sfx(filepath)
 
 
+func play_line_complete() -> void:
+	pass # TODO
+
+
 func play_nice() -> void:
 	const PATHS = [
 		"res://sounds/sfx_blimey.mp3",

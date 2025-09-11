@@ -84,7 +84,7 @@ func hit() -> void:
 
 
 func complete() -> void:
-	Aud.play_nice()
+	Aud.play_line_complete()
 	finished.emit()
 	level.paper.cut_along_segment(target_segment, position)
 	set_capture_mouse(false)

@@ -74,6 +74,10 @@ func _on_available_area_updated() -> void:
 
 
 func _on_paper_removed(poly_removed: PackedVector2Array) -> void:
+	var area_removed: float = polygon_area_shoelace(poly_removed)
+	var removed_ratio: float = area_removed / initial_available_area
+	if removed_ratio > Mng.compliment_ratio:
+		Aud.play_nice()
 	@warning_ignore("integer_division")
 	var removed_area: float = polygon_area_shoelace(poly_removed)
 	var removed_area_ratio: float = removed_area/initial_available_area
