@@ -4,6 +4,7 @@ extends Control
 func _ready() -> void:
 	Aud.play_menu_music()
 	Aud.play_lose()
+	Aud.start_random_lines()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
