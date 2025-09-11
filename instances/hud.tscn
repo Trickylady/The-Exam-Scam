@@ -19,8 +19,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme = ExtResource("1_sjqol")
 script = ExtResource("1_hvx1s")
+metadata/_edit_lock_ = true
 
 [node name="coll" type="CollisionPolygon2D" parent="."]
 unique_name_in_owner = true
@@ -40,6 +42,7 @@ offset_right = -16.0
 offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 max_value = 1.0
 show_percentage = false
 
@@ -47,6 +50,7 @@ show_percentage = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 texture = ExtResource("2_6fdae")
 
 [node name="lb_level_n" type="Label" parent="overlay"]
@@ -68,6 +72,7 @@ offset_left = 182.0
 offset_top = 83.0
 offset_right = 310.0
 offset_bottom = 123.0
+mouse_filter = 2
 theme_override_constants/separation = 1
 
 [node name="lb_score_1" type="Label" parent="overlay/hb_scores"]
@@ -109,6 +114,7 @@ offset_left = 126.0
 offset_top = 132.0
 offset_right = 176.0
 offset_bottom = 181.0
+mouse_filter = 2
 theme_override_constants/separation = 8
 
 [node name="1Up" type="TextureRect" parent="overlay/hb_lives"]
@@ -146,6 +152,7 @@ offset_left = 38.0
 offset_top = 271.0
 offset_right = 206.0
 offset_bottom = 320.0
+mouse_filter = 2
 theme_override_constants/separation = 8
 
 [node name="ico1" type="TextureRect" parent="overlay/hb_boosts"]
@@ -162,6 +169,7 @@ offset_left = 37.0
 offset_top = 400.0
 offset_right = 205.0
 offset_bottom = 449.0
+mouse_filter = 2
 theme_override_constants/separation = 8
 
 [node name="ico1" type="TextureRect" parent="overlay/hb_slows"]

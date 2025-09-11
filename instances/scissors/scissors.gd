@@ -58,13 +58,19 @@ signal cut_line_hit(pencil: Pencil)
 
 
 func setup() -> void:
-	_update_capture_mouse()
 	visibility_changed.connect(_update_capture_mouse)
+	_update_capture_mouse()
+	update_angles()
+	update_scale()
+
+
+func update_angles() -> void:
+	angles.clear()
 	var increment: float = TAU / Mng.scissors_angles_num
 	for i in Mng.scissors_angles_num:
 		var angle: float = increment * i
 		angles.append(angle)
-	update_scale()
+	rotation = 0
 
 
 func update_scale() -> void:

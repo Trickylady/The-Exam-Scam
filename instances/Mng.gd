@@ -36,6 +36,7 @@ var pencils_slow_duration: float = 10.0 # sec
 var slow_pencils_mult: float = 0.25
 
 
+# Game status
 var current_level_n: int
 var scores: Dictionary = {}
 var score: int:
@@ -51,9 +52,9 @@ signal lives_updated
 signal boost_n_updated
 signal slow_n_updated
 
+
 const LEVEL_PCK = preload("res://instances/level.tscn")
 var level: Level
-
 
 
 func _ready() -> void:
