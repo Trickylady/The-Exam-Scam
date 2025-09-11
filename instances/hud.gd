@@ -12,6 +12,7 @@ func _set_level(l: Level) -> void:
 
 func _ready() -> void:
 	%pnl_debug.hide()
+	$sound_settings.hide()
 	%progress.visible = Mng.is_debug_build
 
 
@@ -83,11 +84,29 @@ func _clear_container(cont: Container) -> void:
 
 
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed(&"ui_cancel"):
+		$sound_settings.visible = !$sound_settings.visible
 	if !Mng.is_debug_build: return
 	if event is InputEventKey:
 		if event.keycode == KEY_Q and event.is_pressed() and not event.is_echo():
 			%pnl_debug.visible = !%pnl_debug.visible
 
 
+func _process(_delta: float) -> void:
+	var on_overlay: bool = Geometry2D.is_point_in_polygon(get_local_mouse_position(), %coll.polygon)
+	if on_overlay and Input.mouse_mode == Input.MOUSE_MODE_HIDDEN:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	elif not on_overlay and Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+
+
 func _on_gomenubutton_pressed() -> void:
+	$sound_settings.show()
+func _on_btn_override_go_to_menu_pressed() -> void:
+	get_tree().paused = false
 	Mng.go_to_main_menu()
+func _on_btn_close_menu_pressed() -> void:
+	$sound_settings.hide()
+func _on_sound_settings_visibility_changed() -> void:
+	get_tree().paused = $sound_settings.visible
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if $sound_settings.visible else Input.MOUSE_MODE_HIDDEN

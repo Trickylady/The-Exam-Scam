@@ -39,6 +39,7 @@ text = "Credits"
 label_settings = SubResource("LabelSettings_tg8u4")
 
 [node name="lb_back" type="Label" parent="."]
+layout_mode = 0
 offset_left = 77.0
 offset_top = 403.0
 offset_right = 337.0

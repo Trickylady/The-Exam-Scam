@@ -10,6 +10,7 @@ font_size = 50
 font_color = Color(0.807843, 0.909804, 0.984314, 1)
 
 [node name="sound_settings" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

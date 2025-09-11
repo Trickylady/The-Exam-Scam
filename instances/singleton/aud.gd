@@ -61,8 +61,8 @@ func play_nice() -> void:
 
 
 func play_win_level() -> void:
-	if Mng.is_family_friendly: _play_voiceline("res://sounds/win.mp3")
-	else: _play_voiceline("res://sounds/win_pg.mp3")
+	if Mng.is_family_friendly: _play_voiceline("res://sounds/win_pg.mp3")
+	else: _play_voiceline("res://sounds/win.mp3")
 
 
 func play_win_game() -> void:
