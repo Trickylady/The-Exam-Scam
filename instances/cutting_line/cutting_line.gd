@@ -53,10 +53,7 @@ func _physics_process(delta: float) -> void:
 	has_reached_back = abs(_shape_back.b.x) > _length_back
 	
 	if has_reached_forw and has_reached_back:
-		finished.emit()
-		level.paper.cut_along_segment(target_segment, position)
-		set_capture_mouse(false)
-		queue_free()
+		complete()
 
 
 func _process(_delta: float) -> void:
@@ -76,6 +73,19 @@ func set_capture_mouse(val: bool) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Pencil:
-		set_capture_mouse(false)
+		hit()
 		pencil_touched.emit(body)
-		queue_free()
+
+
+func hit() -> void:
+	Aud.play_hit()
+	set_capture_mouse(false)
+	queue_free()
+
+
+func complete() -> void:
+	Aud.play_nice()
+	finished.emit()
+	level.paper.cut_along_segment(target_segment, position)
+	set_capture_mouse(false)
+	queue_free()

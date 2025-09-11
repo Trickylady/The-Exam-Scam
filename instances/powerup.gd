@@ -85,10 +85,7 @@ func collect() -> void:
 		Type.LIFE: Mng.lives += 1
 		Type.BOOST: Mng.boost_n += 1
 		Type.SLOW: Mng.slow_n += 1
-	# TODO: animate
-	if $sfx_collect.stream:
-		$sfx_collect.play()
-		#await $sfx_collect.finished
+	Aud.play_powerup_collected()
 	despawn()
 
 

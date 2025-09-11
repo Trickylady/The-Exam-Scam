@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbtiqih3ycb26"]
+
+[ext_resource type="Script" uid="uid://ccitvwsr7376d" path="res://instances/singleton/aud.gd" id="1_qegt6"]
+
+[node name="Aud" type="Node"]
+script = ExtResource("1_qegt6")
+
+[node name="voice_line" type="AudioStreamPlayer" parent="."]
+bus = &"voice"
+
+[node name="sfx_powerup" type="AudioStreamPlayer" parent="."]
+bus = &"sfx"
+
+[node name="sfx_game" type="AudioStreamPlayer" parent="."]
+volume_db = -9.797
+bus = &"sfx"
+
+[node name="mus" type="AudioStreamPlayer" parent="."]
+bus = &"music"

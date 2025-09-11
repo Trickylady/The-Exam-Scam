@@ -81,6 +81,9 @@ func go_to_main_menu() -> void:
 
 
 func go_to_level(level_n: int) -> void:
+	if level_n == 1:
+		Aud.play_tutorial()
+	
 	current_level_n = level_n
 	await get_tree().process_frame
 	get_tree().change_scene_to_packed(LEVEL_PCK)
@@ -95,8 +98,13 @@ func go_to_level(level_n: int) -> void:
 
 func _on_level_won() -> void:
 	if current_level_n == max_levels:
-		go_to_main_menu()
+		_on_game_won()
+		return
 		#TODO: go to win page
 	go_to_level(current_level_n + 1)
+	Aud.play_win_level()
+func _on_game_won() -> void:
+	Aud.play_win_game()
+	go_to_main_menu()
 func _on_level_lost() -> void:
 	go_to_main_menu() # TODO
