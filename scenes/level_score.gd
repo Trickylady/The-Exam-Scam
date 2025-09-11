@@ -17,7 +17,7 @@ func _populate() -> void:
 	text += "\nLevel score %s" % stat_value(l_stats.scores)
 	text += "\nTime elapsed %s" % stat_value(GameStats.t_msec_to_string(l_stats.time_elapsed))
 	text += "\n1 UPs! collected %s" % stat_value(l_stats.lives_collected)
-	text += "\nAdderals collected %s" % stat_value(l_stats.boosts_collected)
+	text += "\nAdderalls collected %s" % stat_value(l_stats.boosts_collected)
 	text += "\nXanax collected %s" % stat_value(l_stats.slows_collected)
 	text += "\nHits %s times..." % stat_value(l_stats.hits, Color.ORANGE_RED)
 	%lb_score.text = text

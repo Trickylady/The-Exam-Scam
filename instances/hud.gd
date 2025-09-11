@@ -52,24 +52,31 @@ func update_scores() -> void:
 		# show blanks for leading zeros unless zero_pad is true; ones place always shown
 		lbl.text = str(d) if (zero_pad or nonzero_seen or i == 3) else ""
 func update_lives() -> void:
-	_clear_container(%hb_lives)
-	for i in Mng.lives:
-		_add_icon_to_container(Powerup.IMGS.Lives, %hb_lives)
+	_add_icons(Powerup.IMGS.Lives, Powerup.IMGS.StackLives, Mng.lives, %hb_lives)
 func update_boosts() -> void:
-	_clear_container(%hb_boosts)
-	for i in Mng.boost_n:
-		_add_icon_to_container(Powerup.IMGS.Boosts, %hb_boosts)
+	_add_icons(Powerup.IMGS.Boosts, Powerup.IMGS.StackBoosts, Mng.boost_n, %hb_boosts)
 func update_slows() -> void:
-	_clear_container(%hb_slows)
-	for i in Mng.slow_n:
-		_add_icon_to_container(Powerup.IMGS.Slows, %hb_slows)
+	_add_icons(Powerup.IMGS.Slows, Powerup.IMGS.StackSlows, Mng.slow_n, %hb_slows)
 
+func _add_icons(img: Texture2D, img_stack: Texture2D, qt: int, cont: Container) -> void:
+	_clear_container(cont)
+	if qt <= 5:
+		#single
+		for i in qt:
+			_add_icon_to_container(img, cont)
+	else:
+		#stack
+		_add_icon_to_container(img_stack, cont)
+		var lb := Label.new()
+		lb.text = str(qt)
+		lb.add_theme_font_size_override("font_size", 36)
+		cont.add_child(lb)
 
 func _on_paper_available_area_updated() -> void:
 	%progress.value = level.paper.completed_ratio
 
 
-func _add_icon_to_container(tex: Texture2D, cont: Container, dim: float = 32) -> void:
+func _add_icon_to_container(tex: Texture2D, cont: Container, dim: float = 42) -> void:
 	var new_tex := TextureRect.new()
 	new_tex.texture = tex
 	new_tex.custom_minimum_size = Vector2.ONE * dim

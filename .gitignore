@@ -6,3 +6,6 @@ html_build/
 Timmy.exe
 .gitignore
 html_build.zip
+Timmy.pck
+Timmy.x86_64
+Timmy-linux.zip
