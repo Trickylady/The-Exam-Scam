@@ -56,9 +56,9 @@ unique_name_in_owner = true
 material = SubResource("ShaderMaterial_8omac")
 layout_mode = 1
 mouse_filter = 2
-texture = null
 
 [node name="powerups" type="Node2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("5_8omac")
 
 [node name="pencils_mng" type="Node2D" parent="."]

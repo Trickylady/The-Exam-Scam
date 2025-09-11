@@ -54,6 +54,7 @@ var _tw_rot: Tween
 var _hit_point_forw: Vector2
 var _hit_point_back: Vector2
 
+signal cut_line_success
 signal cut_line_hit(pencil: Pencil)
 
 
@@ -127,6 +128,7 @@ func cut() -> void:
 
 
 func _on_cutting_line_finished() -> void:
+	cut_line_success.emit()
 	is_cutting = false
 	if Mng.scissors_rotation_sequential:
 		cycle_angle(false)
@@ -153,11 +155,8 @@ func _update_scissors_rotation() -> void:
 
 func _update_shoot() -> void:
 	if not is_node_ready(): return
-	var _boosting: bool = is_boosting
-	if not Engine.is_editor_hint():
-		_boosting = _boosting # TODO: check for boost in inventory
-	var grad: Gradient = shoot_col_boost if _boosting else shoot_col_normal
-	var shoot_speed: float = shoot_circles_boost_speed if _boosting else shoot_circles_normal_speed
+	var grad: Gradient = shoot_col_boost if is_boosting else shoot_col_normal
+	var shoot_speed: float = shoot_circles_boost_speed if is_boosting else shoot_circles_normal_speed
 	%part_forw.color_ramp = grad
 	%part_back.color_ramp = grad
 	%part_forw.initial_velocity_max= shoot_speed

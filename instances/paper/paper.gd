@@ -41,6 +41,8 @@ func setup() -> void:
 	# mask
 	clear_cut_visuals()
 	%sub.size = size
+	var mat: ShaderMaterial = material
+	mat.shader = preload("res://instances/paper/paper.gdshader")
 	material.set_shader_parameter("mask_tex", %sub.get_texture())
 	
 	paper_regions.clear()
@@ -82,7 +84,7 @@ func _on_paper_removed(poly_removed: PackedVector2Array) -> void:
 	var removed_area: float = polygon_area_shoelace(poly_removed)
 	var removed_area_ratio: float = removed_area/initial_available_area
 	var delta_score: int = int(floor(1000 * removed_area_ratio))
-	Mng.score += delta_score
+	Mng.stats.increase_score(delta_score)
 
 
 func cut_out_ui_polygon_from_field(_poly: PackedVector2Array) -> void:

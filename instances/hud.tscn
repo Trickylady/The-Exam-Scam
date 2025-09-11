@@ -190,6 +190,7 @@ texture_normal = ExtResource("6_7kkmc")
 
 [node name="pnl_debug" parent="." instance=ExtResource("8_34k8l")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 offset_left = -375.0
 

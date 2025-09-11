@@ -6,7 +6,6 @@ extends Node
 func play_music() -> void:
 	if not $mus.playing:
 		$mus.play()
-		$mus_noise.play()
 
 
 func play_tutorial() -> void:
