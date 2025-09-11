@@ -2,4 +2,7 @@
 .godot/
 /android/
 .vscode/
+html_build/
 Timmy.exe
+.gitignore
+html_build.zip

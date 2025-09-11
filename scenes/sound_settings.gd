@@ -19,6 +19,11 @@ func _toggle_mute(bus: int) -> void:
 		3: %lb_voice.text = "voice" if is_mute else "[color=black][s]voice"
 
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed(&"ui_cancel") and visible:
+		hide()
+
+
 func _on_btn_back_pressed() -> void:
 	hide()
 

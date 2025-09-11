@@ -1,7 +1,7 @@
 #Singleton Mng.gd
 extends Node
 
-var is_debug_build: bool = true
+var is_debug_build: bool = false # TODO: REMEMBER TO CHANGE THAT FOR THE FINAL BUILD
 
 # Game modifiers
 var is_family_friendly: bool = true

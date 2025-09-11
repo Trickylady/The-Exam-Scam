@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://qguv6il4xhsx" path="res://theme/BD_Cartoon_Shout.ttf" id="4_371vd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fordv"]
-font_size = 80
+font_size = 60
 
 [node name="level_score" type="Control"]
 layout_mode = 3
