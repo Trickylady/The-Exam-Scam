@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://rhpdhi2a4cm0"]
+
+[ext_resource type="Theme" uid="uid://benif35do1jnk" path="res://theme/main.theme" id="1_4qb0p"]
+[ext_resource type="Script" uid="uid://ddcuog6o0eg2s" path="res://instances/score_recap.gd" id="2_2s2aw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o7hyq"]
+font_size = 80
+
+[node name="score_recap" type="VBoxContainer"]
+offset_right = 506.0
+offset_bottom = 158.0
+theme = ExtResource("1_4qb0p")
+script = ExtResource("2_2s2aw")
+
+[node name="lb" type="Label" parent="."]
+layout_mode = 2
+text = "Score"
+label_settings = SubResource("LabelSettings_o7hyq")
+horizontal_alignment = 1
+
+[node name="lb_score" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[wave]210901[/wave]"
+fit_content = true

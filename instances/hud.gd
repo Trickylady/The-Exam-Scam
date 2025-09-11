@@ -12,6 +12,7 @@ func _set_level(l: Level) -> void:
 
 func _ready() -> void:
 	%pnl_debug.hide()
+	%progress.visible = Mng.is_debug_build
 
 
 func setup() -> void:

@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://bt7relrtv2qwy"]
+
+[ext_resource type="Script" uid="uid://bivth3318hxwi" path="res://scenes/level_score.gd" id="1_erj3y"]
+[ext_resource type="Theme" uid="uid://benif35do1jnk" path="res://theme/main.theme" id="1_fordv"]
+[ext_resource type="Texture2D" uid="uid://2i8ledfyd7uc" path="res://images/bg/background_menutabs.png" id="2_fordv"]
+[ext_resource type="Texture2D" uid="uid://1fjy7rglbc1w" path="res://images/ui/next_button.png" id="3_pu2ek"]
+[ext_resource type="FontFile" uid="uid://qguv6il4xhsx" path="res://theme/BD_Cartoon_Shout.ttf" id="4_371vd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fordv"]
+font_size = 80
+
+[node name="level_score" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_fordv")
+script = ExtResource("1_erj3y")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fordv")
+
+[node name="vb" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -421.0
+offset_top = -341.0
+offset_right = 421.0
+offset_bottom = 390.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="vb"]
+layout_mode = 2
+text = "Score"
+label_settings = SubResource("LabelSettings_fordv")
+horizontal_alignment = 1
+
+[node name="lb_score" type="RichTextLabel" parent="vb"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "1500"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_go_to_menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 345.0
+offset_right = 389.0
+offset_bottom = 737.0
+flat = true
+
+[node name="nextbutton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1362.0
+offset_top = 752.0
+offset_right = 1594.0
+offset_bottom = 964.0
+texture_normal = ExtResource("3_pu2ek")
+
+[node name="lb" type="Label" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 429.0
+offset_right = 332.0
+offset_bottom = 491.0
+rotation = 0.0764139
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_371vd")
+theme_override_font_sizes/font_size = 40
+text = "Go to"
+
+[connection signal="pressed" from="btn_go_to_menu" to="." method="_on_btn_go_to_menu_pressed"]
+[connection signal="pressed" from="nextbutton" to="." method="_on_nextbutton_pressed"]

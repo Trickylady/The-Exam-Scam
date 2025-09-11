@@ -1,13 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://dujdy2di13elt"]
+[gd_scene load_steps=10 format=3 uid="uid://dujdy2di13elt"]
 
 [ext_resource type="Script" uid="uid://bxtbo42mjoxb3" path="res://scenes/menu_title.gd" id="1_6d3kw"]
+[ext_resource type="Theme" uid="uid://benif35do1jnk" path="res://theme/main.theme" id="1_gda4y"]
 [ext_resource type="Texture2D" uid="uid://bxepm5hyi0ec1" path="res://images/bg/menu_use.png" id="2_bt2k5"]
 [ext_resource type="Texture2D" uid="uid://cgvdhnbmwcajm" path="res://images/ui/menu_exit.png" id="3_r4bt5"]
 [ext_resource type="Texture2D" uid="uid://bqyn5thepfadc" path="res://images/ui/menu_play.png" id="4_avo1h"]
 [ext_resource type="Texture2D" uid="uid://5iv2fk4tdmf2" path="res://images/ui/menu_continue.png" id="5_uwf38"]
 [ext_resource type="Texture2D" uid="uid://b78q61krlfp2d" path="res://images/ui/menu_sound.png" id="6_hg21e"]
-[ext_resource type="Theme" uid="uid://dvlv5eahbvwrh" path="res://theme/maintheme.tres" id="7_x1g0k"]
 [ext_resource type="PackedScene" uid="uid://5h3ennugpanl" path="res://scenes/sound_settings.tscn" id="8_gda4y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gda4y"]
+font_size = 65
+font_color = Color(0.164706, 0.490196, 0.858824, 1)
 
 [node name="menu_title" type="Control"]
 layout_mode = 3
@@ -16,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_gda4y")
 script = ExtResource("1_6d3kw")
 metadata/_edit_lock_ = true
 
@@ -30,18 +35,20 @@ texture = ExtResource("2_bt2k5")
 metadata/_edit_lock_ = true
 
 [node name="Gamename" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1154.0
 offset_top = 25.0
 offset_right = 1444.0
 offset_bottom = 319.0
 rotation = 0.172584
-theme = ExtResource("7_x1g0k")
 text = "The 
 Exam 
 Scam"
+label_settings = SubResource("LabelSettings_gda4y")
 horizontal_alignment = 1
 
 [node name="exitbutton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1105.0
 offset_top = 546.0
 offset_right = 1330.0
@@ -49,6 +56,7 @@ offset_bottom = 784.0
 texture_normal = ExtResource("3_r4bt5")
 
 [node name="playbutton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 806.0
 offset_top = 219.0
 offset_right = 1173.0
@@ -57,6 +65,7 @@ texture_normal = ExtResource("4_avo1h")
 texture_disabled = ExtResource("5_uwf38")
 
 [node name="sound" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 851.0
 offset_top = 730.0
 offset_right = 1187.0

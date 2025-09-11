@@ -9,7 +9,7 @@ signal value_changed(value: float)
 
 func _set_value(_value: float) -> void:
 	value = clamp(_value, 0, 1)
-	$bar.size.x = size.x * value
+	$bar.set_deferred("size", Vector2(size.x * value, size.y))
 	value_changed.emit(value)
 
 

@@ -79,9 +79,9 @@ func reset_stats() -> void:
 
 func go_to_intro() -> void:
 	if is_family_friendly:
-		get_tree().change_scene_to_file("res://introaredo.tscn")
+		get_tree().change_scene_to_file("res://scenes/introaredo.tscn")
 	else:
-		get_tree().change_scene_to_file("res://introaredo.tscn")
+		get_tree().change_scene_to_file("res://scenes/introaredo.tscn")
 
 
 func go_to_main_menu() -> void:
@@ -98,27 +98,37 @@ func go_to_level(level_n: int) -> void:
 	get_tree().change_scene_to_packed(LEVEL_PCK)
 	await get_tree().node_added
 	await get_tree().current_scene.ready
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	level = get_tree().current_scene
 	level.n = level_n
 	level.level_won.connect(_on_level_won)
-	level.level_lost.connect(_on_level_lost)
+	level.level_lost.connect(go_to_youlose)
 	level.start()
 
 
-func _on_level_won() -> void:
-	if current_level_n == max_levels:
-		_on_game_won()
-		return
-		#TODO: go to win page
+func go_to_level_score() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_tree().change_scene_to_file("res://scenes/level_score.tscn")
+
+
+func next_level() -> void:
 	go_to_level(current_level_n + 1)
-	Aud.play_win_level()
-func _on_game_won() -> void:
-	Aud.play_win_game()
-	go_to_main_menu()
-func _on_level_lost() -> void:
-	Aud.play_lose()
-	go_to_main_menu() # TODO
+
+
+func go_to_youlose() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_tree().change_scene_to_file("res://scenes/youlose.tscn")
+func go_to_youwin() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_tree().change_scene_to_file("res://scenes/youwin.tscn")
 
 
 func quit() -> void:
 	get_tree().quit()
+
+
+func _on_level_won() -> void:
+	if current_level_n == max_levels:
+		go_to_youwin()
+		return
+	go_to_level_score()

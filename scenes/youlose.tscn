@@ -1,22 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhm7nmp8gh02u"]
+[gd_scene load_steps=5 format=3 uid="uid://dhm7nmp8gh02u"]
 
 [ext_resource type="Script" uid="uid://rf1m6ow3nir7" path="res://scenes/youlose.gd" id="1_4r7sw"]
+[ext_resource type="Theme" uid="uid://benif35do1jnk" path="res://theme/main.theme" id="1_nlte8"]
 [ext_resource type="Texture2D" uid="uid://v3yxb4fbxorq" path="res://images/bg/loser.png" id="2_41qbh"]
-[ext_resource type="AudioStream" uid="uid://d10mkhtem355q" path="res://sounds/lose.mp3" id="3_tfa17"]
+[ext_resource type="PackedScene" uid="uid://rhpdhi2a4cm0" path="res://instances/score_recap.tscn" id="4_udcgi"]
 
-[node name="youlose" type="Node2D"]
+[node name="youlose" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_nlte8")
 script = ExtResource("1_4r7sw")
 
 [node name="youlosebg" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_41qbh")
 
-[node name="abackmenu" type="Area2D" parent="."]
+[node name="btn_go_to_menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 345.0
+offset_right = 389.0
+offset_bottom = 737.0
+flat = true
 
-[node name="cpbackmenu" type="CollisionPolygon2D" parent="abackmenu"]
-polygon = PackedVector2Array(42, 341, 330, 335, 414, 605, 183, 791, -9, 629)
+[node name="score_recap" parent="." instance=ExtResource("4_udcgi")]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 791.0
+offset_right = 1022.0
+offset_bottom = 949.0
 
-[node name="ASPLose" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_tfa17")
-autoplay = true
+[connection signal="pressed" from="btn_go_to_menu" to="." method="_on_btn_go_to_menu_pressed"]
