@@ -4,17 +4,18 @@
 [ext_resource type="Script" uid="uid://ddcuog6o0eg2s" path="res://instances/score_recap.gd" id="2_2s2aw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o7hyq"]
-font_size = 80
+font_size = 50
 
 [node name="score_recap" type="VBoxContainer"]
-offset_right = 506.0
+offset_right = 681.0
 offset_bottom = 158.0
 theme = ExtResource("1_4qb0p")
 script = ExtResource("2_2s2aw")
 
 [node name="lb" type="Label" parent="."]
+visible = false
 layout_mode = 2
-text = "Score"
+text = "Final Score"
 label_settings = SubResource("LabelSettings_o7hyq")
 horizontal_alignment = 1
 
@@ -22,5 +23,10 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "[wave]210901[/wave]"
+text = "Total
+Cuts
+Hits
+Powerups
+Total"
 fit_content = true
+autowrap_mode = 0

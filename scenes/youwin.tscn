@@ -29,13 +29,6 @@ grow_vertical = 2
 texture = ExtResource("2_k6oso")
 metadata/_edit_lock_ = true
 
-[node name="score_recap" parent="." instance=ExtResource("4_wovw3")]
-layout_mode = 0
-offset_left = 516.0
-offset_top = 791.0
-offset_right = 1022.0
-offset_bottom = 949.0
-
 [node name="btn_go_to_menu" type="Button" parent="."]
 layout_mode = 0
 offset_left = 10.0
@@ -46,6 +39,7 @@ flat = true
 
 [node name="btn_credits" type="TextureButton" parent="."]
 self_modulate = Color(0.0745098, 0.164706, 0.243137, 1)
+layout_mode = 0
 offset_left = 1476.0
 offset_top = 151.0
 offset_right = 1771.0
@@ -70,6 +64,12 @@ vertical_alignment = 1
 [node name="credits" parent="." instance=ExtResource("7_jxny4")]
 visible = false
 layout_mode = 1
+
+[node name="score_recap" parent="." instance=ExtResource("4_wovw3")]
+offset_left = 429.0
+offset_top = 711.0
+offset_right = 1047.0
+offset_bottom = 981.0
 
 [connection signal="pressed" from="btn_go_to_menu" to="." method="_on_btn_go_to_menu_pressed"]
 [connection signal="pressed" from="btn_credits" to="." method="_on_btn_credits_pressed"]
