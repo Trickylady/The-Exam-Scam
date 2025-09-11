@@ -25,11 +25,46 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("3_lt7em")
 
+[node name="lb_sound" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1821.0
+offset_top = 913.0
+offset_right = 2027.0
+offset_bottom = 969.5
+rotation = -1.57079
+text = "sound"
+label_settings = SubResource("LabelSettings_tg8u4")
+
+[node name="lb_back" type="Label" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 403.0
+offset_right = 337.0
+offset_bottom = 460.0
+rotation = 0.111956
+text = "Back to"
+label_settings = SubResource("LabelSettings_tg8u4")
+horizontal_alignment = 1
+
+[node name="btn_back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 329.0
+offset_right = 384.0
+offset_bottom = 767.0
+flat = true
+
 [node name="vb" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -362.5
+offset_top = -300.0
+offset_right = 362.5
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 44
@@ -46,7 +81,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/default_color = Color(0.54902, 0.752941, 0.992157, 1)
 bbcode_enabled = true
-text = "[s]Master"
+text = "Master"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -119,24 +154,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="btn_back" type="Button" parent="."]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 329.0
-offset_right = 384.0
-offset_bottom = 767.0
-flat = true
-
-[node name="lb_sound" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1821.0
-offset_top = 913.0
-offset_right = 2027.0
-offset_bottom = 969.5
-rotation = -1.57079
-text = "sound"
-label_settings = SubResource("LabelSettings_tg8u4")
-
+[connection signal="pressed" from="btn_back" to="." method="_on_btn_back_pressed"]
 [connection signal="gui_input" from="vb/hb1/lb_master" to="." method="_on_lb_master_gui_input"]
 [connection signal="value_changed" from="vb/hb1/volume_master" to="." method="_on_volume_master_value_changed"]
 [connection signal="gui_input" from="vb/hb2/lb_sfx" to="." method="_on_lb_sfx_gui_input"]
@@ -145,4 +163,3 @@ label_settings = SubResource("LabelSettings_tg8u4")
 [connection signal="value_changed" from="vb/hb3/volume_mus" to="." method="_on_volume_mus_value_changed"]
 [connection signal="gui_input" from="vb/hb4/lb_voice" to="." method="_on_lb_voice_gui_input"]
 [connection signal="value_changed" from="vb/hb4/volume_voice" to="." method="_on_volume_voice_value_changed"]
-[connection signal="pressed" from="btn_back" to="." method="_on_btn_back_pressed"]

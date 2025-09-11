@@ -44,7 +44,7 @@ func play_hit() -> void:
 
 
 func play_line_complete() -> void:
-	pass # TODO
+	pass # TODO: not implemented
 
 
 func play_nice() -> void:
