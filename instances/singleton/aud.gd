@@ -3,9 +3,13 @@ extends Node
 
 
 
-func play_music() -> void:
-	if not $mus.playing:
-		$mus.play()
+func play_menu_music() -> void:
+	$mus.stop()
+func play_game_music() -> void:
+	$mus.stop()
+	if not $mus.playing: $mus.play()
+func stop_music() -> void:
+	$mus.stop()
 
 
 func play_tutorial() -> void:

@@ -4,6 +4,7 @@ class_name MenuTitle
 
 
 func _ready() -> void:
+	Aud.play_menu_music()
 	$sound_settings.hide()
 	$credits.hide()
 

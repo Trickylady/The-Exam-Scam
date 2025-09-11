@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	Aud.stop_music()
 	$skipintro.pressed.connect(_on_skipintro_input)
 
 
