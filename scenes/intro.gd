@@ -6,7 +6,7 @@ func _ready() -> void:
 
 
 func _on_skipintro_input():
-		Mng.start_game()
+	Mng.start_game()
 
 
 func _on_timmy_slide_animation_finished(_Timmyslide: StringName) -> void:

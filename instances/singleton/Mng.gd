@@ -75,9 +75,9 @@ func reset_stats() -> void:
 
 func go_to_intro() -> void:
 	if is_family_friendly:
-		get_tree().change_scene_to_file("res://scenes/introaredo.tscn")
+		get_tree().change_scene_to_file("res://scenes/intro_family.tscn")
 	else:
-		get_tree().change_scene_to_file("res://scenes/introaredo.tscn")
+		get_tree().change_scene_to_file("res://scenes/intro_pg.tscn")
 
 
 func go_to_main_menu() -> void:

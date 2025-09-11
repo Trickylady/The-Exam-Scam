@@ -1,37 +1,37 @@
-[gd_scene load_steps=36 format=3 uid="uid://b4k1ui5uwwr7d"]
+[gd_scene load_steps=36 format=3 uid="uid://x1evj6pgycq2"]
 
-[ext_resource type="Texture2D" uid="uid://djfv1qp5dywf" path="res://images/intro/classroom.png" id="1_hmu8l"]
-[ext_resource type="Script" uid="uid://dbn3yehlrcc3j" path="res://scenes/intro_a.gd" id="1_rpasm"]
-[ext_resource type="Texture2D" uid="uid://cb7u8m7ulib3q" path="res://images/ui/skip_intro.png" id="2_av1cd"]
-[ext_resource type="Texture2D" uid="uid://fo2omj47piwx" path="res://images/intro/timmy_body.png" id="3_l1v3n"]
-[ext_resource type="Texture2D" uid="uid://5ljyuinm74kd" path="res://images/intro/timmy_face.png" id="4_0ip5i"]
-[ext_resource type="Texture2D" uid="uid://bs7bcbn108mmu" path="res://images/intro/timmy_eyesocket_left.png" id="5_m58uy"]
-[ext_resource type="Texture2D" uid="uid://5quwg4oyjjf6" path="res://images/intro/timmy_eyesocket_right.png" id="6_ytfq5"]
-[ext_resource type="Texture2D" uid="uid://hle8dpvun82l" path="res://images/intro/timmy_eyebrow_left.png" id="7_y6cef"]
-[ext_resource type="Texture2D" uid="uid://x5gcxdhkso4g" path="res://images/intro/timmy_eyebrow_right.png" id="8_jj8yx"]
-[ext_resource type="Texture2D" uid="uid://dnyiph6adiwf3" path="res://images/intro/timmy_iris_left.png" id="9_x3rtx"]
-[ext_resource type="Texture2D" uid="uid://c01bgaacv7dyd" path="res://images/intro/timmy_iris_right.png" id="10_dsh3a"]
-[ext_resource type="Texture2D" uid="uid://b2vyxfw1ooa45" path="res://images/intro/timmy_mouth_a.png" id="11_8v6sv"]
-[ext_resource type="Texture2D" uid="uid://dadnsne3hagna" path="res://images/intro/timmy_mouth_ab.png" id="12_fbndv"]
-[ext_resource type="Texture2D" uid="uid://v1t5f3j1e2la" path="res://images/intro/timmy_mouth_b.png" id="13_husbj"]
-[ext_resource type="Texture2D" uid="uid://byptewf2spwkk" path="res://images/intro/timmy_mouth_c.png" id="14_qbkpp"]
-[ext_resource type="Texture2D" uid="uid://yiw2ato5nkwp" path="res://images/intro/timmy_mouth_d.png" id="15_8i70n"]
-[ext_resource type="Texture2D" uid="uid://bry7i6qr7kvcj" path="res://images/intro/timmy_sweat.png" id="16_hvfwx"]
-[ext_resource type="Texture2D" uid="uid://2rp44b3dyph2" path="res://images/intro/timmy_hand_wave.png" id="17_1vms3"]
-[ext_resource type="Texture2D" uid="uid://cxnj20o0mwwsw" path="res://images/intro/paul_body.png" id="17_nvd7a"]
-[ext_resource type="Texture2D" uid="uid://bx54cbmqlg47u" path="res://images/intro/paul_face.png" id="18_a15e7"]
-[ext_resource type="Texture2D" uid="uid://m0hcxl6ogepx" path="res://images/intro/classroomteacher.png" id="20_7u0k2"]
-[ext_resource type="AudioStream" uid="uid://brn2ycl8k5om7" path="res://sounds/a.mp3" id="20_uov0u"]
-[ext_resource type="Texture2D" uid="uid://bobinbbsbqfoa" path="res://images/intro/teacher_body.png" id="21_j1lt7"]
-[ext_resource type="Texture2D" uid="uid://dhqccgnpydk4h" path="res://images/intro/desk.png" id="21_xsvm7"]
-[ext_resource type="Texture2D" uid="uid://r4p6s7y2bjig" path="res://images/intro/teacher_face.png" id="22_08y61"]
-[ext_resource type="Texture2D" uid="uid://dx72tvl2mp6e4" path="res://images/intro/floor_scene_b.png" id="25_3lgv7"]
-[ext_resource type="Texture2D" uid="uid://dgu0glx02wp3j" path="res://images/intro/floor_scene.png" id="25_160w6"]
-[ext_resource type="Texture2D" uid="uid://bjmercw3u2pgm" path="res://images/intro/timmy_hand_back.png" id="26_3to7h"]
-[ext_resource type="Texture2D" uid="uid://jn238raymxij" path="res://images/intro/floor_scene_paper.png" id="26_h72wh"]
-[ext_resource type="Texture2D" uid="uid://dqa5texp70qvi" path="res://images/bg/Level_1_start.png" id="29_qfgx3"]
-[ext_resource type="FontFile" uid="uid://qguv6il4xhsx" path="res://theme/BD_Cartoon_Shout.ttf" id="30_4bb6v"]
-[ext_resource type="Texture2D" uid="uid://bg1di6k8sorcu" path="res://images/intro/text_box.png" id="30_p7pld"]
+[ext_resource type="Script" uid="uid://dbn3yehlrcc3j" path="res://scenes/intro.gd" id="1_2b16r"]
+[ext_resource type="Texture2D" uid="uid://djfv1qp5dywf" path="res://images/intro/classroom.png" id="2_ctm87"]
+[ext_resource type="Texture2D" uid="uid://fo2omj47piwx" path="res://images/intro/timmy_body.png" id="3_dyr44"]
+[ext_resource type="Texture2D" uid="uid://5ljyuinm74kd" path="res://images/intro/timmy_face.png" id="4_8mhja"]
+[ext_resource type="Texture2D" uid="uid://bs7bcbn108mmu" path="res://images/intro/timmy_eyesocket_left.png" id="5_jvoyn"]
+[ext_resource type="Texture2D" uid="uid://5quwg4oyjjf6" path="res://images/intro/timmy_eyesocket_right.png" id="6_n3msn"]
+[ext_resource type="Texture2D" uid="uid://hle8dpvun82l" path="res://images/intro/timmy_eyebrow_left.png" id="7_lcb7c"]
+[ext_resource type="Texture2D" uid="uid://x5gcxdhkso4g" path="res://images/intro/timmy_eyebrow_right.png" id="8_b2qol"]
+[ext_resource type="Texture2D" uid="uid://dnyiph6adiwf3" path="res://images/intro/timmy_iris_left.png" id="9_f7bgi"]
+[ext_resource type="Texture2D" uid="uid://c01bgaacv7dyd" path="res://images/intro/timmy_iris_right.png" id="10_j44v3"]
+[ext_resource type="Texture2D" uid="uid://b2vyxfw1ooa45" path="res://images/intro/timmy_mouth_a.png" id="11_15i1r"]
+[ext_resource type="Texture2D" uid="uid://dadnsne3hagna" path="res://images/intro/timmy_mouth_ab.png" id="12_oew4o"]
+[ext_resource type="Texture2D" uid="uid://v1t5f3j1e2la" path="res://images/intro/timmy_mouth_b.png" id="13_ul4ol"]
+[ext_resource type="Texture2D" uid="uid://byptewf2spwkk" path="res://images/intro/timmy_mouth_c.png" id="14_mxr25"]
+[ext_resource type="Texture2D" uid="uid://yiw2ato5nkwp" path="res://images/intro/timmy_mouth_d.png" id="15_gs3iv"]
+[ext_resource type="Texture2D" uid="uid://bry7i6qr7kvcj" path="res://images/intro/timmy_sweat.png" id="16_djvlv"]
+[ext_resource type="Texture2D" uid="uid://cxnj20o0mwwsw" path="res://images/intro/paul_body.png" id="17_gsgpl"]
+[ext_resource type="Texture2D" uid="uid://bx54cbmqlg47u" path="res://images/intro/paul_face.png" id="18_v8213"]
+[ext_resource type="Texture2D" uid="uid://2rp44b3dyph2" path="res://images/intro/timmy_hand_wave.png" id="19_5rr5w"]
+[ext_resource type="Texture2D" uid="uid://dhqccgnpydk4h" path="res://images/intro/desk.png" id="20_kc40g"]
+[ext_resource type="Texture2D" uid="uid://m0hcxl6ogepx" path="res://images/intro/classroomteacher.png" id="21_cyuue"]
+[ext_resource type="Texture2D" uid="uid://bobinbbsbqfoa" path="res://images/intro/teacher_body.png" id="22_eyl61"]
+[ext_resource type="Texture2D" uid="uid://r4p6s7y2bjig" path="res://images/intro/teacher_face.png" id="23_j4xh7"]
+[ext_resource type="AudioStream" uid="uid://brn2ycl8k5om7" path="res://sounds/a.mp3" id="24_trof0"]
+[ext_resource type="Texture2D" uid="uid://dgu0glx02wp3j" path="res://images/intro/floor_scene.png" id="25_sgbsn"]
+[ext_resource type="Texture2D" uid="uid://dx72tvl2mp6e4" path="res://images/intro/floor_scene_b.png" id="26_mihta"]
+[ext_resource type="Texture2D" uid="uid://jn238raymxij" path="res://images/intro/floor_scene_paper.png" id="27_oe6sw"]
+[ext_resource type="Texture2D" uid="uid://bjmercw3u2pgm" path="res://images/intro/timmy_hand_back.png" id="28_po1cp"]
+[ext_resource type="Texture2D" uid="uid://cb7u8m7ulib3q" path="res://images/ui/skip_intro.png" id="29_ifpym"]
+[ext_resource type="Texture2D" uid="uid://bg1di6k8sorcu" path="res://images/intro/text_box.png" id="30_tukhp"]
+[ext_resource type="FontFile" uid="uid://qguv6il4xhsx" path="res://theme/BD_Cartoon_Shout.ttf" id="31_8bkbb"]
+[ext_resource type="Texture2D" uid="uid://dqa5texp70qvi" path="res://images/bg/Level_1_start.png" id="32_wmwvm"]
 
 [sub_resource type="Animation" id="Animation_emik5"]
 length = 0.001
@@ -626,70 +626,10 @@ tracks/48/keys = {
 tracks/49/type = "value"
 tracks/49/imported = false
 tracks/49/enabled = true
-tracks/49/path = NodePath("TextBox1:position")
+tracks/49/path = NodePath("TextBox1/subtitles:text")
 tracks/49/interp = 1
 tracks/49/loop_wrap = true
 tracks/49/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1539, 250)]
-}
-tracks/50/type = "value"
-tracks/50/imported = false
-tracks/50/enabled = true
-tracks/50/path = NodePath("TextBox1:rotation")
-tracks/50/interp = 1
-tracks/50/loop_wrap = true
-tracks/50/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.316787]
-}
-tracks/51/type = "value"
-tracks/51/imported = false
-tracks/51/enabled = true
-tracks/51/path = NodePath("TextBox1:modulate")
-tracks/51/interp = 1
-tracks/51/loop_wrap = true
-tracks/51/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/52/type = "value"
-tracks/52/imported = false
-tracks/52/enabled = true
-tracks/52/path = NodePath("TextBox1:scale")
-tracks/52/interp = 1
-tracks/52/loop_wrap = true
-tracks/52/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/53/type = "value"
-tracks/53/imported = false
-tracks/53/enabled = true
-tracks/53/path = NodePath("TextBox1:visible")
-tracks/53/interp = 1
-tracks/53/loop_wrap = true
-tracks/53/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/54/type = "value"
-tracks/54/imported = false
-tracks/54/enabled = true
-tracks/54/path = NodePath("TextBox1/subtitles:text")
-tracks/54/interp = 1
-tracks/54/loop_wrap = true
-tracks/54/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -699,34 +639,70 @@ Timmy be all prepared and [shake] sh*t [/shake] for
 his chemistry exam, 
 innit bruv?"]
 }
-tracks/55/type = "value"
-tracks/55/imported = false
-tracks/55/enabled = true
-tracks/55/path = NodePath("TextBox1/subtitles:visible")
-tracks/55/interp = 1
-tracks/55/loop_wrap = true
-tracks/55/keys = {
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("TextBox1:visible")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [true]
 }
-tracks/56/type = "value"
-tracks/56/imported = false
-tracks/56/enabled = true
-tracks/56/path = NodePath("TextBox1/subtitles:visible_characters")
-tracks/56/interp = 1
-tracks/56/loop_wrap = true
-tracks/56/keys = {
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("TextBox1:position")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [-1]
+"update": 0,
+"values": [Vector2(1032, 200)]
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("TextBox1:rotation")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("TextBox1:scale")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("TextBox1:modulate")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_nhrif"]
 resource_name = "timmyslide"
-length = 60.0
+length = 63.0
 step = 0.0333
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1038,7 +1014,7 @@ tracks/25/keys = {
 "times": PackedFloat32Array(0, 23.5333, 27.5, 28.5, 30, 50.5, 51, 53, 58.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(279, 8), Vector2(279, 8), Vector2(-988, 8), Vector2(-988, 8), Vector2(-988, 969), Vector2(-988, 969), Vector2(887, 1493), Vector2(887, 1493), Vector2(887, 3338)]
+"values": [Vector2(279, 8), Vector2(279, 8), Vector2(-988, 8), Vector2(-988, 8), Vector2(-988, 969), Vector2(-988, 969), Vector2(848, 1578), Vector2(848, 1578), Vector2(848, 3339)]
 }
 tracks/26/type = "value"
 tracks/26/imported = false
@@ -1287,7 +1263,7 @@ tracks/46/path = NodePath("Level1Start:visible")
 tracks/46/interp = 1
 tracks/46/loop_wrap = true
 tracks/46/keys = {
-"times": PackedFloat32Array(0, 58.3667, 58.5),
+"times": PackedFloat32Array(0, 61, 61.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, false, true]
@@ -1299,7 +1275,7 @@ tracks/47/path = NodePath("Level1Start:scale")
 tracks/47/interp = 1
 tracks/47/loop_wrap = true
 tracks/47/keys = {
-"times": PackedFloat32Array(0, 58.5, 59),
+"times": PackedFloat32Array(0, 61.5, 62),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1e-05, 1), Vector2(1, 1)]
@@ -1311,7 +1287,7 @@ tracks/48/path = NodePath("Level1Start:position")
 tracks/48/interp = 1
 tracks/48/loop_wrap = true
 tracks/48/keys = {
-"times": PackedFloat32Array(0, 59),
+"times": PackedFloat32Array(0, 63),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(960, 540), Vector2(960, 540)]
@@ -1319,143 +1295,36 @@ tracks/48/keys = {
 tracks/49/type = "value"
 tracks/49/imported = false
 tracks/49/enabled = true
-tracks/49/path = NodePath("TextBox1:position")
+tracks/49/path = NodePath("TextBox1/subtitles:text")
 tracks/49/interp = 1
 tracks/49/loop_wrap = true
 tracks/49/keys = {
-"times": PackedFloat32Array(0, 7, 7.5, 10.9415, 11.4508, 15.2841, 15.7863, 16.2841, 22.6333, 23.1333, 23.6371),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1539, 250), Vector2(1539, 250), Vector2(314, 831), Vector2(314, 831), Vector2(956, 116), Vector2(956, 116), Vector2(1000, 983), Vector2(1000, 983), Vector2(1000, 983), Vector2(1684, 160), Vector2(1684, 160)]
-}
-tracks/50/type = "value"
-tracks/50/imported = false
-tracks/50/enabled = true
-tracks/50/path = NodePath("TextBox1:rotation")
-tracks/50/interp = 1
-tracks/50/loop_wrap = true
-tracks/50/keys = {
-"times": PackedFloat32Array(0, 7, 7.5, 10.9415, 11.4508, 22.6333, 23.1333, 23.6371),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.316787, 0.316787, -0.402805, -0.402805, 0.0, 0.0, 0.326766, 0.326766]
-}
-tracks/51/type = "value"
-tracks/51/imported = false
-tracks/51/enabled = true
-tracks/51/path = NodePath("TextBox1:modulate")
-tracks/51/interp = 1
-tracks/51/loop_wrap = true
-tracks/51/keys = {
-"times": PackedFloat32Array(0, 1, 1.5, 7, 7.5, 8.01, 10.9508, 11.4508, 11.9508, 15.2841, 15.7841, 16.2808, 22.6333, 23.1333, 23.6371),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/52/type = "value"
-tracks/52/imported = false
-tracks/52/enabled = true
-tracks/52/path = NodePath("TextBox1:scale")
-tracks/52/interp = 1
-tracks/52/loop_wrap = true
-tracks/52/keys = {
-"times": PackedFloat32Array(0, 1, 1.5, 7, 7.5, 8, 10.9415, 11.4508, 11.9454, 15.2841, 15.7852, 16.2841, 22.6333, 23.1333, 23.6371),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1.00136e-05, 1.00136e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1)]
-}
-tracks/53/type = "value"
-tracks/53/imported = false
-tracks/53/enabled = true
-tracks/53/path = NodePath("TextBox1:visible")
-tracks/53/interp = 1
-tracks/53/loop_wrap = true
-tracks/53/keys = {
-"times": PackedFloat32Array(0, 7, 7.5, 10.9508, 11.456, 15.2841, 15.7852, 22.6333, 23.1333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2, 7.5, 11, 15.5, 17, 19.5, 24, 28.5, 32, 35, 38, 41.5004, 42.995, 47, 51.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [true, false, true, false, true, false, true, false, true]
-}
-tracks/54/type = "value"
-tracks/54/imported = false
-tracks/54/enabled = true
-tracks/54/path = NodePath("TextBox1/subtitles:text")
-tracks/54/interp = 1
-tracks/54/loop_wrap = true
-tracks/54/keys = {
-"times": PackedFloat32Array(0, 7.5, 8, 11.4508, 15.295, 15.7841, 16.7841, 17.2841, 17.7841, 19.2841, 19.2897, 22.6333, 23.1333, 25.2667, 30, 33, 34.5, 41.5004, 46.9949, 50.5028),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": ["
-
-[center]Alright, so this is Timmy.
+"values": ["", "[center]Alright, so this is Timmy.
 Timmy be all prepared
 and  [shake]sh*t[/shake] for his chemistry
-exam, innit bruv?!", "", "[center]
-
-He got his calculator,
+exam, innit bruv?!", "[center]He got his calculator,
 scissors, tape, pen, and
-paper.", "[center]
-
-Now all he's gotta do is
+papers.", "[center]Now all he's gotta do is
 write down the answers
 to the [shake]f*cking[/shake] questions
-on the blackboard, yeah.", "[center]
-
-Now all he's gotta do is
-write down the answers
-to the [shake]fucking[/shake] questions
-on the blackboard, yeah.", "[center]
-[font_size=50]
-Wait... [/font_size]", "[center]
-[font_size=50]
-Wait... [/font_size]", "[center]", "[center]
-
-
-Where the [shake]f*ck[/shake] are your
-empty pages Timmy?", "[center]
-
-
-What the fuck were you
-planning to fucking write
-on, you fucking bellend?!", "[center]
-
-
-What the [shake]f*ck[/shake] were you
-planning to [shake]f*cking[/shake] write
-on, you [shake]f*cking b*ll*nd?![/shake]", "[center]
-
-
-What the [shake]f*ck[/shake] were you
-planning to [shake]f*cking[/shake] write
-on, you [shake]f*cking b*ll*nd?![/shake]", "[center]
-
-
-Maybe your mate Paul
-has some extra papers?", "[center] 
-
-
-Not your mate and he doesn't have them
-either?", "[center]
-
-Right. let's ask Miss
-Sourpuss, yeah.", "[center]
-
-
-Oi, she don't look too
-happy...", "[center]
-
-Let's maybe just ask real
+on the blackboard, yeah.", "[center][font_size=50]Wait... [/font_size]", "[center]Where the [shake]f*ck[/shake] are your
+empty pages Timmy?", "[center]What the [shake]f*ck[/shake] were you
+planning to write on,
+you [shake]f*cking b*ll*nd[/shake]?!", "[center]Maybe your mate Paul
+has some extra papers,
+yeah?", "[center]Not your mate and he
+didn't bring them papers
+either?", "[center]Right. let's ask Miss
+Sourpuss, 'ey.", "[center]Oi, she don't look too
+happy...", "[center]Let's maybe just ask real
 nicely and I'm sure
-she'll...", "[center]
-
-
-Hold on! What's that
-crumpled-up paper on the
-floor doing there?", "[center]
-
-
-Grab it, Timmy,
+she'll...", "[center][font_size=50]Hold on![/font_size]", "[center]What's that
+crumpled-up paper
+on the floor
+doing there?", "[center][font_size=30]Grab it, Timmy,[/font_size]
 [shake]f*cking[/shake] grab it, yeah!", "[center]Brilliant, Timmy, you
 [shake]f*cking[/shake] snail! Your mate
 Paul spotted it as well
@@ -1464,29 +1333,65 @@ he's planning on playing
 nice, that chubby little
 [shake]ginger c*nt[/shake]."]
 }
-tracks/55/type = "value"
-tracks/55/imported = false
-tracks/55/enabled = true
-tracks/55/path = NodePath("TextBox1/subtitles:visible")
-tracks/55/interp = 1
-tracks/55/loop_wrap = true
-tracks/55/keys = {
-"times": PackedFloat32Array(0, 2, 7, 8, 11.4603, 12.4508, 15.2781, 16.2879, 17.2841, 17.7841, 19.2897, 19.7841, 22.6333, 23.6333, 25.0102, 25.4996),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("TextBox1:visible")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+"values": [true]
 }
-tracks/56/type = "value"
-tracks/56/imported = false
-tracks/56/enabled = true
-tracks/56/path = NodePath("TextBox1/subtitles:visible_characters")
-tracks/56/interp = 1
-tracks/56/loop_wrap = true
-tracks/56/keys = {
-"times": PackedFloat32Array(0, 2, 3.5, 4.5, 5.5, 6.5, 7, 7.5, 8, 8.5, 9, 10.4458, 10.9494, 12.2333, 13.2, 13.9, 14.6333, 15.7841, 16.282, 16.7828, 17.7841, 18.3879, 19.4879, 20.1546, 20.8546, 21.5546, 23.1333, 23.6333, 24.1454, 25.4055, 26.2399, 26.9301),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [-1, 28, 50, 78, 100, 100, 100, -1, 25, 50, 56, 56, 0, 26, 49, 75, 102, 0, 102, 102, 26, -1, 0, 26, 52, 100, 0, 23, 46, 25, 43, 50]
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("TextBox1:position")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(0, 1.5, 7.5, 8, 15.5, 16, 32, 32.5, 41.5, 42),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1032, 200), Vector2(1032, 335), Vector2(1032, 335), Vector2(237, 194), Vector2(237, 194), Vector2(969, 971), Vector2(969, 971), Vector2(1668, 170), Vector2(1668, 170), Vector2(261, 195)]
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("TextBox1:rotation")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(0, 1.5, 7.5, 8, 15.5, 16, 32, 32.5, 41.5, 42),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, -0.50785, -0.50785, -0.249582, -0.249582, 0.150874, 0.150874, -0.394315]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("TextBox1:scale")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(1, 1.5, 6, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("TextBox1:modulate")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ojpj6"]
@@ -1495,97 +1400,97 @@ _data = {
 &"timmyslide": SubResource("Animation_nhrif")
 }
 
-[node name="introA" type="Node2D"]
-script = ExtResource("1_rpasm")
+[node name="intro_pg" type="Node2D"]
+script = ExtResource("1_2b16r")
 
 [node name="classbg" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_hmu8l")
+texture = ExtResource("2_ctm87")
 
 [node name="Timmy" type="Node2D" parent="."]
 
 [node name="TimmyBody" type="Sprite2D" parent="Timmy"]
 position = Vector2(-216, 931)
-texture = ExtResource("3_l1v3n")
+texture = ExtResource("3_dyr44")
 
 [node name="Timmyhead" type="Node2D" parent="Timmy"]
 position = Vector2(-230, 717)
 
 [node name="TimmyFace" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(-1.5, -196)
-texture = ExtResource("4_0ip5i")
+texture = ExtResource("4_8mhja")
 
 [node name="TimmyEyesocketLeft" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(-77.5, -238)
-texture = ExtResource("5_m58uy")
+texture = ExtResource("5_jvoyn")
 
 [node name="TimmyEyesocketRight" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(62.5, -232)
-texture = ExtResource("6_ytfq5")
+texture = ExtResource("6_n3msn")
 
 [node name="TimmyEyebrowLeft" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(-69.5, -314)
-texture = ExtResource("7_y6cef")
+texture = ExtResource("7_lcb7c")
 
 [node name="TimmyEyebrowRight" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(59.5, -314)
-texture = ExtResource("8_jj8yx")
+texture = ExtResource("8_b2qol")
 
 [node name="TimmyIrisLeft" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(-75.5, -232)
-texture = ExtResource("9_x3rtx")
+texture = ExtResource("9_f7bgi")
 
 [node name="TimmyIrisRight" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(59.5, -227)
-texture = ExtResource("10_dsh3a")
+texture = ExtResource("10_j44v3")
 
 [node name="TimmyMouthA" type="Sprite2D" parent="Timmy/Timmyhead"]
 position = Vector2(-36.5, -31)
-texture = ExtResource("11_8v6sv")
+texture = ExtResource("11_15i1r")
 
 [node name="TimmyMouthAB" type="Sprite2D" parent="Timmy/Timmyhead"]
 visible = false
 position = Vector2(-26.5719, -20.5896)
-texture = ExtResource("12_fbndv")
+texture = ExtResource("12_oew4o")
 
 [node name="TimmyMouthB" type="Sprite2D" parent="Timmy/Timmyhead"]
 visible = false
 position = Vector2(-29.1761, -17.4572)
-texture = ExtResource("13_husbj")
+texture = ExtResource("13_ul4ol")
 
 [node name="TimmyMouthC" type="Sprite2D" parent="Timmy/Timmyhead"]
 visible = false
 position = Vector2(-66.4732, -18.9554)
-texture = ExtResource("14_qbkpp")
+texture = ExtResource("14_mxr25")
 
 [node name="TimmyMouthD" type="Sprite2D" parent="Timmy/Timmyhead"]
 visible = false
 position = Vector2(-72.8284, -18.6821)
-texture = ExtResource("15_8i70n")
+texture = ExtResource("15_gs3iv")
 
 [node name="TimmySweat" type="Sprite2D" parent="Timmy/Timmyhead"]
 visible = false
 modulate = Color(1, 1, 1, 0)
 position = Vector2(126.805, -319.2)
-texture = ExtResource("16_hvfwx")
+texture = ExtResource("16_djvlv")
 
 [node name="Paul" type="Node2D" parent="."]
 position = Vector2(279, 8)
 
 [node name="PaulBody" type="Sprite2D" parent="Paul"]
 position = Vector2(1968, 906)
-texture = ExtResource("17_nvd7a")
+texture = ExtResource("17_gsgpl")
 
 [node name="PaulFace" type="Sprite2D" parent="Paul"]
 position = Vector2(1979, 732)
-texture = ExtResource("18_a15e7")
+texture = ExtResource("18_v8213")
 offset = Vector2(-49, -280)
 
 [node name="TimmyHandWave" type="Sprite2D" parent="."]
 position = Vector2(326, 1146)
 rotation = -1.3189
-texture = ExtResource("17_1vms3")
+texture = ExtResource("19_5rr5w")
 offset = Vector2(-109.908, -181.871)
 
 [node name="Desk" type="Sprite2D" parent="."]
@@ -1594,7 +1499,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(961, 540)
 rotation = -6.28319
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("21_xsvm7")
+texture = ExtResource("20_kc40g")
 
 [node name="teacherclassroom" type="Node2D" parent="."]
 visible = false
@@ -1602,23 +1507,23 @@ position = Vector2(928, 534)
 scale = Vector2(0.380827, 0.380827)
 
 [node name="Classroomteacher" type="Sprite2D" parent="teacherclassroom"]
-texture = ExtResource("20_7u0k2")
+texture = ExtResource("21_cyuue")
 
 [node name="Teacher" type="Node2D" parent="teacherclassroom"]
 position = Vector2(1932, 111)
 
 [node name="TeacherBody" type="Sprite2D" parent="teacherclassroom/Teacher"]
 position = Vector2(-3058.5, 294.5)
-texture = ExtResource("21_j1lt7")
+texture = ExtResource("22_eyl61")
 
 [node name="TeacherFace" type="Sprite2D" parent="teacherclassroom/Teacher"]
 position = Vector2(-3072.94, -197.654)
-texture = ExtResource("22_08y61")
+texture = ExtResource("23_j4xh7")
 offset = Vector2(19.4385, -208.846)
 
-[node name="1-Soundintro" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-779, 505)
-stream = ExtResource("20_uov0u")
+[node name="1-Soundintro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_trof0")
+bus = &"voice"
 
 [node name="FloorScene" type="Sprite2D" parent="."]
 visible = false
@@ -1626,21 +1531,21 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(-964, 1637)
 rotation = 12.5664
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("25_160w6")
+texture = ExtResource("25_sgbsn")
 
 [node name="FloorSceneB" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 540)
-texture = ExtResource("25_3lgv7")
+texture = ExtResource("26_mihta")
 
 [node name="FloorScenePaper" type="Sprite2D" parent="."]
 position = Vector2(809, 778)
-texture = ExtResource("26_h72wh")
+texture = ExtResource("27_oe6sw")
 
 [node name="TimmyHandBack" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1382, 1719)
-texture = ExtResource("26_3to7h")
+texture = ExtResource("28_po1cp")
 offset = Vector2(-197, -292)
 
 [node name="Timmyslide" type="AnimationPlayer" parent="."]
@@ -1654,22 +1559,19 @@ offset_left = 1538.0
 offset_top = 712.0
 offset_right = 1828.0
 offset_bottom = 1020.0
-texture_normal = ExtResource("2_av1cd")
+texture_normal = ExtResource("29_ifpym")
 
 [node name="TextBox1" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(1539, 250)
-rotation = 0.316787
-texture = ExtResource("30_p7pld")
+position = Vector2(1032, 200)
+texture = ExtResource("30_tukhp")
 
 [node name="subtitles" type="RichTextLabel" parent="TextBox1"]
-visible = false
 offset_left = -223.132
 offset_top = -100.707
 offset_right = 214.868
 offset_bottom = 81.2925
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("30_4bb6v")
+theme_override_fonts/normal_font = ExtResource("31_8bkbb")
 theme_override_font_sizes/normal_font_size = 23
 bbcode_enabled = true
 text = "
@@ -1679,10 +1581,11 @@ his chemistry exam,
 innit bruv?"
 fit_content = true
 scroll_active = false
+vertical_alignment = 1
 
 [node name="Level1Start" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 540)
-texture = ExtResource("29_qfgx3")
+texture = ExtResource("32_wmwvm")
 
 [connection signal="animation_finished" from="Timmyslide" to="." method="_on_timmy_slide_animation_finished"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=3 uid="uid://cicj8wt4l0brl"]
 
-[ext_resource type="Script" uid="uid://dbn3yehlrcc3j" path="res://scenes/intro_a.gd" id="1_jbt0w"]
+[ext_resource type="Script" uid="uid://dbn3yehlrcc3j" path="res://scenes/intro.gd" id="1_jbt0w"]
 [ext_resource type="Texture2D" uid="uid://djfv1qp5dywf" path="res://images/intro/classroom.png" id="2_6081f"]
 [ext_resource type="Texture2D" uid="uid://f80p5s7ryf16" path="res://images/intro/pg_timmy_body.png" id="3_jbt0w"]
 [ext_resource type="Texture2D" uid="uid://5ljyuinm74kd" path="res://images/intro/timmy_face.png" id="4_r4l7w"]
@@ -1524,6 +1524,7 @@ offset = Vector2(19.4385, -208.846)
 
 [node name="1-Soundintro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("24_jbt0w")
+bus = &"voice"
 
 [node name="FloorScene" type="Sprite2D" parent="."]
 visible = false
