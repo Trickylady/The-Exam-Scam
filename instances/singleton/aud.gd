@@ -48,7 +48,7 @@ func play_hit() -> void:
 
 
 func play_line_complete() -> void:
-	pass # TODO: not implemented
+	$sfx_snip.play()
 
 
 func play_nice() -> void:
@@ -66,19 +66,49 @@ func play_win_level() -> void:
 
 
 func play_win_game() -> void:
-	if Mng.is_family_friendly: _play_voiceline("res://sounds/win.mp3")
-	else: _play_voiceline("res://sounds/win_pg.mp3")
+	if Mng.is_family_friendly: _play_voiceline("res://sounds/win_pg.mp3")
+	else: _play_voiceline("res://sounds/win.mp3")
 
 
 func play_lose() -> void:
-	if Mng.is_family_friendly: _play_voiceline("res://sounds/lose.mp3")
-	else: _play_voiceline("res://sounds/lose_pg.mp3")
+	if Mng.is_family_friendly: _play_voiceline("res://sounds/lose_pg.mp3")
+	else: _play_voiceline("res://sounds/lose.mp3")
+
+
+func start_random_lines() -> void:
+	$tmr_random_line.wait_time = randf_range(15, 45)
+	$tmr_random_line.start()
+func stop_random_lines() -> void:
+	$tmr_random_line.stop()
+func _on_tmr_random_line_timeout() -> void:
+	$tmr_random_line.wait_time = randf_range(30, 60)
+	play_random_line()
+	$tmr_random_line.start()
+
+
+func play_random_line() -> void:
+	const RAND_FF = [
+		"res://sounds/sfx_hands_pg.mp3",
+		"res://sounds/sfx_pens_pg2.mp3",
+		"res://sounds/sfx_pens_pg3.mp3",
+		"res://sounds/sfx_pens_pg.mp3",
+	]
+	const RAND_PG = [
+		"res://sounds/sfx_hands.mp3",
+		"res://sounds/sfx_pens1.mp3",
+		"res://sounds/sfx_pens2.mp3",
+		"res://sounds/sfx_pens3.mp3",
+	]
+	var filepath: String = RAND_FF.pick_random()
+	if not Mng.is_family_friendly: filepath = (RAND_FF + RAND_PG).pick_random()
+	_play_sfx(filepath)
 
 
 func _play_voiceline(filepath: String) -> void:
 	$voice_line.stop()
 	$voice_line.stream = load(filepath)
 	$voice_line.play()
+
 
 func _play_sfx(filepath: String) -> void:
 	$sfx_game.stop()
