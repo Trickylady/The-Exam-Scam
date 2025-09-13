@@ -19,3 +19,7 @@ func _on_btn_medium_pressed() -> void:
 func _on_btn_hard_pressed() -> void:
 	Mng.game_difficulty = 3
 	Mng.start_game()
+
+
+func _on_btn_go_to_menu_pressed() -> void:
+	hide()

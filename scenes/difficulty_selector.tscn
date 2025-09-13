@@ -37,6 +37,7 @@ offset_left = 10.0
 offset_top = 345.0
 offset_right = 389.0
 offset_bottom = 737.0
+focus_mode = 0
 flat = true
 
 [node name="lb" type="Label" parent="btn_go_to_menu"]
@@ -138,6 +139,7 @@ layout_mode = 2
 text = "rotate with right-click"
 label_settings = SubResource("LabelSettings_xjc7p")
 
+[connection signal="pressed" from="btn_go_to_menu" to="." method="_on_btn_go_to_menu_pressed"]
 [connection signal="pressed" from="hb_diff/btn_easy" to="." method="_on_btn_easy_pressed"]
 [connection signal="pressed" from="hb_diff/btn_medium" to="." method="_on_btn_medium_pressed"]
 [connection signal="pressed" from="hb_diff/btn_hard" to="." method="_on_btn_hard_pressed"]
