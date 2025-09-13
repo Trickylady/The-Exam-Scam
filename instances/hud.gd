@@ -18,6 +18,7 @@ func _ready() -> void:
 
 func setup() -> void:
 	%progress.value = 0
+	set_progress_line_offset(0.0)
 	level.paper.available_area_updated.connect(_on_paper_available_area_updated)
 	update_gui()
 	_connect_signals()
@@ -72,8 +73,23 @@ func _add_icons(img: Texture2D, img_stack: Texture2D, qt: int, cont: Container) 
 		lb.add_theme_font_size_override("font_size", 36)
 		cont.add_child(lb)
 
+
 func _on_paper_available_area_updated() -> void:
+	var offset: float = level.paper.completed_ratio / Mng.goal_completion
+	var tw: Tween = create_tween()
+	tw.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
+	tw.tween_method(set_progress_line_offset, get_progress_line_offset(), offset, 0.4)
+	#set_progress_line_offset(offset)
 	%progress.value = level.paper.completed_ratio
+
+
+func get_progress_line_offset() -> float:
+	var grad: Gradient = %progress_line.texture.gradient
+	return grad.offsets[1]
+func set_progress_line_offset(val: float) -> void:
+	val = clampf(val, 0.001, 1.0)
+	var grad: Gradient = %progress_line.texture.gradient
+	grad.offsets[1] = val
 
 
 func _add_icon_to_container(tex: Texture2D, cont: Container, dim: float = 42) -> void:
