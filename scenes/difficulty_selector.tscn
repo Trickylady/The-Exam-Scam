@@ -1,0 +1,144 @@
+[gd_scene load_steps=8 format=3 uid="uid://ds2h76tjkx5vp"]
+
+[ext_resource type="Theme" uid="uid://benif35do1jnk" path="res://theme/main.theme" id="1_3lx16"]
+[ext_resource type="Script" uid="uid://cih2dtjawxmvt" path="res://scenes/difficulty_selector.gd" id="2_xjc7p"]
+[ext_resource type="Texture2D" uid="uid://2i8ledfyd7uc" path="res://images/bg/background_menutabs.png" id="3_y4671"]
+[ext_resource type="PackedScene" uid="uid://cqiq075yf53g2" path="res://instances/btn_texture.tscn" id="4_xjc7p"]
+[ext_resource type="FontFile" uid="uid://qguv6il4xhsx" path="res://theme/BD_Cartoon_Shout.ttf" id="5_mwy8y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3lx16"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_xjc7p"]
+font_size = 72
+
+[node name="difficulty_selector" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3lx16")
+script = ExtResource("2_xjc7p")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_y4671")
+
+[node name="btn_go_to_menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 345.0
+offset_right = 389.0
+offset_bottom = 737.0
+flat = true
+
+[node name="lb" type="Label" parent="btn_go_to_menu"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 72.0
+offset_right = 294.0
+offset_bottom = 134.0
+rotation = 0.0764139
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_mwy8y")
+theme_override_font_sizes/font_size = 40
+text = "Back to"
+
+[node name="lb_title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1803.0
+offset_top = 435.0
+offset_right = 225.0
+offset_bottom = 530.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_mwy8y")
+theme_override_font_sizes/font_size = 40
+text = "select
+Difficulty"
+label_settings = SubResource("LabelSettings_3lx16")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hb_diff" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 425.0
+offset_right = 1568.0
+offset_bottom = 851.0
+alignment = 1
+
+[node name="btn_easy" parent="hb_diff" instance=ExtResource("4_xjc7p")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+base_rot = 175.1
+text_rot = -132.3
+levitate_min = 10.0
+levitate_max = 15.0
+
+[node name="btn_medium" parent="hb_diff" instance=ExtResource("4_xjc7p")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+title_text = "Medium"
+subtitle_text = "5 Levels"
+bg_color = Color(0.192157, 0.45098, 0.647059, 1)
+base_rot = -4.3
+anim_speed = 1.5
+
+[node name="btn_hard" parent="hb_diff" instance=ExtResource("4_xjc7p")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+title_text = "Hard"
+subtitle_text = "7 Levels"
+bg_color = Color(0.0352941, 0.0862745, 0.145098, 1)
+base_rot = -130.3
+text_rot = 99.4
+anim_speed = 2.0
+
+[node name="hb_rot" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 612.0
+offset_top = 847.0
+offset_right = 2066.0
+offset_bottom = 1147.0
+scale = Vector2(0.5, 0.5)
+
+[node name="btn_toggle_rot" parent="hb_rot" instance=ExtResource("4_xjc7p")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+title_text = "X"
+subtitle_text = ""
+bg_color = Color(0.0352941, 0.0862745, 0.145098, 1)
+levitate_min = 10.0
+levitate_max = 15.0
+
+[node name="lb" type="Label" parent="hb_rot"]
+layout_mode = 2
+text = "rotate with right-click"
+label_settings = SubResource("LabelSettings_xjc7p")
+
+[connection signal="pressed" from="hb_diff/btn_easy" to="." method="_on_btn_easy_pressed"]
+[connection signal="pressed" from="hb_diff/btn_medium" to="." method="_on_btn_medium_pressed"]
+[connection signal="pressed" from="hb_diff/btn_hard" to="." method="_on_btn_hard_pressed"]
+[connection signal="pressed" from="hb_rot/btn_toggle_rot" to="." method="_on_btn_toggle_rot_pressed"]

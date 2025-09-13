@@ -23,7 +23,7 @@ func setup() -> void:
 		#if node is Pencil:
 			#pencils.append(node)
 	await get_tree().process_frame
-	n_pencils = level.n + 3 # TODO: Balance pencils formula
+	n_pencils = Mng.get_spawn_number_pencils()
 	pencils_radius = 160.0 / n_pencils
 	pencils_speed = 300.0 + 100 * level.n
 	for i in n_pencils:

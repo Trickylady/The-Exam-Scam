@@ -9,10 +9,12 @@ var max_levels: int = 3 # when the game ends
 var max_lives: int = 20 # can't collect more than this
 var max_boosts: int = 20
 var max_slows: int = 20
-var init_boosts: int = 1 # the game starts with
+var init_lives: int = 4 # the game starts with
+var init_boosts: int = 1
 var init_slows: int = 1
 var goal_completion: float = 0.75 # 0 to 1 (percentage to win the level)
 var compliment_ratio: float = 0.18 # 0 to 1 (percentage to get a "blimey" compliment from Fin)
+var game_difficulty: int = 1: set = set_game_difficulty
 
 # Scissors
 var scissors_angles_num: int = 5
@@ -69,7 +71,7 @@ func start_game() -> void:
 
 func reset_stats() -> void:
 	stats = GameStats.new()
-	lives = 4
+	lives = init_lives
 	current_level_n = 1
 	boost_n = init_boosts
 	slow_n = init_slows
@@ -131,3 +133,37 @@ func _on_level_won() -> void:
 		go_to_youwin()
 		return
 	go_to_level_score()
+
+
+func set_game_difficulty(val: int) -> void:
+	game_difficulty = clampi(val, 1, 3)
+	match game_difficulty:
+		1:
+			max_levels = 3
+			init_lives = 5
+			init_boosts = 3
+			init_slows = 2
+			goal_completion = 0.75
+		2:
+			max_levels = 5
+			init_lives = 4
+			init_boosts = 2
+			init_slows = 1
+			goal_completion = 0.80
+		3:
+			max_levels = 7
+			init_lives = 3
+			init_boosts = 0
+			init_slows = 0
+			goal_completion = 0.85
+
+
+func get_spawn_number_pencils() -> int:
+	match game_difficulty:
+		1:
+			return level.n + 3
+		2:
+			return level.n + 4
+		3:
+			return level.n + 5
+	return level.n + 1
