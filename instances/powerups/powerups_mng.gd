@@ -24,6 +24,7 @@ func spawn_new_powerup() -> void:
 	new_powerup.level = level
 	new_powerup.type = Mng.powerup_spaw_probabilities.keys().pick_random() # TODO
 	new_powerup.position = level.paper.get_random_point_in_paper()
+	new_powerup.collected.connect(_on_powerup_collected)
 	add_child(new_powerup)
 
 
