@@ -15,7 +15,7 @@
 
 [sub_resource type="Gradient" id="Gradient_j0w4x"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.630872)
+offsets = PackedFloat32Array(0, 0.163311)
 colors = PackedColorArray(0.917647, 0.615686, 0.0784314, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_q1xj4"]
@@ -41,14 +41,6 @@ unique_name_in_owner = true
 visible = false
 polygon = PackedVector2Array(0, 0, 356.47, 0, 458, 339, 439, 352, 444, 371, 431, 380, 441, 413, 127, 635, 0, 544)
 
-[node name="progress_line" type="Line2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(16, 1037)
-points = PackedVector2Array(341, -1037, 441, -699, 423, -685, 428, -666, 414, -657, 424, -624, 111, -401, -16, -494)
-width = 15.0
-texture = SubResource("GradientTexture1D_q1xj4")
-texture_mode = 2
-
 [node name="progress" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
@@ -65,6 +57,14 @@ grow_vertical = 0
 mouse_filter = 2
 max_value = 1.0
 show_percentage = false
+
+[node name="progress_line" type="Line2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(16, 1037)
+points = PackedVector2Array(341, -1037, 441, -699, 423, -685, 428, -666, 414, -657, 424, -624, 111, -401, -16, -494)
+width = 15.0
+texture = SubResource("GradientTexture1D_q1xj4")
+texture_mode = 2
 
 [node name="overlay" type="TextureRect" parent="."]
 layout_mode = 0

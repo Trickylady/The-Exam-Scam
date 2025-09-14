@@ -139,8 +139,35 @@ layout_mode = 2
 text = "rotate with right-click"
 label_settings = SubResource("LabelSettings_xjc7p")
 
+[node name="hb_play_intro" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 1604.0
+offset_top = 588.0
+offset_right = 2416.0
+offset_bottom = 888.0
+rotation = -1.44406
+scale = Vector2(0.5, 0.5)
+
+[node name="btn_play_intro" parent="hb_play_intro" instance=ExtResource("4_xjc7p")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+title_text = "X"
+subtitle_text = ""
+bg_color = Color(0.0352941, 0.0862745, 0.145098, 1)
+levitate_min = 10.0
+levitate_max = 15.0
+
+[node name="lb" type="Label" parent="hb_play_intro"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "play intro"
+label_settings = SubResource("LabelSettings_xjc7p")
+
 [connection signal="pressed" from="btn_go_to_menu" to="." method="_on_btn_go_to_menu_pressed"]
 [connection signal="pressed" from="hb_diff/btn_easy" to="." method="_on_btn_easy_pressed"]
 [connection signal="pressed" from="hb_diff/btn_medium" to="." method="_on_btn_medium_pressed"]
 [connection signal="pressed" from="hb_diff/btn_hard" to="." method="_on_btn_hard_pressed"]
 [connection signal="pressed" from="hb_rot/btn_toggle_rot" to="." method="_on_btn_toggle_rot_pressed"]
+[connection signal="pressed" from="hb_play_intro/btn_play_intro" to="." method="_on_btn_play_intro_pressed"]

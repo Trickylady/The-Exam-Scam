@@ -5,6 +5,7 @@ var is_debug_build: bool = false # TODO: REMEMBER TO CHANGE THAT FOR THE FINAL B
 
 # Game modifiers
 var is_family_friendly: bool = true
+var play_intro: bool = true
 var max_levels: int = 3 # when the game ends
 var max_lives: int = 20 # can't collect more than this
 var max_boosts: int = 20
@@ -52,12 +53,15 @@ signal lives_updated
 signal boost_n_updated
 signal slow_n_updated
 
-
+# references
 const LEVEL_PCK = preload("res://instances/level.tscn")
 var level: Level
+var leaderboard_mng: LeaderboardMng
 
 
 func _ready() -> void:
+	leaderboard_mng = LeaderboardMng.new()
+	add_child(leaderboard_mng)
 	Input.set_custom_mouse_cursor(preload("res://images/ui/mouse_cursor_normal.png"))
 	reset_stats()
 
@@ -78,6 +82,7 @@ func reset_stats() -> void:
 
 
 func go_to_intro() -> void:
+	play_intro = false
 	if is_family_friendly:
 		get_tree().call_deferred("change_scene_to_file", "res://scenes/intro_family.tscn")
 	else:

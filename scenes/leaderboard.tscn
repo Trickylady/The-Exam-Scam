@@ -1,0 +1,150 @@
+[gd_scene load_steps=9 format=3 uid="uid://c120w3tgwjd3m"]
+
+[ext_resource type="Theme" uid="uid://benif35do1jnk" path="res://theme/main.theme" id="1_jfen3"]
+[ext_resource type="Script" uid="uid://cyy704e826b88" path="res://scenes/leaderboard.gd" id="2_jfen3"]
+[ext_resource type="Texture2D" uid="uid://2i8ledfyd7uc" path="res://images/bg/background_menutabs.png" id="3_ldk02"]
+[ext_resource type="FontFile" uid="uid://qguv6il4xhsx" path="res://theme/BD_Cartoon_Shout.ttf" id="4_sg475"]
+[ext_resource type="PackedScene" uid="uid://cqiq075yf53g2" path="res://instances/btn_texture.tscn" id="5_mhq7p"]
+[ext_resource type="PackedScene" uid="uid://c5uxkakurscml" path="res://instances/entry_leaderboard.tscn" id="6_6lrio"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3lx16"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_xjc7p"]
+font_size = 72
+
+[node name="leaderboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jfen3")
+script = ExtResource("2_jfen3")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ldk02")
+
+[node name="btn_go_to_menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 345.0
+offset_right = 389.0
+offset_bottom = 737.0
+focus_mode = 0
+flat = true
+
+[node name="lb" type="Label" parent="btn_go_to_menu"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 72.0
+offset_right = 294.0
+offset_bottom = 134.0
+rotation = 0.0764139
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_sg475")
+theme_override_font_sizes/font_size = 40
+text = "Back to"
+
+[node name="lb_title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1803.0
+offset_top = 435.0
+offset_right = 225.0
+offset_bottom = 530.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_sg475")
+theme_override_font_sizes/font_size = 40
+text = "Leaderboard"
+label_settings = SubResource("LabelSettings_3lx16")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hb_rot" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 612.0
+offset_top = 847.0
+offset_right = 2066.0
+offset_bottom = 1147.0
+scale = Vector2(0.5, 0.5)
+
+[node name="btn_toggle_rot" parent="hb_rot" instance=ExtResource("5_mhq7p")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+title_text = "X"
+subtitle_text = ""
+bg_color = Color(0.0352941, 0.0862745, 0.145098, 1)
+levitate_min = 10.0
+levitate_max = 15.0
+
+[node name="lb" type="Label" parent="hb_rot"]
+layout_mode = 2
+text = "rotate with right-click"
+label_settings = SubResource("LabelSettings_xjc7p")
+
+[node name="vb_center" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -561.0
+offset_top = -383.0
+offset_right = 561.0
+offset_bottom = 383.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="lb_title_center" type="Label" parent="vb_center"]
+layout_mode = 2
+text = "you suck so bad"
+label_settings = SubResource("LabelSettings_xjc7p")
+horizontal_alignment = 1
+
+[node name="scroll" type="ScrollContainer" parent="vb_center"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="vb_entry" type="VBoxContainer" parent="vb_center/scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="entry_03" parent="vb_center/scroll/vb_entry" instance=ExtResource("6_6lrio")]
+layout_mode = 2
+score = 2505
+username_highlight_key = "wave"
+is_current_player = true
+
+[node name="entry_01" parent="vb_center/scroll/vb_entry" instance=ExtResource("6_6lrio")]
+layout_mode = 2
+score = 3527
+username = "Captain_Onosa"
+
+[node name="entry_02" parent="vb_center/scroll/vb_entry" instance=ExtResource("6_6lrio")]
+layout_mode = 2
+score = 3506
+username = "Pandacoder"
+
+[connection signal="pressed" from="btn_go_to_menu" to="." method="_on_btn_go_to_menu_pressed"]
+[connection signal="pressed" from="hb_rot/btn_toggle_rot" to="." method="_on_btn_toggle_rot_pressed"]
