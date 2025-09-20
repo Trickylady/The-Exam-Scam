@@ -1,4 +1,5 @@
 extends Node
+class_name SWPlayers
 
 const SWUtils = preload("res://addons/silent_wolf/utils/SWUtils.gd")
 const SWLogger = preload("res://addons/silent_wolf/utils/SWLogger.gd")

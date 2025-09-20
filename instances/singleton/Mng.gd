@@ -1,7 +1,7 @@
 #Singleton Mng.gd
 extends Node
 
-var is_debug_build: bool = false # TODO: REMEMBER TO CHANGE THAT FOR THE FINAL BUILD
+var is_debug_build: bool = true # TODO: REMEMBER TO CHANGE THAT FOR THE FINAL BUILD
 
 # Game modifiers
 var is_family_friendly: bool = true
@@ -15,7 +15,6 @@ var init_boosts: int = 1
 var init_slows: int = 1
 var goal_completion: float = 0.75 # 0 to 1 (percentage to win the level)
 var compliment_ratio: float = 0.18 # 0 to 1 (percentage to get a "blimey" compliment from Fin)
-var game_difficulty: int = 1: set = set_game_difficulty
 
 # Scissors
 var scissors_angles_num: int = 5
@@ -43,6 +42,7 @@ var slow_pencils_mult: float = 0.25
 # Game status
 var current_level_n: int
 var stats: GameStats
+var game_difficulty: int = 1: set = set_game_difficulty
 var lives: int:
 	set(val): lives = clamp(val, 0, max_lives); lives_updated.emit()
 var boost_n: int:
@@ -74,11 +74,12 @@ func start_game() -> void:
 
 
 func reset_stats() -> void:
-	stats = GameStats.new()
+	stats = GameStats.new(game_difficulty, scissors_rotation_sequential)
 	lives = init_lives
 	current_level_n = 1
 	boost_n = init_boosts
 	slow_n = init_slows
+	leaderboard_mng.get_score_from_leaderboard()
 
 
 func go_to_intro() -> void:
@@ -172,3 +173,20 @@ func get_spawn_number_pencils() -> int:
 		3:
 			return level.n + 5
 	return level.n + 1
+
+
+func load_stats_from_file(path: String = "res://test_save.json") -> GameStats:
+	var f := FileAccess.open(path, FileAccess.READ)
+	var data: String = f.get_as_text()
+	f.close()
+	var d: Dictionary = JSON.parse_string(data)
+	return GameStats.from_json(d)
+
+
+func save_stats_to_json(path: String = "res://test_save.json") -> void:
+	var d: Dictionary = stats.to_json()
+	var data: String = JSON.stringify(d, "\t")
+	
+	var f := FileAccess.open(path, FileAccess.WRITE)
+	f.store_string(data)
+	f.close()

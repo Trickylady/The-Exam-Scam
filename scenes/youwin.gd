@@ -7,10 +7,14 @@ func _ready() -> void:
 	Aud.start_random_lines()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	$credits.hide()
+	if Mng.is_debug_build:
+		#Mng.save_stats_to_json()
+		Mng.leaderboard_mng.send_score_to_leaderboard("iRadDevWin")
 
 
 func _on_btn_go_to_menu_pressed() -> void:
 	Mng.go_to_main_menu()
+
 
 var _next_interval: float = 1.0
 var _interval: float = 0.0 

@@ -1,4 +1,5 @@
 extends Node
+class_name SWScores
 
 const SWLogger = preload("res://addons/silent_wolf/utils/SWLogger.gd")
 const UUID = preload("res://addons/silent_wolf/utils/UUID.gd")
@@ -61,7 +62,7 @@ var wrDeleteScore = null
 
 # metadata, if included should be a dictionary
 # The score attribute could be either a score_value (int) or score_id (String)
-func save_score(player_name: String, score, ldboard_name: String="main", metadata: Dictionary={}) -> Node:
+func save_score(player_name: String, score, ldboard_name: String="main", metadata: Dictionary={}) -> SWScores:
 	# player_name must be present
 	if player_name == null or player_name == "":
 		SWLogger.error("ERROR in SilentWolf.Scores.persist_score - please enter a valid player name")
@@ -115,7 +116,7 @@ func _on_SaveScore_request_completed(result, response_code, headers, body) -> vo
 		sw_save_score_complete.emit(sw_result)
 
 
-func get_scores(maximum: int=10, ldboard_name: String="main", period_offset: int=0) -> Node:
+func get_scores(maximum: int = 10, ldboard_name: String = "main", period_offset: int = 0) -> SWScores:
 	var prepared_http_req = SilentWolf.prepare_http_request()
 	GetScores = prepared_http_req.request
 	wrGetScores = prepared_http_req.weakref

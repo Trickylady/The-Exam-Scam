@@ -1,0 +1,27 @@
+{
+	"_all": {
+		"1": {
+			"boosts_collected": 2,
+			"cuts": 15,
+			"hits": 1,
+			"level_num": 1,
+			"lives_collected": 0,
+			"scores": 742,
+			"slows_collected": 1,
+			"time_elapsed": 25169
+		},
+		"2": {
+			"boosts_collected": 1,
+			"cuts": 6,
+			"hits": 5,
+			"level_num": 2,
+			"lives_collected": 1,
+			"scores": 679,
+			"slows_collected": 0,
+			"time_elapsed": 14778
+		}
+	},
+	"game_difficulty": 1,
+	"level_n": 2,
+	"level_t_start": 32719
+}

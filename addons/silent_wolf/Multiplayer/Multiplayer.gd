@@ -1,4 +1,5 @@
 extends Node
+class_name SWMultiplayer
 
 @onready var WSClient = Node.new()
 

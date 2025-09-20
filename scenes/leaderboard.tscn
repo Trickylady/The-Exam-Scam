@@ -106,35 +106,38 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -561.0
-offset_top = -383.0
-offset_right = 561.0
-offset_bottom = 383.0
+offset_left = 46.0
+offset_top = -423.0
+offset_right = 727.0
+offset_bottom = 421.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 24
 
-[node name="lb_title_center" type="Label" parent="vb_center"]
+[node name="HBoxContainer" type="HBoxContainer" parent="vb_center"]
 layout_mode = 2
-text = "you suck so bad"
+
+[node name="lb_title_center" type="Label" parent="vb_center/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "you suck"
 label_settings = SubResource("LabelSettings_xjc7p")
 horizontal_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
 
 [node name="scroll" type="ScrollContainer" parent="vb_center"]
 layout_mode = 2
 size_flags_vertical = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
 
 [node name="vb_entry" type="VBoxContainer" parent="vb_center/scroll"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 24
-
-[node name="entry_03" parent="vb_center/scroll/vb_entry" instance=ExtResource("6_6lrio")]
-layout_mode = 2
-score = 2505
-username_highlight_key = "wave"
-is_current_player = true
 
 [node name="entry_01" parent="vb_center/scroll/vb_entry" instance=ExtResource("6_6lrio")]
 layout_mode = 2
@@ -145,6 +148,22 @@ username = "Captain_Onosa"
 layout_mode = 2
 score = 3506
 username = "Pandacoder"
+
+[node name="entry_03" parent="vb_center/scroll/vb_entry" instance=ExtResource("6_6lrio")]
+layout_mode = 2
+score = 2505
+username_highlight_key = "wave"
+is_current_player = true
+
+[node name="entry_04" parent="vb_center/scroll/vb_entry" instance=ExtResource("6_6lrio")]
+layout_mode = 2
+score = 2653
+username = "TheYagich"
+
+[node name="entry_05" parent="vb_center/scroll/vb_entry" instance=ExtResource("6_6lrio")]
+layout_mode = 2
+score = 2450
+username = "MrWhoMan"
 
 [connection signal="pressed" from="btn_go_to_menu" to="." method="_on_btn_go_to_menu_pressed"]
 [connection signal="pressed" from="hb_rot/btn_toggle_rot" to="." method="_on_btn_toggle_rot_pressed"]

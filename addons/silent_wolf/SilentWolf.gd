@@ -7,15 +7,11 @@ const SWUtils = preload("res://addons/silent_wolf/utils/SWUtils.gd")
 const SWHashing = preload("res://addons/silent_wolf/utils/SWHashing.gd")
 const SWLogger = preload("res://addons/silent_wolf/utils/SWLogger.gd")
 
-#var Auth = Node.new()
-#var Scores = Node.new()
-#var Players = Node.new()
-#var Multiplayer = Node.new()
 
-@onready var Auth = Node.new()
-@onready var Scores = Node.new()
-@onready var Players = Node.new()
-@onready var Multiplayer = Node.new()
+var Auth: SWAuth
+var Scores: SWScores
+var Players: SWPlayers
+var Multiplayer: SWMultiplayer
 
 #
 # SILENTWOLF CONFIG: THE CONFIG VARIABLES BELOW WILL BE OVERRIDED THE 
@@ -45,10 +41,10 @@ var auth_config = {
 	"saved_session_expiration_days": 30
 }
 
-var auth_script = load("res://addons/silent_wolf/Auth/Auth.gd")
-var scores_script = load("res://addons/silent_wolf/Scores/Scores.gd")
-var players_script = load("res://addons/silent_wolf/Players/Players.gd")
-#var multiplayer_script = load("res://addons/silent_wolf/Multiplayer/Multiplayer.gd")
+var is_setup: bool = false
+var is_config: bool = false
+signal setup_complete
+signal config_complete
 
 
 func _init():
@@ -57,21 +53,25 @@ func _init():
 
 func _ready():
 	# The following line would keep SilentWolf working even if the game tree is paused.
-	#pause_mode = Node.PAUSE_MODE_PROCESS
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	print("SW ready start timestamp: " + str(SWUtils.get_timestamp()))
-	Auth.set_script(auth_script)
+	Auth = SWAuth.new()
 	add_child(Auth)
-	Scores.set_script(scores_script)
+	Scores = SWScores.new()
 	add_child(Scores)
-	Players.set_script(players_script)
-	add_child(Players)
-	#Multiplayer.set_script(multiplayer_script)
+	#Players = SWPlayers.new()
+	#add_child(Players)
+	#Multiplayer = SWMultiplayer.new()
 	#add_child(Multiplayer)
+	is_setup = true
+	setup_complete.emit()
 	print("SW ready end timestamp: " + str(SWUtils.get_timestamp()))
 
 
-func configure(json_config):
+func configure(json_config: Dictionary) -> void:
 	config = json_config
+	is_config = true
+	config_complete.emit()
 
 
 func configure_api_key(api_key):

@@ -1,4 +1,5 @@
 extends Node
+class_name SWAuth
 
 const SWLocalFileStorage = preload("res://addons/silent_wolf/utils/SWLocalFileStorage.gd")
 const SWUtils = preload("res://addons/silent_wolf/utils/SWUtils.gd")

@@ -63,7 +63,7 @@ func _update() -> void:
 	else:
 		%lb_n.self_modulate = Color.WHITE
 		%tex_n.self_modulate = SCORE_COLS[2] if alt else SCORE_COLS[1]
-		%lb_total_score.self_modulate = SCORE_COLS[1] if alt else Color.WHITE
+		%lb_total_score.self_modulate = SCORE_COLS[0] if alt else Color.WHITE
 	
 	%lb_n.text = "%d" % num
 	%lb_username.text = user_text
